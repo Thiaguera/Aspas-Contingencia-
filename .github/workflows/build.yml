@@ -35,95 +35,95 @@ jobs:
               exit(1)
 
           with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
-              lines = f.readlines()
-
-          full_text = "".join(lines)
+              full_text = f.read()
 
           marker = "============ BUILD FILES ============"
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
-          known_paths = [
-              "settings.gradle.kts",
-              "build.gradle.kts",
-              "gradle.properties",
-              "gradle/libs.versions.toml",
-              "core/common/build.gradle.kts",
-              "core/domain/build.gradle.kts",
-              "core/data/build.gradle.kts",
-              "core/print/build.gradle.kts",
-              "core/sync/build.gradle.kts",
-              "app/build.gradle.kts",
-              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt",
-              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt",
-              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt",
-              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt",
-              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt",
-              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt",
-              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt",
-              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt",
-              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt",
-              "app/src/main/kotlin/br/com/aspas.contingencia.navigation/Routes.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.navigation/AspasNavHost.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.login/LoginScreen.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.tables/TablesScreen.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.order/OrderScreen.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.printers/PrintersScreen.kt".replace(".", "/"),
-              "app/src/main/kotlin/br/com/aspas.contingencia.feature.kitchen/KitchenScreen.kt".replace(".", "/"),
-              "app/src/main/assets/catalog.json",
-              "app/proguard-rules.pro",
-              "app/src/main/AndroidManifest.xml",
-              "app/src/main/res/values/strings.xml",
-              "app/src/main/res/values/themes.xml",
-              "app/src/main/res/xml/network_security_config.xml"
+          # Dicionário ou lista ordenada com marcadores únicos e caminhos reais
+          files_map = [
+              ("settings.gradle.kts", "settings.gradle.kts"),
+              ("root build.gradle.kts", "build.gradle.kts"),
+              ("gradle.properties", "gradle.properties"),
+              ("libs.versions.toml", "gradle/libs.versions.toml"),
+              ("core/common/build.gradle.kts", "core/common/build.gradle.kts"),
+              ("core/domain/build.gradle.kts", "core/domain/build.gradle.kts"),
+              ("core/data/build.gradle.kts", "core/data/build.gradle.kts"),
+              ("core/print/build.gradle.kts", "core/print/build.gradle.kts"),
+              ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
+              ("app/build.gradle.kts", "app/build.gradle.kts"),
+              ("Hlc.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt"),
+              ("HlcGenerator.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt"),
+              ("Uuid.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt"),
+              ("PinHasher.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt"),
+              ("Models.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt"),
+              ("EventEnvelope.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt"),
+              ("EventType.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt"),
+              ("Payloads.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt"),
+              ("Repositories.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt"),
+              ("Services.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt"),
+              ("UseCases.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt"),
+              ("Entities.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt"),
+              ("Daos.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt"),
+              ("AspasDatabase.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt"),
+              ("DatabaseFactory.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt"),
+              ("SessionProvider.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt"),
+              ("EventRepositoryImpl.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt"),
+              ("RepositoriesImpl.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt"),
+              ("ProjectionEngine.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt"),
+              ("CatalogImporter.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt"),
+              ("EscPosCommands.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt"),
+              ("ElginI9Driver.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt"),
+              ("TicketLayout.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt"),
+              ("TicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt"),
+              ("ItemTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt"),
+              ("CancellationTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt"),
+              ("TestTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt"),
+              ("RetryPolicy.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt"),
+              ("PrintDispatcherImpl.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt"),
+              ("PrintScheduler.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt"),
+              ("SyncPreference.kt", "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt"),
+              ("SyncEngineImpl.kt", "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt"),
+              ("AspasApp.kt", "app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt"),
+              ("MainActivity.kt", "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt"),
+              ("SessionHolder.kt", "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt"),
+              ("SessionManager.kt", "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt"),
+              ("AppModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt"),
+              ("DatabaseModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt"),
+              ("RepositoryModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt"),
+              ("ServiceModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt"),
+              ("LeaseManagerImpl.kt", "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt"),
+              ("Theme.kt", "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt"),
+              ("Routes.kt", "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt"),
+              ("AspasNavHost.kt", "app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt"),
+              ("LoginScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt"),
+              ("TablesScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt"),
+              ("OrderScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt"),
+              ("CheckoutScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt"),
+              ("PrintersScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt"),
+              ("KitchenScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/kitchen/KitchenScreen.kt"),
+              ("catalog.json", "app/src/main/assets/catalog.json"),
+              ("proguard-rules.pro", "app/proguard-rules.pro"),
+              ("AndroidManifest.xml", "app/src/main/AndroidManifest.xml"),
+              ("strings.xml", "app/src/main/res/values/strings.xml"),
+              ("themes.xml", "app/src/main/res/values/themes.xml"),
+              ("network_security_config.xml", "app/src/main/res/xml/network_security_config.xml")
           ]
 
           extracted_count = 0
-          for i, path in enumerate(known_paths):
-              actual_path = path
-              pos = full_text.find(actual_path)
+          for idx, (label, target_path) in enumerate(files_map):
+              pos = full_text.find(target_path)
               if pos == -1:
-                  # Tentar rota alternativa sem barras se falhar
+                  print(f"[AVISO] Nao encontrado: {target_path}")
                   continue
               
-              start_content = pos + len(actual_path)
+              start_content = pos + len(target_path)
               end_content = len(full_text)
-              for next_path in known_paths[i+1:]:
-                  next_pos = full_text.find(next_path, start_content)
+              
+              # Procurar o próximo marcador válido na sequência
+              for next_label, next_target in files_map[idx+1:]:
+                  next_pos = full_text.find(next_target, start_content)
                   if next_pos != -1 and next_pos < end_content:
                       end_content = next_pos
                       break
@@ -132,13 +132,13 @@ jobs:
               if file_data.startswith("---"):
                   file_data = file_data.split("---", 2)[-1].strip()
 
-              dir_name = os.path.dirname(actual_path)
+              dir_name = os.path.dirname(target_path)
               if dir_name:
                   os.makedirs(dir_name, exist_ok=True)
               
-              with open(actual_path, "w", encoding="utf-8") as out:
+              with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
-              print(f"[CRIADO] {actual_path}")
+              print(f"[CRIADO] {target_path}")
               extracted_count += 1
 
           print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
