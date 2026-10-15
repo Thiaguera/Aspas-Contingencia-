@@ -1,1 +1,127 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUubWFuYWdlbWVudAoKaW1wb3J0IGFuZHJvaWQuY29udGVudC5Db250ZXh0CmltcG9ydCBhbmRyb2lkLm5ldC5VcmkKaW1wb3J0IGFuZHJvaWR4LmFjdGl2aXR5LmNvbXBvc2UucmVtZW1iZXJMYXVuY2hlckZvckFjdGl2aXR5UmVzdWx0CmltcG9ydCBhbmRyb2lkeC5hY3Rpdml0eS5yZXN1bHQuY29udHJhY3QuQWN0aXZpdHlSZXN1bHRDb250cmFjdHMKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuZm91bmRhdGlvbi5sYXlvdXQuKgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5mb3VuZGF0aW9uLmxhenkuTGF6eUNvbHVtbgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5mb3VuZGF0aW9uLmxhenkuaXRlbXMKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwuaWNvbnMuSWNvbnMKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwuaWNvbnMuZmlsbGVkLkFycm93QmFjawppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5tYXRlcmlhbDMuKgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5ydW50aW1lLioKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkuTW9kaWZpZXIKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkudGV4dC5pbnB1dC5QYXNzd29yZFZpc3VhbFRyYW5zZm9ybWF0aW9uCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLnVpLnVuaXQuZHAKaW1wb3J0IGFuZHJvaWR4LmhpbHQubmF2aWdhdGlvbi5jb21wb3NlLmhpbHRWaWV3TW9kZWwKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS5WaWV3TW9kZWwKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS52aWV3TW9kZWxTY29wZQppbXBvcnQgYW5kcm9pZHguc2VjdXJpdHkuY3J5cHRvLkVuY3J5cHRlZFNoYXJlZFByZWZlcmVuY2VzCmltcG9ydCBhbmRyb2lkeC5zZWN1cml0eS5jcnlwdG8uTWFzdGVyS2V5CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmNvbW1vbi5QaW5IYXNoZXIKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuY29tbW9uLlV1aWQKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5iYWNrdXAuRW5jcnlwdGVkQmFja3VwCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuYmFja3VwLlBvcnRhYmxlQmFja3VwU2VydmljZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmRiLkFzcGFzRGF0YWJhc2UKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5kYi5lbnRpdHkuVXNlckVudGl0eQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLnByb2plY3Rpb24uUHJvamVjdGlvbkVuZ2luZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4uZXZlbnQuRXZlbnRUeXBlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRvbWFpbi5ldmVudC5wYXlsb2FkLioKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZG9tYWluLnJlcG9zaXRvcnkuRXZlbnRSZXBvc2l0b3J5CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLnNlc3Npb24uU2Vzc2lvbk1hbmFnZXIKaW1wb3J0IGRhZ2dlci5oaWx0LmFuZHJvaWQubGlmZWN5Y2xlLkhpbHRWaWV3TW9kZWwKaW1wb3J0IGRhZ2dlci5oaWx0LmFuZHJvaWQucXVhbGlmaWVycy5BcHBsaWNhdGlvbkNvbnRleHQKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5EaXNwYXRjaGVycwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuKgppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmxhdW5jaAppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLnN5bmMuTXV0ZXgKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy53aXRoQ29udGV4dAppbXBvcnQga290bGlueC5zZXJpYWxpemF0aW9uLmVuY29kZVRvU3RyaW5nCmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uanNvbi5Kc29uCmltcG9ydCBqYXZhLmlvLkZpbGUKaW1wb3J0IGphdmEubWF0aC5CaWdEZWNpbWFsCmltcG9ydCBqYXZhLm1hdGguUm91bmRpbmdNb2RlCmltcG9ydCBqYXZhLnRleHQuTnVtYmVyRm9ybWF0CmltcG9ydCBqYXZhLnV0aWwuTG9jYWxlCmltcG9ydCBqYXZheC5pbmplY3QuSW5qZWN0Cgpwcml2YXRlIEBPcHRJbihFeHBlcmltZW50YWxNYXRlcmlhbDNBcGk6OmNsYXNzKQpAQ29tcG9zYWJsZQpmdW4gTWFuYWdlbWVudFNjcmVlbihvbkJhY2s6ICgpIC0+IFVuaXQsIHZtOiBNYW5hZ2VtZW50Vmlld01vZGVsID0gaGlsdFZpZXdNb2RlbCgpKSB7CiAgICB2YWwgdXNlcnMgYnkgdm0udXNlcnMuY29sbGVjdEFzU3RhdGUoKQogICAgdmFsIGNhc2ggYnkgdm0uYWN0aXZlQ2FzaC5jb2xsZWN0QXNTdGF0ZSgpCiAgICB2YWwgcmVwb3J0IGJ5IHZtLnJlcG9ydC5jb2xsZWN0QXNTdGF0ZSgpCiAgICB2YWwgYnVzeSBieSB2bS5idXN5LmNvbGxlY3RBc1N0YXRlKCkKICAgIHZhbCBtZXNzYWdlIGJ5IHZtLm1lc3NhZ2UuY29sbGVjdEFzU3RhdGUoKQogICAgdmFyIHRhYiBieSByZW1lbWJlciB7IG11dGFibGVJbnRTdGF0ZU9mKDApIH0KICAgIHZhciBiYWNrdXBQYXNzd29yZCBieSByZW1lbWJlciB7IG11dGFibGVTdGF0ZU9mKCIiKSB9CiAgICB2YXIgcGVuZGluZ0V4cG9ydCBieSByZW1lbWJlciB7IG11dGFibGVTdGF0ZU9mKGZhbHNlKSB9CiAgICB2YWwgZXhwb3J0TGF1bmNoZXIgPSByZW1lbWJlckxhdW5jaGVyRm9yQWN0aXZpdHlSZXN1bHQoQWN0aXZpdHlSZXN1bHRDb250cmFjdHMuQ3JlYXRlRG9jdW1lbnQoImFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbSIpKSB7IHVyaSAtPgogICAgICAgIGlmICh1cmkgIT0gbnVsbCAmJiBwZW5kaW5nRXhwb3J0KSB2bS5leHBvcnRCYWNrdXAodXJpLCBiYWNrdXBQYXNzd29yZC50b0NoYXJBcnJheSgpKQogICAgICAgIHBlbmRpbmdFeHBvcnQgPSBmYWxzZTsgYmFja3VwUGFzc3dvcmQgPSAiIgogICAgfQogICAgdmFsIGltcG9ydExhdW5jaGVyID0gcmVtZW1iZXJMYXVuY2hlckZvckFjdGl2aXR5UmVzdWx0KEFjdGl2aXR5UmVzdWx0Q29udHJhY3RzLk9wZW5Eb2N1bWVudCgpKSB7IHVyaSAtPgogICAgICAgIGlmICh1cmkgIT0gbnVsbCkgdm0udmFsaWRhdGVCYWNrdXAodXJpLCBiYWNrdXBQYXNzd29yZC50b0NoYXJBcnJheSgpKQogICAgICAgIGJhY2t1cFBhc3N3b3JkID0gIiIKICAgIH0KICAgIFNjYWZmb2xkKHRvcEJhciA9IHsgVG9wQXBwQmFyKHRpdGxlID0geyBUZXh0KCJHZXN0w6NvIikgfSwgbmF2aWdhdGlvbkljb24gPSB7IEljb25CdXR0b24ob25DbGljayA9IG9uQmFjaykgeyBJY29uKEljb25zLkRlZmF1bHQuQXJyb3dCYWNrLCAiVm9sdGFyIikgfSB9KSB9KSB7IHBhZGRpbmcgLT4KICAgICAgICBDb2x1bW4oTW9kaWZpZXIucGFkZGluZyhwYWRkaW5nKS5maWxsTWF4U2l6ZSgpKSB7CiAgICAgICAgICAgIFRhYlJvdyhzZWxlY3RlZFRhYkluZGV4ID0gdGFiKSB7IGxpc3RPZigiRXF1aXBlIiwgIkNhaXhhIiwgIlJlbGF0w7NyaW9zIiwgIkJhY2t1cCIpLmZvckVhY2hJbmRleGVkIHsgaW5kZXgsIHRpdGxlIC0+IFRhYihzZWxlY3RlZCA9IHRhYiA9PSBpbmRleCwgb25DbGljayA9IHsgdGFiID0gaW5kZXggfSwgdGV4dCA9IHsgVGV4dCh0aXRsZSkgfSkgfSB9CiAgICAgICAgICAgIG1lc3NhZ2U/LmxldCB7IFRleHQoaXQsIE1vZGlmaWVyLnBhZGRpbmcoMTYuZHApLCBjb2xvciA9IGlmIChpdC5zdGFydHNXaXRoKCJOw6NvIikgfHwgaXQuc3RhcnRzV2l0aCgiQXBlbmFzIikgfHwgaXQuc3RhcnRzV2l0aCgiUElOIikpIE1hdGVyaWFsVGhlbWUuY29sb3JTY2hlbWUuZXJyb3IgZWxzZSBNYXRlcmlhbFRoZW1lLmNvbG9yU2NoZW1lLnByaW1hcnkpIH0KICAgICAgICAgICAgd2hlbiAodGFiKSB7CiAgICAgICAgICAgICAgICAwIC0+IFRlYW1UYWIodXNlcnMsIGJ1c3ksIHZtKQogICAgICAgICAgICAgICAgMSAtPiBDYXNoVGFiKGNhc2ggIT0gbnVsbCwgYnVzeSwgdm0pCiAgICAgICAgICAgICAgICAyIC0+IFJlcG9ydHNUYWIocmVwb3J0LCBidXN5LCB2bSkKICAgICAgICAgICAgICAgIGVsc2UgLT4gQmFja3VwVGFiKGJhY2t1cFBhc3N3b3JkLCB7IGJhY2t1cFBhc3N3b3JkID0gaXQgfSwgYnVzeSwgb25FeHBvcnQgPSB7IHBlbmRpbmdFeHBvcnQgPSB0cnVlOyBleHBvcnRMYXVuY2hlci5sYXVuY2goImFzcGFzLWJhY2t1cC0ke1N5c3RlbS5jdXJyZW50VGltZU1pbGxpcygpfS5hc3BiIikgfSwgb25WYWxpZGF0ZSA9IHsgaW1wb3J0TGF1bmNoZXIubGF1bmNoKGFycmF5T2YoImFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbSIsICJhcHBsaWNhdGlvbi8qIikpIH0pCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0KCkBDb21wb3NhYmxlIHByaXZhdGUgZnVuIFRlYW1UYWIodXNlcnM6IExpc3Q8YnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmRiLmVudGl0eS5Vc2VyRW50aXR5PiwgYnVzeTogQm9vbGVhbiwgdm06IE1hbmFnZW1lbnRWaWV3TW9kZWwpIHsKICAgIHZhciBuYW1lIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH07IHZhciBwaW4gYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZigiIikgfQogICAgTGF6eUNvbHVtbihNb2RpZmllci5maWxsTWF4U2l6ZSgpLnBhZGRpbmcoMTYuZHApLCB2ZXJ0aWNhbEFycmFuZ2VtZW50ID0gQXJyYW5nZW1lbnQuc3BhY2VkQnkoMTAuZHApKSB7CiAgICAgICAgaXRlbSB7IFRleHQoIk5vdm8gb3BlcmFkb3IiLCBzdHlsZSA9IE1hdGVyaWFsVGhlbWUudHlwb2dyYXBoeS50aXRsZU1lZGl1bSkgfQogICAgICAgIGl0ZW0geyBPdXRsaW5lZFRleHRGaWVsZChuYW1lLCB7IG5hbWUgPSBpdCB9LCBsYWJlbCA9IHsgVGV4dCgiTm9tZSIpIH0sIHNpbmdsZUxpbmUgPSB0cnVlLCBtb2RpZmllciA9IE1vZGlmaWVyLmZpbGxNYXhXaWR0aCgpKSB9CiAgICAgICAgaXRlbSB7IE91dGxpbmVkVGV4dEZpZWxkKHBpbiwgeyBwaW4gPSBpdC5maWx0ZXIoQ2hhcjo6aXNEaWdpdCkudGFrZSg2KSB9LCBsYWJlbCA9IHsgVGV4dCgiUElOICg0IGEgNiBkw61naXRvcykiKSB9LCB2aXN1YWxUcmFuc2Zvcm1hdGlvbiA9IFBhc3N3b3JkVmlzdWFsVHJhbnNmb3JtYXRpb24oKSwgc2luZ2xlTGluZSA9IHRydWUsIG1vZGlmaWVyID0gTW9kaWZpZXIuZmlsbE1heFdpZHRoKCkpIH0KICAgICAgICBpdGVtIHsgQnV0dG9uKG9uQ2xpY2sgPSB7IHZtLmNyZWF0ZU9wZXJhdG9yKG5hbWUsIHBpbik7IG5hbWUgPSAiIjsgcGluID0gIiIgfSwgZW5hYmxlZCA9ICFidXN5KSB7IFRleHQoIkNyaWFyIG9wZXJhZG9yIikgfSB9CiAgICAgICAgaXRlbSB7IEhvcml6b250YWxEaXZpZGVyKCk7IFRleHQoIk9wZXJhZG9yZXMgYXRpdm9zIiwgc3R5bGUgPSBNYXRlcmlhbFRoZW1lLnR5cG9ncmFwaHkudGl0bGVNZWRpdW0pIH0KICAgICAgICBpdGVtcyh1c2Vycywga2V5ID0geyBpdC51c2VySWQgfSkgeyB1c2VyIC0+IExpc3RJdGVtKGhlYWRsaW5lQ29udGVudCA9IHsgVGV4dCh1c2VyLm5hbWUpIH0sIHN1cHBvcnRpbmdDb250ZW50ID0geyBUZXh0KHVzZXIucm9sZSkgfSwgdHJhaWxpbmdDb250ZW50ID0geyBpZiAodXNlci5yb2xlLmVxdWFscygib3BlcmF0b3IiLCB0cnVlKSkgVGV4dEJ1dHRvbihvbkNsaWNrID0geyB2bS5kZWFjdGl2YXRlT3BlcmF0b3IodXNlci51c2VySWQpIH0sIGVuYWJsZWQgPSAhYnVzeSkgeyBUZXh0KCJEZXNhdGl2YXIiKSB9IH0pOyBIb3Jpem9udGFsRGl2aWRlcigpIH0KICAgIH0KfQoKQENvbXBvc2FibGUgcHJpdmF0ZSBmdW4gQ2FzaFRhYihvcGVuOiBCb29sZWFuLCBidXN5OiBCb29sZWFuLCB2bTogTWFuYWdlbWVudFZpZXdNb2RlbCkgewogICAgdmFyIG9wZW5pbmcgYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZigiIikgfTsgdmFyIG1vdmVtZW50IGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH07IHZhciByZWFzb24gYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZigiIikgfTsgdmFyIGNvdW50ZWQgYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZigiIikgfTsgdmFyIG5vdGVzIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH07IHZhciBpc0luIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YodHJ1ZSkgfQogICAgTGF6eUNvbHVtbihNb2RpZmllci5maWxsTWF4U2l6ZSgpLnBhZGRpbmcoMTYuZHApLCB2ZXJ0aWNhbEFycmFuZ2VtZW50ID0gQXJyYW5nZW1lbnQuc3BhY2VkQnkoMTAuZHApKSB7CiAgICAgICAgaXRlbSB7IFRleHQoaWYgKG9wZW4pICJDYWl4YSBhYmVydG8iIGVsc2UgIkNhaXhhIGZlY2hhZG8iLCBzdHlsZSA9IE1hdGVyaWFsVGhlbWUudHlwb2dyYXBoeS50aXRsZU1lZGl1bSkgfQogICAgICAgIGlmICghb3BlbikgeyBpdGVtIHsgT3V0bGluZWRUZXh0RmllbGQob3BlbmluZywgeyBvcGVuaW5nID0gaXQgfSwgbGFiZWwgPSB7IFRleHQoIkZ1bmRvIGRlIHRyb2NvIikgfSwgc2luZ2xlTGluZSA9IHRydWUsIG1vZGlmaWVyID0gTW9kaWZpZXIuZmlsbE1heFdpZHRoKCkpIH07IGl0ZW0geyBCdXR0b24ob25DbGljayA9IHsgdm0ub3BlbkNhc2gob3BlbmluZykgfSwgZW5hYmxlZCA9ICFidXN5KSB7IFRleHQoIkFicmlyIGNhaXhhIikgfSB9IH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgaXRlbSB7IFRleHQoIk1vdmltZW50YcOnw6NvIikgfTsgaXRlbSB7IFJvdyB7IEZpbHRlckNoaXAoc2VsZWN0ZWQgPSBpc0luLCBvbkNsaWNrID0geyBpc0luID0gdHJ1ZSB9LCBsYWJlbCA9IHsgVGV4dCgiRW50cmFkYSIpIH0pOyBTcGFjZXIoTW9kaWZpZXIud2lkdGgoOC5kcCkpOyBGaWx0ZXJDaGlwKHNlbGVjdGVkID0gIWlzSW4sIG9uQ2xpY2sgPSB7IGlzSW4gPSBmYWxzZSB9LCBsYWJlbCA9IHsgVGV4dCgiU2FuZ3JpYS9zYcOtZGEiKSB9KSB9IH0KICAgICAgICAgICAgaXRlbSB7IE91dGxpbmVkVGV4dEZpZWxkKG1vdmVtZW50LCB7IG1vdmVtZW50ID0gaXQgfSwgbGFiZWwgPSB7IFRleHQoIlZhbG9yIikgfSwgc2luZ2xlTGluZSA9IHRydWUsIG1vZGlmaWVyID0gTW9kaWZpZXIuZmlsbE1heFdpZHRoKCkpIH07IGl0ZW0geyBPdXRsaW5lZFRleHRGaWVsZChyZWFzb24sIHsgcmVhc29uID0gaXQgfSwgbGFiZWwgPSB7IFRleHQoIk1vdGl2byIpIH0sIG1vZGlmaWVyID0gTW9kaWZpZXIuZmlsbE1heFdpZHRoKCkpIH07IGl0ZW0geyBCdXR0b24ob25DbGljayA9IHsgdm0ucmVnaXN0ZXJNb3ZlbWVudChpZiAoaXNJbikgImluIiBlbHNlICJvdXQiLCBtb3ZlbWVudCwgcmVhc29uKTsgbW92ZW1lbnQgPSAiIjsgcmVhc29uID0gIiIgfSwgZW5hYmxlZCA9ICFidXN5KSB7IFRleHQoIlJlZ2lzdHJhciBtb3ZpbWVudGHDp8OjbyIpIH0gfQogICAgICAgICAgICBpdGVtIHsgSG9yaXpvbnRhbERpdmlkZXIoKTsgVGV4dCgiRmVjaGFtZW50byIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlTWVkaXVtKSB9OyBpdGVtIHsgT3V0bGluZWRUZXh0RmllbGQoY291bnRlZCwgeyBjb3VudGVkID0gaXQgfSwgbGFiZWwgPSB7IFRleHQoIlZhbG9yIGNvbmZlcmlkbyIpIH0sIHNpbmdsZUxpbmUgPSB0cnVlLCBtb2RpZmllciA9IE1vZGlmaWVyLmZpbGxNYXhXaWR0aCgpKSB9OyBpdGVtIHsgT3V0bGluZWRUZXh0RmllbGQobm90ZXMsIHsgbm90ZXMgPSBpdCB9LCBsYWJlbCA9IHsgVGV4dCgiT2JzZXJ2YcOnw7VlcyAob3BjaW9uYWwpIikgfSwgbW9kaWZpZXIgPSBNb2RpZmllci5maWxsTWF4V2lkdGgoKSkgfTsgaXRlbSB7IEJ1dHRvbihvbkNsaWNrID0geyB2bS5jbG9zZUNhc2goY291bnRlZCwgbm90ZXMpIH0sIGVuYWJsZWQgPSAhYnVzeSkgeyBUZXh0KCJGZWNoYXIgY2FpeGEiKSB9IH0KICAgICAgICB9CiAgICB9Cn0KCkBDb21wb3NhYmxlIHByaXZhdGUgZnVuIFJlcG9ydHNUYWIocmVwb3J0OiBNYW5hZ2VtZW50UmVwb3J0LCBidXN5OiBCb29sZWFuLCB2bTogTWFuYWdlbWVudFZpZXdNb2RlbCkgewogICAgdmFsIGN1cnJlbmN5ID0gcmVtZW1iZXIgeyBOdW1iZXJGb3JtYXQuZ2V0Q3VycmVuY3lJbnN0YW5jZShMb2NhbGUoInB0IiwgIkJSIikpIH0KICAgIExhenlDb2x1bW4oTW9kaWZpZXIuZmlsbE1heFNpemUoKS5wYWRkaW5nKDE2LmRwKSwgdmVydGljYWxBcnJhbmdlbWVudCA9IEFycmFuZ2VtZW50LnNwYWNlZEJ5KDEwLmRwKSkgewogICAgICAgIGl0ZW0geyBUZXh0KCJSZWxhdMOzcmlvIGRvIGNhaXhhIGFiZXJ0byBhdHVhbCIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlTWVkaXVtKSB9OyBpdGVtIHsgQnV0dG9uKG9uQ2xpY2sgPSB2bTo6cmVmcmVzaFJlcG9ydCwgZW5hYmxlZCA9ICFidXN5KSB7IFRleHQoIkF0dWFsaXphciIpIH0gfQogICAgICAgIGlmIChyZXBvcnQuc2Vzc2lvbklkID09IG51bGwpIHsgaXRlbSB7IFRleHQoIkFicmEgdW0gY2FpeGEgZSBhdHVhbGl6ZSBwYXJhIGNvbnN1bHRhciBvIHBlcsOtb2RvLiIpIH0gfQogICAgICAgIGVsc2UgeyBpdGVtIHsgVGV4dCgiUGVkaWRvczogJHtyZXBvcnQub3JkZXJDb3VudH0iKSB9OyBpdGVtIHsgVGV4dCgiVG90YWwgZG9zIHBlZGlkb3M6ICR7Y3VycmVuY3kuZm9ybWF0KHJlcG9ydC5ncm9zc09yZGVycyl9IikgfTsgaXRlbSB7IFRleHQoIlBhZ2FtZW50b3MgbsOjbyBlc3Rvcm5hZG9zOiAke2N1cnJlbmN5LmZvcm1hdChyZXBvcnQucmVjZWl2ZWQpfSIpIH07IGl0ZW0geyBUZXh0KCJQb3IgbWVpbyIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlTWVkaXVtKSB9IH0KICAgICAgICBpdGVtcyhyZXBvcnQucGF5bWVudHMuZW50cmllcy50b0xpc3QoKSwga2V5ID0geyBpdC5rZXkgfSkgeyAobWV0aG9kLCBhbW91bnQpIC0+IExpc3RJdGVtKGhlYWRsaW5lQ29udGVudCA9IHsgVGV4dChtZXRob2QpIH0sIHRyYWlsaW5nQ29udGVudCA9IHsgVGV4dChjdXJyZW5jeS5mb3JtYXQoYW1vdW50KSkgfSk7IEhvcml6b250YWxEaXZpZGVyKCkgfQogICAgfQp9CgpAQ29tcG9zYWJsZSBwcml2YXRlIGZ1biBCYWNrdXBUYWIocGFzc3dvcmQ6IFN0cmluZywgb25QYXNzd29yZDogKFN0cmluZykgLT4gVW5pdCwgYnVzeTogQm9vbGVhbiwgb25FeHBvcnQ6ICgpIC0+IFVuaXQsIG9uVmFsaWRhdGU6ICgpIC0+IFVuaXQpIHsKICAgIENvbHVtbihNb2RpZmllci5maWxsTWF4U2l6ZSgpLnBhZGRpbmcoMTYuZHApLCB2ZXJ0aWNhbEFycmFuZ2VtZW50ID0gQXJyYW5nZW1lbnQuc3BhY2VkQnkoMTIuZHApKSB7CiAgICAgICAgVGV4dCgiQmFja3VwIHBvcnTDoXRpbCIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlTWVkaXVtKQogICAgICAgIFRleHQoIlVzZSB1bWEgc2VuaGEgZXhjbHVzaXZhIGNvbSBhbyBtZW5vcyAxMiBjYXJhY3RlcmVzLiBBIHZhbGlkYcOnw6NvIGFicmUgc29tZW50ZSB1bWEgY8OzcGlhIGlzb2xhZGE7IG51bmNhIHJlc3RhdXJhIG5lbSBzdWJzdGl0dWkgbyBiYW5jbyBlbSB1c28uIikKICAgICAgICBPdXRsaW5lZFRleHRGaWVsZChwYXNzd29yZCwgb25QYXNzd29yZCwgbGFiZWwgPSB7IFRleHQoIlNlbmhhIGRvIGJhY2t1cCIpIH0sIHZpc3VhbFRyYW5zZm9ybWF0aW9uID0gUGFzc3dvcmRWaXN1YWxUcmFuc2Zvcm1hdGlvbigpLCBzaW5nbGVMaW5lID0gdHJ1ZSwgbW9kaWZpZXIgPSBNb2RpZmllci5maWxsTWF4V2lkdGgoKSkKICAgICAgICBCdXR0b24ob25DbGljayA9IG9uRXhwb3J0LCBlbmFibGVkID0gIWJ1c3kgJiYgcGFzc3dvcmQubGVuZ3RoID49IDEyKSB7IFRleHQoIkV4cG9ydGFyIGJhY2t1cCIpIH0KICAgICAgICBPdXRsaW5lZEJ1dHRvbihvbkNsaWNrID0gb25WYWxpZGF0ZSwgZW5hYmxlZCA9ICFidXN5ICYmIHBhc3N3b3JkLmxlbmd0aCA+PSAxMikgeyBUZXh0KCJTZWxlY2lvbmFyIGUgdmFsaWRhciBiYWNrdXAiKSB9CiAgICB9Cn0KCmludGVybmFsIGZ1biBmb3JtYXRNb25leSh2YWx1ZTogQmlnRGVjaW1hbCk6IFN0cmluZyA9IE51bWJlckZvcm1hdC5nZXRDdXJyZW5jeUluc3RhbmNlKExvY2FsZSgicHQiLCAiQlIiKSkuZm9ybWF0KHZhbHVlKQo=
+package br.com.aspas.contingencia.feature.management
+
+import android.content.Context
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
+import br.com.aspas.contingencia.common.PinHasher
+import br.com.aspas.contingencia.common.Uuid
+import br.com.aspas.contingencia.data.backup.EncryptedBackup
+import br.com.aspas.contingencia.data.backup.PortableBackupService
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.db.entity.UserEntity
+import br.com.aspas.contingencia.data.projection.ProjectionEngine
+import br.com.aspas.contingencia.domain.event.EventType
+import br.com.aspas.contingencia.domain.event.payload.*
+import br.com.aspas.contingencia.domain.repository.EventRepository
+import br.com.aspas.contingencia.session.SessionManager
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import java.io.File
+import java.math.BigDecimal
+import java.math.RoundingMode
+import java.text.NumberFormat
+import java.util.Locale
+import javax.inject.Inject
+
+private @OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ManagementScreen(onBack: () -> Unit, vm: ManagementViewModel = hiltViewModel()) {
+    val users by vm.users.collectAsState()
+    val cash by vm.activeCash.collectAsState()
+    val report by vm.report.collectAsState()
+    val busy by vm.busy.collectAsState()
+    val message by vm.message.collectAsState()
+    var tab by remember { mutableIntStateOf(0) }
+    var backupPassword by remember { mutableStateOf("") }
+    var pendingExport by remember { mutableStateOf(false) }
+    val exportLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/octet-stream")) { uri ->
+        if (uri != null && pendingExport) vm.exportBackup(uri, backupPassword.toCharArray())
+        pendingExport = false; backupPassword = ""
+    }
+    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) vm.validateBackup(uri, backupPassword.toCharArray())
+        backupPassword = ""
+    }
+    Scaffold(topBar = { TopAppBar(title = { Text("Gestão") }, navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Voltar") } }) }) { padding ->
+        Column(Modifier.padding(padding).fillMaxSize()) {
+            TabRow(selectedTabIndex = tab) { listOf("Equipe", "Caixa", "Relatórios", "Backup").forEachIndexed { index, title -> Tab(selected = tab == index, onClick = { tab = index }, text = { Text(title) }) } }
+            message?.let { Text(it, Modifier.padding(16.dp), color = if (it.startsWith("Não") || it.startsWith("Apenas") || it.startsWith("PIN")) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary) }
+            when (tab) {
+                0 -> TeamTab(users, busy, vm)
+                1 -> CashTab(cash != null, busy, vm)
+                2 -> ReportsTab(report, busy, vm)
+                else -> BackupTab(backupPassword, { backupPassword = it }, busy, onExport = { pendingExport = true; exportLauncher.launch("aspas-backup-${System.currentTimeMillis()}.aspb") }, onValidate = { importLauncher.launch(arrayOf("application/octet-stream", "application/*")) })
+            }
+        }
+    }
+}
+
+@Composable private fun TeamTab(users: List<br.com.aspas.contingencia.data.db.entity.UserEntity>, busy: Boolean, vm: ManagementViewModel) {
+    var name by remember { mutableStateOf("") }; var pin by remember { mutableStateOf("") }
+    LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Text("Novo operador", style = MaterialTheme.typography.titleMedium) }
+        item { OutlinedTextField(name, { name = it }, label = { Text("Nome") }, singleLine = true, modifier = Modifier.fillMaxWidth()) }
+        item { OutlinedTextField(pin, { pin = it.filter(Char::isDigit).take(6) }, label = { Text("PIN (4 a 6 dígitos)") }, visualTransformation = PasswordVisualTransformation(), singleLine = true, modifier = Modifier.fillMaxWidth()) }
+        item { Button(onClick = { vm.createOperator(name, pin); name = ""; pin = "" }, enabled = !busy) { Text("Criar operador") } }
+        item { HorizontalDivider(); Text("Operadores ativos", style = MaterialTheme.typography.titleMedium) }
+        items(users, key = { it.userId }) { user -> ListItem(headlineContent = { Text(user.name) }, supportingContent = { Text(user.role) }, trailingContent = { if (user.role.equals("operator", true)) TextButton(onClick = { vm.deactivateOperator(user.userId) }, enabled = !busy) { Text("Desativar") } }); HorizontalDivider() }
+    }
+}
+
+@Composable private fun CashTab(open: Boolean, busy: Boolean, vm: ManagementViewModel) {
+    var opening by remember { mutableStateOf("") }; var movement by remember { mutableStateOf("") }; var reason by remember { mutableStateOf("") }; var counted by remember { mutableStateOf("") }; var notes by remember { mutableStateOf("") }; var isIn by remember { mutableStateOf(true) }
+    LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Text(if (open) "Caixa aberto" else "Caixa fechado", style = MaterialTheme.typography.titleMedium) }
+        if (!open) { item { OutlinedTextField(opening, { opening = it }, label = { Text("Fundo de troco") }, singleLine = true, modifier = Modifier.fillMaxWidth()) }; item { Button(onClick = { vm.openCash(opening) }, enabled = !busy) { Text("Abrir caixa") } } }
+        else {
+            item { Text("Movimentação") }; item { Row { FilterChip(selected = isIn, onClick = { isIn = true }, label = { Text("Entrada") }); Spacer(Modifier.width(8.dp)); FilterChip(selected = !isIn, onClick = { isIn = false }, label = { Text("Sangria/saída") }) } }
+            item { OutlinedTextField(movement, { movement = it }, label = { Text("Valor") }, singleLine = true, modifier = Modifier.fillMaxWidth()) }; item { OutlinedTextField(reason, { reason = it }, label = { Text("Motivo") }, modifier = Modifier.fillMaxWidth()) }; item { Button(onClick = { vm.registerMovement(if (isIn) "in" else "out", movement, reason); movement = ""; reason = "" }, enabled = !busy) { Text("Registrar movimentação") } }
+            item { HorizontalDivider(); Text("Fechamento", style = MaterialTheme.typography.titleMedium) }; item { OutlinedTextField(counted, { counted = it }, label = { Text("Valor conferido") }, singleLine = true, modifier = Modifier.fillMaxWidth()) }; item { OutlinedTextField(notes, { notes = it }, label = { Text("Observações (opcional)") }, modifier = Modifier.fillMaxWidth()) }; item { Button(onClick = { vm.closeCash(counted, notes) }, enabled = !busy) { Text("Fechar caixa") } }
+        }
+    }
+}
+
+@Composable private fun ReportsTab(report: ManagementReport, busy: Boolean, vm: ManagementViewModel) {
+    val currency = remember { NumberFormat.getCurrencyInstance(Locale("pt", "BR")) }
+    LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Text("Relatório do caixa aberto atual", style = MaterialTheme.typography.titleMedium) }; item { Button(onClick = vm::refreshReport, enabled = !busy) { Text("Atualizar") } }
+        if (report.sessionId == null) { item { Text("Abra um caixa e atualize para consultar o período.") } }
+        else { item { Text("Pedidos: ${report.orderCount}") }; item { Text("Total dos pedidos: ${currency.format(report.grossOrders)}") }; item { Text("Pagamentos não estornados: ${currency.format(report.received)}") }; item { Text("Por meio", style = MaterialTheme.typography.titleMedium) } }
+        items(report.payments.entries.toList(), key = { it.key }) { (method, amount) -> ListItem(headlineContent = { Text(method) }, trailingContent = { Text(currency.format(amount)) }); HorizontalDivider() }
+    }
+}
+
+@Composable private fun BackupTab(password: String, onPassword: (String) -> Unit, busy: Boolean, onExport: () -> Unit, onValidate: () -> Unit) {
+    Column(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text("Backup portátil", style = MaterialTheme.typography.titleMedium)
+        Text("Use uma senha exclusiva com ao menos 12 caracteres. A validação abre somente uma cópia isolada; nunca restaura nem substitui o banco em uso.")
+        OutlinedTextField(password, onPassword, label = { Text("Senha do backup") }, visualTransformation = PasswordVisualTransformation(), singleLine = true, modifier = Modifier.fillMaxWidth())
+        Button(onClick = onExport, enabled = !busy && password.length >= 12) { Text("Exportar backup") }
+        OutlinedButton(onClick = onValidate, enabled = !busy && password.length >= 12) { Text("Selecionar e validar backup") }
+    }
+}
+
+internal fun formatMoney(value: BigDecimal): String = NumberFormat.getCurrencyInstance(Locale("pt", "BR")).format(value)
