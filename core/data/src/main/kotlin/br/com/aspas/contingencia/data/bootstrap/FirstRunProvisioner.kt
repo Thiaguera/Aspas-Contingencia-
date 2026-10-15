@@ -1,1 +1,85 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuYm9vdHN0cmFwCgppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQKaW1wb3J0IGFuZHJvaWR4LnJvb20ud2l0aFRyYW5zYWN0aW9uCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuY2F0YWxvZy5DYXRhbG9nSW1wb3J0ZXIKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5kYi5Bc3Bhc0RhdGFiYXNlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuZGIuZW50aXR5LlRhYmxlRW50aXR5CmltcG9ydCBkYWdnZXIuaGlsdC5hbmRyb2lkLnF1YWxpZmllcnMuQXBwbGljYXRpb25Db250ZXh0CmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuZmxvdy5maXJzdAppbXBvcnQgamF2YS51dGlsLlVVSUQKaW1wb3J0IGphdmF4LmluamVjdC5JbmplY3QKaW1wb3J0IGphdmF4LmluamVjdC5TaW5nbGV0b24KCnNlYWxlZCBpbnRlcmZhY2UgUHJvdmlzaW9uaW5nUHJvZ3Jlc3MgewogICAgZGF0YSBvYmplY3QgSWRsZSA6IFByb3Zpc2lvbmluZ1Byb2dyZXNzCiAgICBkYXRhIG9iamVjdCBMb2FkaW5nQ2F0YWxvZyA6IFByb3Zpc2lvbmluZ1Byb2dyZXNzCiAgICBkYXRhIG9iamVjdCBDcmVhdGluZ1RhYmxlcyA6IFByb3Zpc2lvbmluZ1Byb2dyZXNzCiAgICBkYXRhIGNsYXNzIENvbXBsZXRlKHZhbCBjYXRhbG9nQWxyZWFkeVByZXNlbnQ6IEJvb2xlYW4sIHZhbCB0YWJsZXNDcmVhdGVkOiBJbnQpIDogUHJvdmlzaW9uaW5nUHJvZ3Jlc3MKICAgIGRhdGEgY2xhc3MgRmFpbGVkKHZhbCBtZXNzYWdlOiBTdHJpbmcpIDogUHJvdmlzaW9uaW5nUHJvZ3Jlc3MKfQoKZGF0YSBjbGFzcyBQcm92aXNpb25pbmdTbmFwc2hvdCgKICAgIHZhbCBjYXRhbG9nUHJlc2VudDogQm9vbGVhbiwKICAgIHZhbCB0YWJsZXNQcmVzZW50OiBCb29sZWFuCikgewogICAgdmFsIGlzUmVhZHk6IEJvb2xlYW4gZ2V0KCkgPSBjYXRhbG9nUHJlc2VudCAmJiB0YWJsZXNQcmVzZW50Cn0KCi8qKiBTYWZlLCByZXBlYXRhYmxlIGZpcnN0LXJ1biBzZXR1cC4gSXQgb25seSBjcmVhdGVzIG1pc3NpbmcgY2F0YWxvZyByZWNvcmRzIGFuZCB0YWJsZSBudW1iZXJzLiAqLwpAU2luZ2xldG9uCmNsYXNzIEZpcnN0UnVuUHJvdmlzaW9uZXIgQEluamVjdCBjb25zdHJ1Y3RvcigKICAgIEBBcHBsaWNhdGlvbkNvbnRleHQgcHJpdmF0ZSB2YWwgY29udGV4dDogQ29udGV4dCwKICAgIHByaXZhdGUgdmFsIGRiOiBBc3Bhc0RhdGFiYXNlLAogICAgcHJpdmF0ZSB2YWwgY2F0YWxvZ0ltcG9ydGVyOiBDYXRhbG9nSW1wb3J0ZXIKKSB7CiAgICBzdXNwZW5kIGZ1biBzbmFwc2hvdCgpOiBQcm92aXNpb25pbmdTbmFwc2hvdCA9IGRiLndpdGhUcmFuc2FjdGlvbiB7CiAgICAgICAgUHJvdmlzaW9uaW5nU25hcHNob3QoCiAgICAgICAgICAgIC8vIEEgZnVsbHkgZGlzYWJsZWQgY2F0YWxvZyBpcyBzdGlsbCBjb25maWd1cmVkOyBkbyBub3QgcmUtaW1wb3J0IG92ZXIgaXQuCiAgICAgICAgICAgIGNhdGFsb2dQcmVzZW50ID0gZGIuY2F0YWxvZ0RhbygpLm9ic2VydmVDYXRlZ29yaWVzKCkuZmlyc3QoKS5pc05vdEVtcHR5KCksCiAgICAgICAgICAgIHRhYmxlc1ByZXNlbnQgPSBkYi50YWJsZURhbygpLmxpc3RBbGwoKS5pc05vdEVtcHR5KCkKICAgICAgICApCiAgICB9CgogICAgc3VzcGVuZCBmdW4gaW5pdGlhbGl6ZUNhdGFsb2dJZk1pc3Npbmcob25Qcm9ncmVzczogKFByb3Zpc2lvbmluZ1Byb2dyZXNzKSAtPiBVbml0ID0ge30pIHsKICAgICAgICB2YWwgY2F0YWxvZ1ByZXNlbnQgPSBkYi5jYXRhbG9nRGFvKCkub2JzZXJ2ZUNhdGVnb3JpZXMoKS5maXJzdCgpLmlzTm90RW1wdHkoKQogICAgICAgIGlmICghY2F0YWxvZ1ByZXNlbnQpIHsKICAgICAgICAgICAgb25Qcm9ncmVzcyhQcm92aXNpb25pbmdQcm9ncmVzcy5Mb2FkaW5nQ2F0YWxvZykKICAgICAgICAgICAgLy8gVGhlIGltcG9ydGVyIGlzIHRyYW5zYWN0aW9uYWwgYW5kIGNyZWF0ZS1vbmx5IHVubGVzcyBhbiBleHBsaWNpdCByZWZyZXNoIHJlcXVlc3RzIG90aGVyd2lzZS4KICAgICAgICAgICAgY2F0YWxvZ0ltcG9ydGVyLmltcG9ydEZyb21Bc3NldHMoY29udGV4dCwgcmVwbGFjZSA9IGZhbHNlKQogICAgICAgIH0KICAgIH0KCiAgICAvKioKICAgICAqIENyZWF0ZXMgb25seSBudW1iZXJzIHRoYXQgZG8gbm90IGV4aXN0LiBUaGUgY2FsbGVyIG11c3Qgc2VsZWN0IHRoZSBwcm9wb3NlZCByYW5nZTsgbm8KICAgICAqIHJlc3RhdXJhbnQtc3BlY2lmaWMgdGFibGUgbGF5b3V0IGlzIGFzc3VtZWQgYnkgdGhpcyBzZXJ2aWNlLgogICAgICovCiAgICBzdXNwZW5kIGZ1biBwcm92aXNpb24odGFibGVOdW1iZXJzOiBJbnRSYW5nZSwgb25Qcm9ncmVzczogKFByb3Zpc2lvbmluZ1Byb2dyZXNzKSAtPiBVbml0ID0ge30pOiBQcm92aXNpb25pbmdQcm9ncmVzcy5Db21wbGV0ZSB7CiAgICAgICAgcmVxdWlyZSghdGFibGVOdW1iZXJzLmlzRW1wdHkoKSkgeyAiSW5mb3JtZSBhbyBtZW5vcyB1bSBuw7ptZXJvIGRlIG1lc2EuIiB9CiAgICAgICAgdmFsIGNhdGFsb2dBbHJlYWR5UHJlc2VudCA9IGRiLmNhdGFsb2dEYW8oKS5vYnNlcnZlQ2F0ZWdvcmllcygpLmZpcnN0KCkuaXNOb3RFbXB0eSgpCiAgICAgICAgaW5pdGlhbGl6ZUNhdGFsb2dJZk1pc3Npbmcob25Qcm9ncmVzcykKICAgICAgICBvblByb2dyZXNzKFByb3Zpc2lvbmluZ1Byb2dyZXNzLkNyZWF0aW5nVGFibGVzKQogICAgICAgIHZhbCBjcmVhdGVkID0gZGIud2l0aFRyYW5zYWN0aW9uIHsKICAgICAgICAgICAgdmFsIG9jY3VwaWVkID0gZGIudGFibGVEYW8oKS5saXN0QWxsKCkubWFwVG8obXV0YWJsZVNldE9mKCkpIHsgaXQubnVtYmVyIH0KICAgICAgICAgICAgdmFyIGNyZWF0ZWRDb3VudCA9IDAKICAgICAgICAgICAgZm9yIChudW1iZXIgaW4gdGFibGVOdW1iZXJzKSB7CiAgICAgICAgICAgICAgICBpZiAoIW9jY3VwaWVkLmFkZChudW1iZXIpKSBjb250aW51ZQogICAgICAgICAgICAgICAgZGIudGFibGVEYW8oKS51cHNlcnQoVGFibGVFbnRpdHkoCiAgICAgICAgICAgICAgICAgICAgdGFibGVJZCA9IFVVSUQucmFuZG9tVVVJRCgpLnRvU3RyaW5nKCksCiAgICAgICAgICAgICAgICAgICAgbnVtYmVyID0gbnVtYmVyLAogICAgICAgICAgICAgICAgICAgIGxhYmVsID0gIk1lc2EgJG51bWJlciIsCiAgICAgICAgICAgICAgICAgICAgc3RhdHVzID0gImZyZWUiLAogICAgICAgICAgICAgICAgICAgIG9wZW5lZEF0ID0gbnVsbCwKICAgICAgICAgICAgICAgICAgICBjbG9zZWRBdCA9IG51bGwsCiAgICAgICAgICAgICAgICAgICAgY3VycmVudExlYXNlSWQgPSBudWxsCiAgICAgICAgICAgICAgICApKQogICAgICAgICAgICAgICAgY3JlYXRlZENvdW50KysKICAgICAgICAgICAgfQogICAgICAgICAgICBjcmVhdGVkQ291bnQKICAgICAgICB9CiAgICAgICAgcmV0dXJuIFByb3Zpc2lvbmluZ1Byb2dyZXNzLkNvbXBsZXRlKAogICAgICAgICAgICBjYXRhbG9nQWxyZWFkeVByZXNlbnQgPSBjYXRhbG9nQWxyZWFkeVByZXNlbnQsCiAgICAgICAgICAgIHRhYmxlc0NyZWF0ZWQgPSBjcmVhdGVkCiAgICAgICAgKS5hbHNvKG9uUHJvZ3Jlc3MpCiAgICB9Cn0K
+package br.com.aspas.contingencia.data.bootstrap
+
+import android.content.Context
+import androidx.room.withTransaction
+import br.com.aspas.contingencia.data.catalog.CatalogImporter
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.db.entity.TableEntity
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.first
+import java.util.UUID
+import javax.inject.Inject
+import javax.inject.Singleton
+
+sealed interface ProvisioningProgress {
+    data object Idle : ProvisioningProgress
+    data object LoadingCatalog : ProvisioningProgress
+    data object CreatingTables : ProvisioningProgress
+    data class Complete(val catalogAlreadyPresent: Boolean, val tablesCreated: Int) : ProvisioningProgress
+    data class Failed(val message: String) : ProvisioningProgress
+}
+
+data class ProvisioningSnapshot(
+    val catalogPresent: Boolean,
+    val tablesPresent: Boolean
+) {
+    val isReady: Boolean get() = catalogPresent && tablesPresent
+}
+
+/** Safe, repeatable first-run setup. It only creates missing catalog records and table numbers. */
+@Singleton
+class FirstRunProvisioner @Inject constructor(
+    @ApplicationContext private val context: Context,
+    private val db: AspasDatabase,
+    private val catalogImporter: CatalogImporter
+) {
+    suspend fun snapshot(): ProvisioningSnapshot = db.withTransaction {
+        ProvisioningSnapshot(
+            // A fully disabled catalog is still configured; do not re-import over it.
+            catalogPresent = db.catalogDao().observeCategories().first().isNotEmpty(),
+            tablesPresent = db.tableDao().listAll().isNotEmpty()
+        )
+    }
+
+    suspend fun initializeCatalogIfMissing(onProgress: (ProvisioningProgress) -> Unit = {}) {
+        val catalogPresent = db.catalogDao().observeCategories().first().isNotEmpty()
+        if (!catalogPresent) {
+            onProgress(ProvisioningProgress.LoadingCatalog)
+            // The importer is transactional and create-only unless an explicit refresh requests otherwise.
+            catalogImporter.importFromAssets(context, replace = false)
+        }
+    }
+
+    /**
+     * Creates only numbers that do not exist. The caller must select the proposed range; no
+     * restaurant-specific table layout is assumed by this service.
+     */
+    suspend fun provision(tableNumbers: IntRange, onProgress: (ProvisioningProgress) -> Unit = {}): ProvisioningProgress.Complete {
+        require(!tableNumbers.isEmpty()) { "Informe ao menos um número de mesa." }
+        val catalogAlreadyPresent = db.catalogDao().observeCategories().first().isNotEmpty()
+        initializeCatalogIfMissing(onProgress)
+        onProgress(ProvisioningProgress.CreatingTables)
+        val created = db.withTransaction {
+            val occupied = db.tableDao().listAll().mapTo(mutableSetOf()) { it.number }
+            var createdCount = 0
+            for (number in tableNumbers) {
+                if (!occupied.add(number)) continue
+                db.tableDao().upsert(TableEntity(
+                    tableId = UUID.randomUUID().toString(),
+                    number = number,
+                    label = "Mesa $number",
+                    status = "free",
+                    openedAt = null,
+                    closedAt = null,
+                    currentLeaseId = null
+                ))
+                createdCount++
+            }
+            createdCount
+        }
+        return ProvisioningProgress.Complete(
+            catalogAlreadyPresent = catalogAlreadyPresent,
+            tablesCreated = created
+        ).also(onProgress)
+    }
+}
