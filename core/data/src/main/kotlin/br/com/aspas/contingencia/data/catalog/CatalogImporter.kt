@@ -1,1 +1,82 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuY2F0YWxvZwoKaW1wb3J0IGFuZHJvaWQuY29udGVudC5Db250ZXh0CmltcG9ydCBhbmRyb2lkeC5yb29tLndpdGhUcmFuc2FjdGlvbgppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmRiLkFzcGFzRGF0YWJhc2UKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5kYi5lbnRpdHkuQ2F0YWxvZ0NhdGVnb3J5RW50aXR5CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuZGIuZW50aXR5LkNhdGFsb2dJdGVtRW50aXR5CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuZGIuZW50aXR5LlByaW50ZXJFbnRpdHkKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5mbG93LmZpcnN0CmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uU2VyaWFsaXphYmxlCmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uZGVjb2RlRnJvbVN0cmluZwppbXBvcnQga290bGlueC5zZXJpYWxpemF0aW9uLmVuY29kZVRvU3RyaW5nCmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uanNvbi5Kc29uCmltcG9ydCB0aW1iZXIubG9nLlRpbWJlcgppbXBvcnQgamF2YXguaW5qZWN0LkluamVjdAppbXBvcnQgamF2YXguaW5qZWN0LlNpbmdsZXRvbgoKQFNlcmlhbGl6YWJsZSBkYXRhIGNsYXNzIENhdGFsb2dGaWxlKHZhbCB2ZXJzaW9uOiBJbnQsIHZhbCBjYXRlZ29yaWVzOiBMaXN0PENhdGVnb3J5SnNvbj4sCiAgICB2YWwgaXRlbXM6IExpc3Q8SXRlbUpzb24+LCB2YWwgcHJpbnRlcnM6IExpc3Q8UHJpbnRlckpzb24+KQpAU2VyaWFsaXphYmxlIGRhdGEgY2xhc3MgQ2F0ZWdvcnlKc29uKHZhbCBpZDogU3RyaW5nLCB2YWwgbmFtZTogU3RyaW5nLAogICAgdmFsIHByaW50X2Rlc3RpbmF0aW9uOiBTdHJpbmcsIHZhbCBzb3J0X29yZGVyOiBJbnQpCkBTZXJpYWxpemFibGUgZGF0YSBjbGFzcyBJdGVtSnNvbih2YWwgaWQ6IFN0cmluZywgdmFsIG5hbWU6IFN0cmluZywgdmFsIGNhdGVnb3J5X2lkOiBTdHJpbmcsCiAgICB2YWwgcHJpY2U6IERvdWJsZSwgdmFsIHByaWNpbmdfbW9kZTogU3RyaW5nID0gImZpeGVkIiwgdmFsIHByaWNlX2hhbGY6IERvdWJsZT8gPSBudWxsLAogICAgdmFsIHdlaWdodF9tYXhfZzogSW50PyA9IG51bGwsIHZhbCB3ZWlnaHRfdGllcnNfanNvbjogU3RyaW5nPyA9IG51bGwsCiAgICB2YWwgcGFycmlsbGFfYnVuZGxlX2pzb246IFN0cmluZz8gPSBudWxsLCB2YWwgcHJpbnRfZGVzdGluYXRpb25zOiBMaXN0PFN0cmluZz4sCiAgICB2YWwgbW9kaWZpZXJzOiBMaXN0PFN0cmluZz4gPSBlbXB0eUxpc3QoKSwgdmFsIHRhZ3M6IExpc3Q8U3RyaW5nPiA9IGVtcHR5TGlzdCgpLAogICAgdmFsIGRlc2NyaXB0aW9uOiBTdHJpbmc/ID0gbnVsbCwgdmFsIG9yaWdpbjogU3RyaW5nPyA9IG51bGwsIHZhbCBzZXJ2ZXM6IEludD8gPSBudWxsLAogICAgdmFsIHNvcnRfb3JkZXI6IEludCA9IDApCkBTZXJpYWxpemFibGUgZGF0YSBjbGFzcyBQcmludGVySnNvbih2YWwgaWQ6IFN0cmluZywgdmFsIG5hbWU6IFN0cmluZywgdmFsIGlwOiBTdHJpbmcsCiAgICB2YWwgcG9ydDogSW50ID0gOTEwMCwgdmFsIGhlYWRlcl9sYWJlbDogU3RyaW5nLCB2YWwgZ3JvdXBfaWQ6IFN0cmluZz8gPSBudWxsKQoKLyoqIEltcG9ydHMgYnVuZGxlZCBjYXRhbG9nIGRhdGEgd2l0aG91dCBjaGFuZ2luZyBvcGVyYXRpbmcgY29uZmlndXJhdGlvbiBieSBkZWZhdWx0LiAqLwpAU2luZ2xldG9uCmNsYXNzIENhdGFsb2dJbXBvcnRlciBASW5qZWN0IGNvbnN0cnVjdG9yKAogICAgcHJpdmF0ZSB2YWwgZGI6IEFzcGFzRGF0YWJhc2UsCiAgICBwcml2YXRlIHZhbCBqc29uOiBKc29uCikgewogICAgc3VzcGVuZCBmdW4gaW1wb3J0RnJvbUFzc2V0cyhjdHg6IENvbnRleHQsIGFzc2V0TmFtZTogU3RyaW5nID0gImNhdGFsb2cuanNvbiIsIHJlcGxhY2U6IEJvb2xlYW4gPSBmYWxzZSkgewogICAgICAgIHZhbCByYXcgPSBjdHguYXNzZXRzLm9wZW4oYXNzZXROYW1lKS5idWZmZXJlZFJlYWRlcigpLnVzZSB7IGl0LnJlYWRUZXh0KCkgfQogICAgICAgIGltcG9ydEZpbGUoanNvbi5kZWNvZGVGcm9tU3RyaW5nPENhdGFsb2dGaWxlPihyYXcpLCByZXBsYWNlKQogICAgfQoKICAgIC8qKgogICAgICogVGhlIGRlZmF1bHQgaXMgY3JlYXRlLW9ubHk6IGV4aXN0aW5nIGNhdGFsb2cgcmVjb3JkcywgYXZhaWxhYmlsaXR5IGNob2ljZXMgYW5kIHByaW50ZXJzCiAgICAgKiBhcmUgbGVmdCB1bnRvdWNoZWQuIFtyZXBsYWNlXSByZW1haW5zIGZvciBhbiBleHBsaWNpdCBkZWZpbml0aW9uIHJlZnJlc2gsIGJ1dCBpcyBzdGlsbAogICAgICogbm9uLWRlc3RydWN0aXZlOiBpdCBkb2VzIG5vdCBkZWxldGUgcmVjb3JkcyBhbmQgYWx3YXlzIHJldGFpbnMgYXZhaWxhYmlsaXR5IGNob2ljZXMuCiAgICAgKi8KICAgIHN1c3BlbmQgZnVuIGltcG9ydEZpbGUoZmlsZTogQ2F0YWxvZ0ZpbGUsIHJlcGxhY2U6IEJvb2xlYW4gPSBmYWxzZSkgPSBkYi53aXRoVHJhbnNhY3Rpb24gewogICAgICAgIHZhbCBjYXRhbG9nID0gZGIuY2F0YWxvZ0RhbygpCiAgICAgICAgdmFsIGV4aXN0aW5nQ2F0ZWdvcmllcyA9IGNhdGFsb2cub2JzZXJ2ZUNhdGVnb3JpZXMoKS5maXJzdCgpLmFzc29jaWF0ZUJ5IHsgaXQuY2F0ZWdvcnlJZCB9CiAgICAgICAgZmlsZS5jYXRlZ29yaWVzLmZvckVhY2ggeyBzb3VyY2UgLT4KICAgICAgICAgICAgaWYgKHJlcGxhY2UgfHwgc291cmNlLmlkICFpbiBleGlzdGluZ0NhdGVnb3JpZXMpIHsKICAgICAgICAgICAgICAgIGNhdGFsb2cudXBzZXJ0Q2F0ZWdvcnkoQ2F0YWxvZ0NhdGVnb3J5RW50aXR5KHNvdXJjZS5pZCwgc291cmNlLm5hbWUsIHNvdXJjZS5wcmludF9kZXN0aW5hdGlvbiwgc291cmNlLnNvcnRfb3JkZXIpKQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGZpbGUuaXRlbXMuZm9yRWFjaCB7IHNvdXJjZSAtPgogICAgICAgICAgICB2YWwgZXhpc3RpbmcgPSBjYXRhbG9nLmdldEl0ZW0oc291cmNlLmlkKQogICAgICAgICAgICBpZiAoZXhpc3RpbmcgPT0gbnVsbCB8fCByZXBsYWNlKSB7CiAgICAgICAgICAgICAgICAvLyBBIHJlZnJlc2ggdXBkYXRlcyBzdXBwbGllZCBjYXRhbG9nIGZpZWxkcyBidXQgbmV2ZXIgdHVybnMgYW4gb3BlcmF0b3ItZGlzYWJsZWQgaXRlbSBiYWNrIG9uLgogICAgICAgICAgICAgICAgY2F0YWxvZy51cHNlcnRJdGVtKHNvdXJjZS50b0VudGl0eShqc29uKS5jb3B5KGF2YWlsYWJsZSA9IGV4aXN0aW5nPy5hdmFpbGFibGUgPzogdHJ1ZSkpCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgZmlsZS5wcmludGVycy5mb3JFYWNoIHsgc291cmNlIC0+CiAgICAgICAgICAgIC8vIElQLCBwb3J0LCBlbmFibGVkIHN0YXRlIGFuZCBoZWFsdGggYXJlIG9wZXJhdGlvbmFsIGNvbmZpZ3VyYXRpb246IG5ldmVyIHJlcGxhY2UgdGhlbS4KICAgICAgICAgICAgaWYgKGRiLnByaW50ZXJEYW8oKS5nZXRCeUlkKHNvdXJjZS5pZCkgPT0gbnVsbCkgewogICAgICAgICAgICAgICAgZGIucHJpbnRlckRhbygpLnVwc2VydChQcmludGVyRW50aXR5KHNvdXJjZS5pZCwgc291cmNlLm5hbWUsIHNvdXJjZS5pcCwgc291cmNlLnBvcnQsCiAgICAgICAgICAgICAgICAgICAgc291cmNlLmhlYWRlcl9sYWJlbCwgc291cmNlLmdyb3VwX2lkLCB0cnVlLCBudWxsLCAidW5rbm93biIpKQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIFRpbWJlci5pKCJjYXRhbG9nOiAke2ZpbGUuaXRlbXMuc2l6ZX0gaXRlbnMgcHJvY2Vzc2Fkb3MgKHJlcGxhY2U9JHJlcGxhY2UpIikKICAgIH0KfQoKcHJpdmF0ZSBmdW4gSXRlbUpzb24udG9FbnRpdHkoanNvbjogSnNvbikgPSBDYXRhbG9nSXRlbUVudGl0eSgKICAgIGl0ZW1JZCA9IGlkLCBuYW1lID0gbmFtZSwgY2F0ZWdvcnlJZCA9IGNhdGVnb3J5X2lkLCBwcmljZSA9IHByaWNlLAogICAgcHJpY2luZ01vZGUgPSBwcmljaW5nX21vZGUsIHByaWNlSGFsZiA9IHByaWNlX2hhbGYsIHdlaWdodE1heEcgPSB3ZWlnaHRfbWF4X2csCiAgICB3ZWlnaHRUaWVyc0pzb24gPSB3ZWlnaHRfdGllcnNfanNvbiwgcGFycmlsbGFCdW5kbGVKc29uID0gcGFycmlsbGFfYnVuZGxlX2pzb24sCiAgICBwcmludERlc3RpbmF0aW9uc0pzb24gPSBqc29uLmVuY29kZVRvU3RyaW5nKHByaW50X2Rlc3RpbmF0aW9ucyksCiAgICBtb2RpZmllcnNKc29uID0gaWYgKG1vZGlmaWVycy5pc0VtcHR5KCkpIG51bGwgZWxzZSBqc29uLmVuY29kZVRvU3RyaW5nKG1vZGlmaWVycyksCiAgICB0YWdzSnNvbiA9IGlmICh0YWdzLmlzRW1wdHkoKSkgbnVsbCBlbHNlIGpzb24uZW5jb2RlVG9TdHJpbmcodGFncyksCiAgICBkZXNjcmlwdGlvbiA9IGRlc2NyaXB0aW9uLCBvcmlnaW4gPSBvcmlnaW4sIHNlcnZlcyA9IHNlcnZlcywKICAgIGF2YWlsYWJsZSA9IHRydWUsIHNvcnRPcmRlciA9IHNvcnRfb3JkZXIpCg==
+package br.com.aspas.contingencia.data.catalog
+
+import android.content.Context
+import androidx.room.withTransaction
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.db.entity.CatalogCategoryEntity
+import br.com.aspas.contingencia.data.db.entity.CatalogItemEntity
+import br.com.aspas.contingencia.data.db.entity.PrinterEntity
+import kotlinx.coroutines.flow.first
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import timber.log.Timber
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Serializable data class CatalogFile(val version: Int, val categories: List<CategoryJson>,
+    val items: List<ItemJson>, val printers: List<PrinterJson>)
+@Serializable data class CategoryJson(val id: String, val name: String,
+    val print_destination: String, val sort_order: Int)
+@Serializable data class ItemJson(val id: String, val name: String, val category_id: String,
+    val price: Double, val pricing_mode: String = "fixed", val price_half: Double? = null,
+    val weight_max_g: Int? = null, val weight_tiers_json: String? = null,
+    val parrilla_bundle_json: String? = null, val print_destinations: List<String>,
+    val modifiers: List<String> = emptyList(), val tags: List<String> = emptyList(),
+    val description: String? = null, val origin: String? = null, val serves: Int? = null,
+    val sort_order: Int = 0)
+@Serializable data class PrinterJson(val id: String, val name: String, val ip: String,
+    val port: Int = 9100, val header_label: String, val group_id: String? = null)
+
+/** Imports bundled catalog data without changing operating configuration by default. */
+@Singleton
+class CatalogImporter @Inject constructor(
+    private val db: AspasDatabase,
+    private val json: Json
+) {
+    suspend fun importFromAssets(ctx: Context, assetName: String = "catalog.json", replace: Boolean = false) {
+        val raw = ctx.assets.open(assetName).bufferedReader().use { it.readText() }
+        importFile(json.decodeFromString<CatalogFile>(raw), replace)
+    }
+
+    /**
+     * The default is create-only: existing catalog records, availability choices and printers
+     * are left untouched. [replace] remains for an explicit definition refresh, but is still
+     * non-destructive: it does not delete records and always retains availability choices.
+     */
+    suspend fun importFile(file: CatalogFile, replace: Boolean = false) = db.withTransaction {
+        val catalog = db.catalogDao()
+        val existingCategories = catalog.observeCategories().first().associateBy { it.categoryId }
+        file.categories.forEach { source ->
+            if (replace || source.id !in existingCategories) {
+                catalog.upsertCategory(CatalogCategoryEntity(source.id, source.name, source.print_destination, source.sort_order))
+            }
+        }
+        file.items.forEach { source ->
+            val existing = catalog.getItem(source.id)
+            if (existing == null || replace) {
+                // A refresh updates supplied catalog fields but never turns an operator-disabled item back on.
+                catalog.upsertItem(source.toEntity(json).copy(available = existing?.available ?: true))
+            }
+        }
+        file.printers.forEach { source ->
+            // IP, port, enabled state and health are operational configuration: never replace them.
+            if (db.printerDao().getById(source.id) == null) {
+                db.printerDao().upsert(PrinterEntity(source.id, source.name, source.ip, source.port,
+                    source.header_label, source.group_id, true, null, "unknown"))
+            }
+        }
+        Timber.i("catalog: ${file.items.size} itens processados (replace=$replace)")
+    }
+}
+
+private fun ItemJson.toEntity(json: Json) = CatalogItemEntity(
+    itemId = id, name = name, categoryId = category_id, price = price,
+    pricingMode = pricing_mode, priceHalf = price_half, weightMaxG = weight_max_g,
+    weightTiersJson = weight_tiers_json, parrillaBundleJson = parrilla_bundle_json,
+    printDestinationsJson = json.encodeToString(print_destinations),
+    modifiersJson = if (modifiers.isEmpty()) null else json.encodeToString(modifiers),
+    tagsJson = if (tags.isEmpty()) null else json.encodeToString(tags),
+    description = description, origin = origin, serves = serves,
+    available = true, sortOrder = sort_order)
