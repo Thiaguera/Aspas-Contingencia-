@@ -13,75 +13,142 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Inspect aspas.md Content
-        run: |
-          echo "=== VERIFICANDO O ASPAS.MD ==="
-          if [ -f "aspas.md" ]; then
-            echo "Tamanho do ficheiro:"
-            ls -lh aspas.md
-            echo "Primeiras 20 linhas do aspas.md:"
-            head -n 20 aspas.md
-          else
-            echo "ERRO: O ficheiro aspas.md não existe na raiz do repositório!"
-            exit 1
-          fi
+      - name: Set up JDK 17
+        uses: android-actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-      - name: Unpack, Setup Gradle and Build APK
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+
+      - name: Parse aspas.md, Setup Gradle and Build APK
         run: |
           python3 -c '
           import os, urllib.request, zipfile, subprocess, base64
 
-          print("A ler o aspas.md linha a linha...")
+          print("--- A ler e processar o aspas.md ---")
+          if not os.path.exists("aspas.md"):
+              print("ERRO: aspas.md nao encontrado!")
+              exit(1)
+
           with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
               lines = f.readlines()
 
-          current_file = None
-          code_buffer = []
-          in_block = False
-          count = 0
+          # Lista exata de caminhos conhecidos que aparecem no aspas.md
+          known_paths = [
+              "settings.gradle.kts",
+              "build.gradle.kts",
+              "gradle.properties",
+              "gradle/libs.versions.toml",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt",
+              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt",
+              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia.feature.kitchen/KitchenScreen.kt".replace(".", "/"), # Ajuste do pacote
+              "app/src/main/assets/catalog.json",
+              "app/proguard-rules.pro",
+              "app/src/main/AndroidManifest.xml",
+              "app/src/main/res/values/strings.xml",
+              "app/src/main/res/values/themes.xml",
+              "app/src/main/res/xml/network_security_config.xml"
+          ]
 
-          for line in lines:
-              stripped = line.strip()
-              if stripped.startswith("```"):
-                  if in_block:
-                      if current_file:
-                          current_path = current_file.strip()
-                          os.makedirs(os.path.dirname(current_path) if os.path.dirname(current_path) else ".", exist_ok=True)
-                          with open(current_path, "w", encoding="utf-8") as out:
-                              out.writelines(code_buffer)
-                          print(f"Extraído com sucesso: {current_path}")
-                          count += 1
-                      current_file = None
-                      code_buffer = []
-                      in_block = False
-                  else:
-                      in_block = True
-                      parts = stripped.split()
-                      if len(parts) > 1:
-                          current_file = parts[-1]
-              elif in_block:
-                  code_buffer.append(line)
-              else:
-                  if stripped and not stripped.startswith("#") and ("/" in stripped or "." in stripped):
-                      current_file = stripped
+          # Vamos ler o ficheiro completo como uma string
+          full_text = "".join(lines)
 
-          print(f"Total de ficheiros extraídos pelo script: {count}")
+          # Algoritmo de corte baseado nas posições dos títulos dos ficheiros
+          extracted_count = 0
+          for i, path in enumerate(known_paths):
+              # Normalizar possíveis variações de barras no path do app/src/...
+              actual_path = path
+              pos = full_text.find(actual_path)
+              if pos == -1:
+                  # Tentar com barras invertidas ou formato alternativo
+                  continue
+              
+              # Encontrar o início do conteúdo logo após o nome do caminho
+              start_content = pos + len(actual_path)
+              
+              # O fim do conteúdo é o início do próximo caminho conhecido
+              end_content = len(full_text)
+              for next_path in known_paths[i+1:]:
+                  next_pos = full_text.find(next_path, start_content)
+                  if next_pos != -1 and next_pos < end_content:
+                      end_content = next_pos
+                      break
+              
+              file_data = full_text[start_content:end_content].strip()
+              
+              # Limpar cabeçalhos de secção caso venham no texto
+              if file_data.startswith("---"):
+                  file_data = file_data.split("---", 2)[-1].strip()
 
-          # Localizar o projeto
-          project_dir = "."
-          for root, dirs, files in os.walk("."):
-              if "settings.gradle" in files or "settings.gradle.kts" in files:
-                  project_dir = root
-                  break
+              # Criar diretórios e escrever o ficheiro
+              dir_name = os.path.dirname(actual_path)
+              if dir_name:
+                  os.makedirs(dir_name, exist_ok=True)
+              
+              with open(actual_path, "w", encoding="utf-8") as out:
+                  out.write(file_data)
+              print(f"[CRIADO] {actual_path}")
+              extracted_count += 1
 
-          print(f"Diretório do projeto detetado: {project_dir}")
-          os.chdir(project_dir)
+          print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
 
-          print("A descarregar o Gradle 8.9...")
+          print("\nA descarregar o Gradle 8.9...")
           encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
           target_url = base64.b64decode(encoded_url).decode("utf-8")
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
+          print("A descompactar o Gradle...")
           with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
               zip_ref.extractall(".")
 
@@ -89,10 +156,13 @@ jobs:
           if os.path.exists(gradle_bin):
               os.chmod(gradle_bin, 0o755)
 
+          print("A gerar o Gradle Wrapper...")
           subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
+
           if os.path.exists("gradlew"):
               os.chmod("gradlew", 0o755)
 
+          print("A compilar o APK Debug...")
           subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
           '
 
