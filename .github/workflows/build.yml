@@ -27,14 +27,12 @@ jobs:
       - name: Unpack, Setup Gradle and Build APK
         run: |
           python3 -c '
-          import os, urllib.request, zipfile, subprocess, base64
+          import os, urllib.request, zipfile, subprocess, base64, re
 
           print("--- Unpacking aspas.md ---")
           with open("aspas.md", "r", encoding="utf-8") as f:
               content = f.read()
 
-          # Extração robusta baseada em blocos de código markdown
-          import re
           blocks = re.findall(r"([^\n]+\n)?```[^\n]*\n(.*?)```", content, re.DOTALL)
           
           for header, code in blocks:
@@ -42,25 +40,25 @@ jobs:
               if header:
                   filepath = header.strip().split()[0]
               
-              if not filepath or "/" not in filepath:
-                  # Se não tiver caminho explícito, assume a estrutura do android-direct-print
+              if not filepath:
                   continue
               
-              os.makedirs(os.path.dirname(filepath), exist_ok=True)
+              dir_name = os.path.dirname(filepath)
+              if dir_name:
+                  os.makedirs(dir_name, exist_ok=True)
+              
               with open(filepath, "w", encoding="utf-8") as out:
                   out.write(code)
               print(f"Created: {filepath}")
 
-          # Forçar entrada na pasta do projeto Android
-          project_dir = "android-direct-print"
-          if not os.path.exists(project_dir):
-              # Se não encontrar com esse nome, procura por uma pasta que contenha build.gradle
-              for root, dirs, files in os.walk("."):
-                  if "build.gradle" in files and root != ".":
-                      project_dir = root
-                      break
+          # Localizar dinamicamente onde ficou o projeto (procura por settings.gradle)
+          project_dir = "."
+          for root, dirs, files in os.walk("."):
+              if "settings.gradle" in files or "settings.gradle.kts" in files:
+                  project_dir = root
+                  break
 
-          print(f"Entering project directory: {project_dir}")
+          print(f"Project directory found at: {project_dir}")
           os.chdir(project_dir)
 
           print("Downloading Gradle 8.9...")
