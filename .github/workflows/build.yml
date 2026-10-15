@@ -49,7 +49,7 @@ jobs:
 
       - name: Generate Gradle Wrapper and Build APK
         run: |
-          curl -O [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)
+          curl -L -O [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)
           unzip -q gradle-8.9-bin.zip
           export PATH=$PWD/gradle-8.9/bin:$PATH
           gradle wrapper --gradle-version 8.9
