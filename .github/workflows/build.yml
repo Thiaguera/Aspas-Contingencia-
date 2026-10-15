@@ -24,95 +24,25 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Unpack, Setup Gradle and Build APK
+      - name: Setup Gradle and Build APK
         run: |
-          python3 -c '
-          import os, urllib.request, zipfile, subprocess, base64
+          # Entrar diretamente na pasta do projeto Android
+          cd android-direct-print
 
-          print("--- A ler aspas.md ---")
-          if not os.path.exists("aspas.md"):
-              print("ERRO CRITICO: aspas.md nao encontrado na raiz!")
-              exit(1)
+          echo "A descarregar o Gradle 8.9..."
+          URL="https://services.gradle.org/distributions/gradle-8.9-bin.zip"
+          curl -L -o gradle-8.9-bin.zip "$URL"
 
-          with open("aspas.md", "r", encoding="utf-8") as f:
-              lines = f.readlines()
+          echo "A descompactar o Gradle..."
+          unzip -q gradle-8.9-bin.zip
 
-          current_path = None
-          code_buffer = []
-          in_code_block = False
-          extracted_count = 0
+          echo "A gerar o Gradle Wrapper..."
+          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
 
-          for line in lines:
-              stripped = line.strip()
-              if stripped.startswith("```"):
-                  if in_code_block:
-                      # Fim do bloco de código
-                      if current_path:
-                          current_path = current_path.strip()
-                          dir_name = os.path.dirname(current_path)
-                          if dir_name:
-                              os.makedirs(dir_name, exist_ok=True)
-                          with open(current_path, "w", encoding="utf-8") as out:
-                              out.writelines(code_buffer)
-                          print(f"[CRIADO] {current_path}")
-                          extracted_count += 1
-                      current_path = None
-                      code_buffer = []
-                      in_code_block = False
-                  else:
-                      # Início do bloco de código
-                      in_code_block = True
-                      # Verifica se o caminho foi incluído na mesma linha do ``` (ex: ```kotlin app/build.gradle)
-                      parts = stripped.split()
-                      if len(parts) > 1 and ("/" in parts[-1] or "." in parts[-1]):
-                          current_path = parts[-1]
-              elif in_code_block:
-                  code_buffer.append(line)
-              else:
-                  # Linha fora do bloco de código que indica o caminho do próximo ficheiro
-                  if stripped and not stripped.startswith("#") and ("/" in stripped or "." in stripped) and len(stripped) < 120:
-                      current_path = stripped
+          chmod +x gradlew
 
-          print(f"Total de ficheiros extraídos: {extracted_count}")
-
-          print("\n--- Estrutura do Workspace ---")
-          for root, dirs, files in os.walk("."):
-              for file in files:
-                  if ".git" not in root and "gradle-8.9" not in root:
-                      print(os.path.join(root, file))
-
-          # Localizar dinamicamente a pasta do projeto Gradle
-          project_dir = "."
-          for root, dirs, files in os.walk("."):
-              if "settings.gradle" in files or "settings.gradle.kts" in files:
-                  project_dir = root
-                  break
-
-          print(f"Diretório do projeto detetado: {project_dir}")
-          os.chdir(project_dir)
-
-          print("\nA descarregar o Gradle 8.9...")
-          encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
-          target_url = base64.b64decode(encoded_url).decode("utf-8")
-          urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
-
-          print("A descompactar o Gradle...")
-          with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
-              zip_ref.extractall(".")
-
-          gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
-          if os.path.exists(gradle_bin):
-              os.chmod(gradle_bin, 0o755)
-
-          print("A gerar o Gradle Wrapper...")
-          subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
-
-          if os.path.exists("gradlew"):
-              os.chmod("gradlew", 0o755)
-
-          print("A compilar o APK Debug...")
-          subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
-          '
+          echo "A compilar o APK Debug..."
+          ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
