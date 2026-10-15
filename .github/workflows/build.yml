@@ -47,7 +47,9 @@ jobs:
                 print(f"Created: {filepath}")
 
           print("Downloading Gradle 8.9...")
-          target_url = "[https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)"
+          p1 = "https://services.gradle.org/"
+          p2 = "distributions/gradle-8.9-bin.zip"
+          target_url = p1 + p2
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
           print("Unzipping Gradle...")
