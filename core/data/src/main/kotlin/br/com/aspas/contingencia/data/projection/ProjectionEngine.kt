@@ -34,68 +34,48 @@ runCatching { apply(e) }.onFailure { Timber.e(it, "projection ${e.type}") }
 }
 }
 }
-/** Applies once. Projection writes and durable marker commit atomically. */
 suspend fun apply(e: EventEnvelope) = applyMutex.withLock {
-    db.withTransaction {
-        if (db.appliedEventDao().isApplied(e.eventId)) return@withTransaction
-        applyInternal(e, replaying = false)
-        db.appliedEventDao().insert(AppliedEventEntity(e.eventId, e.hlc, System.currentTimeMillis(), "live"))
-    }
+db.withTransaction {
+if (db.appliedEventDao().isApplied(e.eventId)) return@withTransaction
+applyInternal(e, replaying = false)
+db.appliedEventDao().insert(AppliedEventEntity(e.eventId, e.hlc, System.currentTimeMillis(), "live"))
 }
-
-/**
- * Deliberate maintenance operation; it is never called at startup. Print queue
- * events are intentionally ignored, therefore a rebuild cannot produce paper.
- */
+}
 suspend fun rebuildFromHistory(): Int = maintenanceGate.withExclusiveMaintenance {
-    applyMutex.withLock {
-    // This durable flag is written before destructive work. A process crash leaves it
-    // set and physical printing fail-closed until an operator explicitly rebuilds again.
-    // Rebuild never reconciles v1/legacy state by itself. Preserve its checkpoint so
-    // queued physical work remains quarantined until a separate explicit reconciliation.
-    val legacyCheckpointHlc = db.projectionStateDao().get()?.legacyCheckpointHlc
-    db.projectionStateDao().put(ProjectionStateEntity(
-        rebuildInProgress = true,
-        legacyCheckpointHlc = legacyCheckpointHlc,
-        updatedAt = System.currentTimeMillis()
-    ))
-    var applied = 0
-    db.withTransaction {
-        clearEventProjectionsForRebuild()
-        db.appliedEventDao().clear()
-        val events = db.eventDao().all()
-        events.forEach { entity ->
-            val envelope = EventEnvelope(entity.eventId, entity.hlc, entity.deviceId, entity.userId, entity.type, entity.payload, entity.createdAt)
-            // All physical print events are skipped during rebuild. Retained print
-            // tables are authoritative and must not be changed by historical events.
-            applyInternal(envelope, replaying = true)
-            db.appliedEventDao().insert(AppliedEventEntity(envelope.eventId, envelope.hlc, System.currentTimeMillis(), "rebuild"))
-            applied++
-        }
-    }
-    // Clear maintenance only after the complete replay transaction commits. On any
-    // failure the durable true flag remains, so printing fails closed after restart.
-    db.projectionStateDao().put(ProjectionStateEntity(
-        rebuildInProgress = false,
-        legacyCheckpointHlc = legacyCheckpointHlc,
-        updatedAt = System.currentTimeMillis()
-    ))
-    applied
-    }
+applyMutex.withLock {
+val legacyCheckpointHlc = db.projectionStateDao().get()?.legacyCheckpointHlc
+db.projectionStateDao().put(ProjectionStateEntity(
+rebuildInProgress = true,
+legacyCheckpointHlc = legacyCheckpointHlc,
+updatedAt = System.currentTimeMillis()
+))
+var applied = 0
+db.withTransaction {
+clearEventProjectionsForRebuild()
+db.appliedEventDao().clear()
+val events = db.eventDao().all()
+events.forEach { entity ->
+val envelope = EventEnvelope(entity.eventId, entity.hlc, entity.deviceId, entity.userId, entity.type, entity.payload, entity.createdAt)
+applyInternal(envelope, replaying = true)
+db.appliedEventDao().insert(AppliedEventEntity(envelope.eventId, envelope.hlc, System.currentTimeMillis(), "rebuild"))
+applied++
 }
-
+}
+db.projectionStateDao().put(ProjectionStateEntity(
+rebuildInProgress = false,
+legacyCheckpointHlc = legacyCheckpointHlc,
+updatedAt = System.currentTimeMillis()
+))
+applied
+}
+}
 suspend fun isMaintenanceInProgress(): Boolean =
-    db.projectionStateDao().get()?.let { it.rebuildInProgress || it.legacyCheckpointHlc != null } == true
-
+db.projectionStateDao().get()?.let { it.rebuildInProgress || it.legacyCheckpointHlc != null } == true
 private suspend fun clearEventProjectionsForRebuild() {
-    // tables is provisioned configuration. Preserve its rows and reset only fields
-    // owned by the event projection; catalog/users/printers and all physical print
-    // tables are likewise retained.
-    db.openHelper.writableDatabase.execSQL("UPDATE `tables` SET status = 'free', openedAt = NULL, closedAt = NULL, currentLeaseId = NULL")
-    listOf("cash_movements", "cash_sessions", "audit_log", "payments", "order_items", "orders", "leases")
-        .forEach { db.openHelper.writableDatabase.execSQL("DELETE FROM `$it`") }
+db.openHelper.writableDatabase.execSQL("UPDATE `tables` SET status = 'free', openedAt = NULL, closedAt = NULL, currentLeaseId = NULL")
+listOf("cash_movements", "cash_sessions", "audit_log", "payments", "order_items", "orders", "leases")
+.forEach { db.openHelper.writableDatabase.execSQL("DELETE FROM `$it`") }
 }
-
 private suspend fun applyInternal(e: EventEnvelope, replaying: Boolean) {
 when (e.type) {
 EventType.TABLE_OPENED -> onTableOpened(e)
@@ -114,8 +94,6 @@ EventType.ORDER_VOIDED -> onVoided(e)
 EventType.PAYMENT_REGISTERED -> onPaymentRegistered(e)
 EventType.PAYMENT_REVERSED -> onPaymentReversed(e)
 EventType.SERVICE_FEE_REMOVED -> onFeeRemoved(e)
-// Every physical print event is ignored during a rebuild. Retained print
-// tables and printer state are authoritative; replay must never send or alter them.
 EventType.PRINT_BATCH_QUEUED, EventType.PRINT_BATCH_CANCELLATION_QUEUED,
 EventType.REPRINT_REQUESTED -> if (!replaying) onPrintBatchQueued(e)
 EventType.PRINT_JOB_COMPLETED -> if (!replaying) onPrintJobCompleted(e)
@@ -127,6 +105,9 @@ EventType.CATALOG_ITEM_AVAILABILITY_CHANGED -> onCatalogAvailability(e)
 EventType.CASH_SESSION_OPENED -> onCashOpened(e)
 EventType.CASH_SESSION_CLOSED -> onCashClosed(e)
 EventType.CASH_MOVEMENT -> onCashMovement(e)
+EventType.USER_CREATED -> onUserCreated(e)
+EventType.USER_DEACTIVATED -> onUserDeactivated(e)
+else -> Unit
 }
 }
 private suspend fun onTableOpened(e: EventEnvelope) {
@@ -274,11 +255,27 @@ val p = json.decodeFromString<CashMovementPayload>(e.payload)
 db.cashMovementDao().insert(CashMovementEntity(p.movementId, p.sessionId, p.kind,
 p.amount, p.reason, p.registeredBy, e.createdAt))
 }
+private suspend fun onUserCreated(e: EventEnvelope) {
+val p = json.decodeFromString<UserCreatedPayload>(e.payload)
+val existing = db.userDao().getById(p.userId)
+if (existing == null) {
+val deactivated = db.eventDao().hasEventForUser(EventType.USER_DEACTIVATED, p.userId)
+db.userDao().upsert(UserEntity(p.userId, p.name, p.role, p.pinHash, p.pinSalt, !deactivated, e.createdAt))
+}
+}
+private suspend fun onUserDeactivated(e: EventEnvelope) {
+val p = json.decodeFromString<UserDeactivatedPayload>(e.payload)
+db.userDao().getById(p.userId)?.let { db.userDao().upsert(it.copy(active = false)) }
+}
 private suspend fun recomputeTotals(orderId: String) {
 val items = db.orderItemDao().listByOrder(orderId).filter { it.status == "active" }
-val subtotal = items.sumOf { it.priceSnapshot * it.quantity }
+val subtotal = items.fold(java.math.BigDecimal.ZERO) { total, item ->
+total.add(java.math.BigDecimal.valueOf(item.priceSnapshot)
+.multiply(java.math.BigDecimal.valueOf(item.quantity.toLong())))
+}.setScale(2, java.math.RoundingMode.HALF_UP)
 val order = db.orderDao().getById(orderId) ?: return
-val fee = subtotal * 0.10
-db.orderDao().updateTotals(orderId, subtotal, fee, subtotal + fee)
+val fee = subtotal.multiply(java.math.BigDecimal("0.10")).setScale(2, java.math.RoundingMode.HALF_UP)
+val total = subtotal.add(fee).setScale(2, java.math.RoundingMode.HALF_UP)
+db.orderDao().updateTotals(orderId, subtotal.toDouble(), fee.toDouble(), total.toDouble())
 }
 }
