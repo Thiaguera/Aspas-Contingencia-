@@ -52,4 +52,116 @@ jobs:
               ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt"),
               ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt"),
               ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.
+              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt"),
+              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt"),
+              ("core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt", "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt"),
+              ("core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt", "core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt"),
+              ("core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt", "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt"),
+              ("core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt", "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt", "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/kitchen/KitchenScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/kitchen/KitchenScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt", "app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt".replace(".", "/")),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt", "app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt", "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt", "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt", "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt", "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt", "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt", "app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt"),
+              ("app/src/main/res/xml/network_security_config.xml", "app/src/main/res/xml/network_security_config.xml"),
+              ("app/src/main/AndroidManifest.xml", "app/src/main/AndroidManifest.xml"),
+              ("app/src/main/res/values/strings.xml", "app/src/main/res/values/strings.xml"),
+              ("app/src/main/res/values/themes.xml", "app/src/main/res/values/themes.xml"),
+              ("app/src/main/assets/catalog.json", "app/src/main/assets/catalog.json"),
+              ("app/proguard-rules.pro", "app/proguard-rules.pro"),
+              ("core/common/build.gradle.kts", "core/common/build.gradle.kts"),
+              ("core/domain/build.gradle.kts", "core/domain/build.gradle.kts"),
+              ("core/data/build.gradle.kts", "core/data/build.gradle.kts"),
+              ("core/print/build.gradle.kts", "core/print/build.gradle.kts"),
+              ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
+              ("app/build.gradle.kts", "app/build.gradle.kts"),
+              ("gradle/libs.versions.toml", "gradle/libs.versions.toml"),
+              ("gradle.properties", "gradle.properties"),
+              ("settings.gradle.kts", "settings.gradle.kts"),
+              ("root build.gradle.kts", "build.gradle.kts")
+          ]
+
+          # Ordenar estritamente por tamanho decrescente do caminho para evitar que 'build.gradle.kts' colida com os dos módulos
+          files_map.sort(key=lambda x: len(x[1]), reverse=True)
+
+          extracted_count = 0
+          for idx, (label, target_path) in enumerate(files_map):
+              pos = full_text.find(target_path)
+              if pos == -1:
+                  print(f"[AVISO] Nao encontrado: {target_path}")
+                  continue
+              
+              start_content = pos + len(target_path)
+              end_content = len(full_text)
+              
+              for next_label, next_target in files_map[idx+1:]:
+                  next_pos = full_text.find(next_target, start_content)
+                  if next_pos != -1 and next_pos < end_content:
+                      end_content = next_pos
+                      break
+              
+              file_data = full_text[start_content:end_content].strip()
+              if file_data.startswith("---"):
+                  file_data = file_data.split("---", 2)[-1].strip()
+
+              dir_name = os.path.dirname(target_path)
+              if dir_name:
+                  os.makedirs(dir_name, exist_ok=True)
+              
+              with open(target_path, "w", encoding="utf-8") as out:
+                  out.write(file_data)
+              print(f"[CRIADO] {target_path}")
+              extracted_count += 1
+
+          print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
+          EOF
+
+      - name: Setup Gradle Wrapper and Build APK
+        run: |
+          echo "A descarregar o Gradle 8.9..."
+          wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip -O gradle-8.9-bin.zip
+          unzip -q gradle-8.9-bin.zip
+          
+          echo "A gerar o Gradle Wrapper..."
+          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
+          
+          chmod +x gradlew
+          echo "A compilar o APK Debug..."
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: '**/app/build/outputs/apk/debug/*.apk'
