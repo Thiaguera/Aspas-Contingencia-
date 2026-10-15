@@ -1,0 +1,11 @@
+-keepattributes Annotation, InnerClasses
+-dontnote kotlinx.serialization.
+-keepclassmembers class kotlinx.serialization. { ; }
+-keepclassmembers class br.com.aspas.contingencia.domain.event.payload.* { ; }
+-keep class * extends androidx.room.RoomDatabase
+-keep class dagger.hilt.* { ; }
+-keep class javax.inject.* { ; }
+-keepclassmembers class kotlinx.coroutines.* { ; }
+-keep class javax.jmdns.* { ; }
+-dontwarn javax.jmdns.*
+-dontwarn org.slf4j.
