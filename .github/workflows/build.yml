@@ -27,7 +27,7 @@ jobs:
       - name: Unpack, Setup Gradle and Build APK
         run: |
           python3 -c '
-          import os, re, zipfile, subprocess
+          import os, re, urllib.request, zipfile, subprocess
 
           with open("aspas.md", "r", encoding="utf-8") as f:
               content = f.read()
@@ -47,7 +47,8 @@ jobs:
                 print(f"Created: {filepath}")
 
           print("Downloading Gradle 8.9...")
-          subprocess.run(["curl", "-L", "-O", "[https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)"], check=True)
+          target_url = "[https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)"
+          urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
           print("Unzipping Gradle...")
           with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
