@@ -1,5 +1,3 @@
-yaml
-
 name: Build Android APK
 
 on:
@@ -27,15 +25,15 @@ jobs:
           for b in blocks:
               lines = b.strip().split("\n")
               if len(lines) >= 2 and lines[1].startswith("```"):
-                  filepath = lines[0].strip()
-                  code_lines = lines[2:]
-                  if code_lines and code_lines[-1].startswith("```"):
-                      code_lines = code_lines[:-1]
-                  
-                  os.makedirs(os.path.dirname(filepath), exist_ok=True)
-                  with open(filepath, "w", encoding="utf-8") as out:
-                      out.write("\n".join(code_lines) + "\n")
-                  print(f"Created: {filepath}")
+                filepath = lines[0].strip()
+                code_lines = lines[2:]
+                if code_lines and code_lines[-1].startswith("```"):
+                    code_lines = code_lines[:-1]
+                
+                os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                with open(filepath, "w", encoding="utf-8") as out:
+                    out.write("\n".join(code_lines) + "\n")
+                print(f"Created: {filepath}")
           '
 
       - name: Set up JDK 17
@@ -47,14 +45,13 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Make gradlew executable
+      - name: Download Gradle and Generate Wrapper
         run: |
-          if [ -f gradlew ]; then
-            chmod +x gradlew
-          else
-            gradle wrapper
-            chmod +x gradlew
-          fi
+          wget -q [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)
+          unzip -q gradle-8.9-bin.zip
+          export PATH=$PWD/gradle-8.9/bin:$PATH
+          gradle wrapper --gradle-version 8.9
+          chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon
