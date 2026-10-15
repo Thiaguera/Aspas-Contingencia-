@@ -24,10 +24,10 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Parse aspas.md, Setup Gradle and Build APK
+      - name: Parse aspas.md to extract project files
         run: |
           python3 << 'EOF'
-          import os, urllib.request, zipfile, subprocess, base64
+          import os
 
           print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
@@ -141,26 +141,19 @@ jobs:
               extracted_count += 1
 
           print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
-
-          print("\nA descarregar o Gradle 8.9...")
-          target_url = base64.b64decode("aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw").decode("utf-8")
-          urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
-
-          print("A descompactar o Gradle...")
-          with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
-              zip_ref.extractall(".")
-
-          gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
-          if os.path.exists(gradle_bin):
-              os.chmod(gradle_bin, 0o755)
-
-          print("A gerar o Gradle Wrapper...")
-          subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
           EOF
 
-      - name: Build APK Debug
+      - name: Setup Gradle Wrapper and Build APK
         run: |
+          echo "A descarregar o Gradle 8.9..."
+          wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip -O gradle-8.9-bin.zip
+          unzip -q gradle-8.9-bin.zip
+          
+          echo "A gerar o Gradle Wrapper..."
+          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
+          
           chmod +x gradlew
+          echo "A compilar o APK Debug..."
           ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
