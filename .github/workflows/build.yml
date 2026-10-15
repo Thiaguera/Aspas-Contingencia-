@@ -27,27 +27,40 @@ jobs:
       - name: Unpack, Locate Project, Setup Gradle and Build APK
         run: |
           python3 -c '
-          import os, re, urllib.request, zipfile, subprocess, base64
+          import os, urllib.request, zipfile, subprocess, base64
 
           print("--- Unpacking aspas.md ---")
-          with open("aspas.md", "r", encoding="utf-8") as f:
-              content = f.read()
+          if not os.path.exists("aspas.md"):
+              print("Error: aspas.md not found!")
 
-          blocks = re.split(r"\n(?=[\w\/\.\-]+\n```)", content)
-          for b in blocks:
-              lines = b.strip().split("\n")
-              if len(lines) >= 2 and lines[1].startswith("```"):
-                filepath = lines[0].strip()
-                code_lines = lines[2:]
-                if code_lines and code_lines[-1].startswith("```"):
-                    code_lines = code_lines[:-1]
-                
-                dir_name = os.path.dirname(filepath)
-                if dir_name:
-                    os.makedirs(dir_name, exist_ok=True)
-                with open(filepath, "w", encoding="utf-8") as out:
-                    out.write("\n".join(code_lines) + "\n")
-                print(f"Created file: {filepath}")
+          with open("aspas.md", "r", encoding="utf-8") as f:
+              lines = f.readlines()
+
+          current_file = None
+          code_lines = []
+          collecting = False
+
+          for line in lines:
+              stripped = line.strip()
+              if stripped.startswith("```"):
+                  if collecting:
+                      if current_file:
+                          dir_name = os.path.dirname(current_file)
+                          if dir_name:
+                              os.makedirs(dir_name, exist_ok=True)
+                          with open(current_file, "w", encoding="utf-8") as out:
+                              out.writelines(code_lines)
+                          print(f"Created file: {current_file}")
+                      current_file = None
+                      code_lines = []
+                      collecting = False
+                  else:
+                      collecting = True
+              elif collecting:
+                  code_lines.append(line)
+              else:
+                  if stripped and not stripped.startswith("#") and ("/" in stripped or "." in stripped):
+                      current_file = stripped
 
           print("\n--- Workspace Files ---")
           for root, dirs, files in os.walk("."):
