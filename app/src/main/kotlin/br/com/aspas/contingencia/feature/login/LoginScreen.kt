@@ -1,1 +1,261 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUubG9naW4KCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmZvdW5kYXRpb24ubGF5b3V0LioKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuZm91bmRhdGlvbi5sYXp5LkxhenlDb2x1bW4KaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuZm91bmRhdGlvbi5sYXp5Lml0ZW1zCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLm1hdGVyaWFsMy4qCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLnJ1bnRpbWUuKgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS51aS5BbGlnbm1lbnQKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkuTW9kaWZpZXIKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkudGV4dC5pbnB1dC5QYXNzd29yZFZpc3VhbFRyYW5zZm9ybWF0aW9uCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLnVpLnVuaXQuZHAKaW1wb3J0IGFuZHJvaWR4LmhpbHQubmF2aWdhdGlvbi5jb21wb3NlLmhpbHRWaWV3TW9kZWwKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS5WaWV3TW9kZWwKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS52aWV3TW9kZWxTY29wZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5jb21tb24uUGluSGFzaGVyCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmNvbW1vbi5VdWlkCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuZGIuQXNwYXNEYXRhYmFzZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLnByb2plY3Rpb24uUHJvamVjdGlvbkVuZ2luZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4uZXZlbnQuRXZlbnRUeXBlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRvbWFpbi5ldmVudC5wYXlsb2FkLlVzZXJDcmVhdGVkUGF5bG9hZAppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4ubW9kZWwuVXNlcgppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4ucmVwb3NpdG9yeS5FdmVudFJlcG9zaXRvcnkKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZG9tYWluLnJlcG9zaXRvcnkuVXNlclJlcG9zaXRvcnkKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuc2Vzc2lvbi5TZXNzaW9uTWFuYWdlcgppbXBvcnQgZGFnZ2VyLmhpbHQuYW5kcm9pZC5saWZlY3ljbGUuSGlsdFZpZXdNb2RlbAppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuKgppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmxhdW5jaAppbXBvcnQga290bGlueC5zZXJpYWxpemF0aW9uLmVuY29kZVRvU3RyaW5nCmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uanNvbi5Kc29uCmltcG9ydCBqYXZheC5pbmplY3QuSW5qZWN0Cgpwcml2YXRlIHNlYWxlZCBpbnRlcmZhY2UgTG9naW5SZXN1bHQgewogICAgZGF0YSBvYmplY3QgU3VjY2VzcyA6IExvZ2luUmVzdWx0CiAgICBkYXRhIGNsYXNzIEVycm9yKHZhbCBtZXNzYWdlOiBTdHJpbmcpIDogTG9naW5SZXN1bHQKfQoKQEhpbHRWaWV3TW9kZWwKY2xhc3MgTG9naW5WaWV3TW9kZWwgQEluamVjdCBjb25zdHJ1Y3RvcigKICAgIHByaXZhdGUgdmFsIGRiOiBBc3Bhc0RhdGFiYXNlLAogICAgcHJpdmF0ZSB2YWwgdXNlclJlcG9zaXRvcnk6IFVzZXJSZXBvc2l0b3J5LAogICAgcHJpdmF0ZSB2YWwgZXZlbnRzOiBFdmVudFJlcG9zaXRvcnksCiAgICBwcml2YXRlIHZhbCBwcm9qZWN0aW9uOiBQcm9qZWN0aW9uRW5naW5lLAogICAgcHJpdmF0ZSB2YWwgc2Vzc2lvbjogU2Vzc2lvbk1hbmFnZXIsCiAgICBwcml2YXRlIHZhbCBqc29uOiBKc29uCikgOiBWaWV3TW9kZWwoKSB7CiAgICB2YWwgdXNlcnM6IFN0YXRlRmxvdzxMaXN0PFVzZXI+PiA9IHVzZXJSZXBvc2l0b3J5Lm9ic2VydmVBY3RpdmUoKQogICAgICAgIC5zdGF0ZUluKHZpZXdNb2RlbFNjb3BlLCBTaGFyaW5nU3RhcnRlZC5XaGlsZVN1YnNjcmliZWQoNV8wMDApLCBlbXB0eUxpc3QoKSkKCiAgICBwcml2YXRlIHZhbCBfcmVhZHkgPSBNdXRhYmxlU3RhdGVGbG93KGZhbHNlKQogICAgdmFsIHJlYWR5OiBTdGF0ZUZsb3c8Qm9vbGVhbj4gPSBfcmVhZHkuYXNTdGF0ZUZsb3coKQogICAgLy8gVGhpcyBpcyBiYXNlZCBvbiBhbiBleHBsaWNpdCBEQU8gcmVhZCwgcmF0aGVyIHRoYW4gdGhlIGluaXRpYWwgZW1wdHkgRmxvdyB2YWx1ZS4KICAgIC8vIEl0IHByZXZlbnRzIGJyaWVmbHkgc2hvd2luZyBlbnJvbGxtZW50IHdoaWxlIGV4aXN0aW5nIHVzZXJzIGFyZSBzdGlsbCBsb2FkaW5nLgogICAgcHJpdmF0ZSB2YWwgX25lZWRzRW5yb2xsbWVudCA9IE11dGFibGVTdGF0ZUZsb3coZmFsc2UpCiAgICB2YWwgbmVlZHNFbnJvbGxtZW50OiBTdGF0ZUZsb3c8Qm9vbGVhbj4gPSBfbmVlZHNFbnJvbGxtZW50LmFzU3RhdGVGbG93KCkKICAgIHByaXZhdGUgdmFsIF9zdWJtaXR0aW5nID0gTXV0YWJsZVN0YXRlRmxvdyhmYWxzZSkKICAgIHZhbCBzdWJtaXR0aW5nOiBTdGF0ZUZsb3c8Qm9vbGVhbj4gPSBfc3VibWl0dGluZy5hc1N0YXRlRmxvdygpCiAgICAvLyBSZXBsYXkgdGhlIGxhdGVzdCBmYWlsdXJlIHNvIGFuIGluaXRpYWxpemF0aW9uIGVycm9yIGlzIG5vdCBsb3N0IGJlZm9yZSBDb21wb3NlIHN0YXJ0cyBjb2xsZWN0aW5nLgogICAgcHJpdmF0ZSB2YWwgX3Jlc3VsdCA9IE11dGFibGVTaGFyZWRGbG93PExvZ2luUmVzdWx0PihyZXBsYXkgPSAxKQogICAgdmFsIHJlc3VsdDogU2hhcmVkRmxvdzxMb2dpblJlc3VsdD4gPSBfcmVzdWx0LmFzU2hhcmVkRmxvdygpCgogICAgcHJpdmF0ZSB2YXIgd3JvbmdBdHRlbXB0cyA9IDAKICAgIHByaXZhdGUgdmFyIGxvY2tlZFVudGlsID0gMEwKCiAgICBpbml0IHsKICAgICAgICB2aWV3TW9kZWxTY29wZS5sYXVuY2ggewogICAgICAgICAgICAvLyBEbyBub3QgcHJvdmlzaW9uIG9yIGFsdGVyIGV4aXN0aW5nIGFjY291bnRzIChpbmNsdWRpbmcgdXNyLWFkbWluKS4KICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIF9uZWVkc0Vucm9sbG1lbnQudmFsdWUgPSBkYi51c2VyRGFvKCkubGlzdEFjdGl2ZSgpLmlzRW1wdHkoKQogICAgICAgICAgICB9IGNhdGNoIChfOiBFeGNlcHRpb24pIHsKICAgICAgICAgICAgICAgIF9yZXN1bHQuZW1pdChMb2dpblJlc3VsdC5FcnJvcigiTsOjbyBmb2kgcG9zc8OtdmVsIGNhcnJlZ2FyIG9zIHVzdcOhcmlvcy4gVGVudGUgbm92YW1lbnRlLiIpKQogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgX3JlYWR5LnZhbHVlID0gdHJ1ZQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIGZ1biBhdHRlbXB0KHVzZXJJZDogU3RyaW5nLCBwaW46IFN0cmluZykgewogICAgICAgIGlmIChfc3VibWl0dGluZy52YWx1ZSkgcmV0dXJuCiAgICAgICAgdmlld01vZGVsU2NvcGUubGF1bmNoIHsKICAgICAgICAgICAgdmFsIG5vdyA9IFN5c3RlbS5jdXJyZW50VGltZU1pbGxpcygpCiAgICAgICAgICAgIGlmIChub3cgPCBsb2NrZWRVbnRpbCkgewogICAgICAgICAgICAgICAgX3Jlc3VsdC5lbWl0KExvZ2luUmVzdWx0LkVycm9yKCJNdWl0YXMgdGVudGF0aXZhcy4gQWd1YXJkZSAkeyhsb2NrZWRVbnRpbCAtIG5vdyArIDk5OSkgLyAxXzAwMH0gc2VndW5kb3MuIikpCiAgICAgICAgICAgICAgICByZXR1cm5AbGF1bmNoCiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKGxvY2tlZFVudGlsICE9IDBMKSB7CiAgICAgICAgICAgICAgICBsb2NrZWRVbnRpbCA9IDBMCiAgICAgICAgICAgICAgICB3cm9uZ0F0dGVtcHRzID0gMAogICAgICAgICAgICB9CiAgICAgICAgICAgIF9zdWJtaXR0aW5nLnZhbHVlID0gdHJ1ZQogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgdmFsIHVzZXIgPSBkYi51c2VyRGFvKCkuZ2V0QnlJZCh1c2VySWQpCiAgICAgICAgICAgICAgICB2YWwgb2sgPSB1c2VyICE9IG51bGwgJiYgdXNlci5hY3RpdmUgJiYgUGluSGFzaGVyLnZlcmlmeShwaW4sIHVzZXIucGluU2FsdCwgdXNlci5waW5IYXNoKQogICAgICAgICAgICAgICAgaWYgKG9rKSB7CiAgICAgICAgICAgICAgICAgICAgd3JvbmdBdHRlbXB0cyA9IDAKICAgICAgICAgICAgICAgICAgICBzZXNzaW9uLmxvZ2luKHVzZXIudXNlcklkLCB1c2VyLm5hbWUsIHVzZXIucm9sZSkKICAgICAgICAgICAgICAgICAgICBfcmVzdWx0LmVtaXQoTG9naW5SZXN1bHQuU3VjY2VzcykKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgd3JvbmdBdHRlbXB0cysrCiAgICAgICAgICAgICAgICAgICAgaWYgKHdyb25nQXR0ZW1wdHMgPj0gTUFYX1dST05HX0FUVEVNUFRTKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGxvY2tlZFVudGlsID0gU3lzdGVtLmN1cnJlbnRUaW1lTWlsbGlzKCkgKyBMT0NLT1VUX01JTExJUwogICAgICAgICAgICAgICAgICAgICAgICB3cm9uZ0F0dGVtcHRzID0gMAogICAgICAgICAgICAgICAgICAgICAgICBfcmVzdWx0LmVtaXQoTG9naW5SZXN1bHQuRXJyb3IoIk11aXRhcyB0ZW50YXRpdmFzLiBBZ3VhcmRlIDMwIHNlZ3VuZG9zLiIpKQogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIF9yZXN1bHQuZW1pdChMb2dpblJlc3VsdC5FcnJvcigiUElOIGluY29ycmV0byBvdSB1c3XDoXJpbyBpbmF0aXZvLiIpKQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBjYXRjaCAoXzogRXhjZXB0aW9uKSB7CiAgICAgICAgICAgICAgICBfcmVzdWx0LmVtaXQoTG9naW5SZXN1bHQuRXJyb3IoIk7Do28gZm9pIHBvc3PDrXZlbCBlbnRyYXIuIFRlbnRlIG5vdmFtZW50ZS4iKSkKICAgICAgICAgICAgfSBmaW5hbGx5IHsKICAgICAgICAgICAgICAgIF9zdWJtaXR0aW5nLnZhbHVlID0gZmFsc2UKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBmdW4gZW5yb2xsRmlyc3RNYW5hZ2VyKG5hbWU6IFN0cmluZywgcGluOiBTdHJpbmcsIGNvbmZpcm1hdGlvbjogU3RyaW5nKSB7CiAgICAgICAgaWYgKF9zdWJtaXR0aW5nLnZhbHVlKSByZXR1cm4KICAgICAgICB2aWV3TW9kZWxTY29wZS5sYXVuY2ggewogICAgICAgICAgICBfc3VibWl0dGluZy52YWx1ZSA9IHRydWUKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHJlcXVpcmUobmFtZS50cmltKCkubGVuZ3RoID49IDIpIHsgIkluZm9ybWUgbyBub21lIGRvIGdlcmVudGUuIiB9CiAgICAgICAgICAgICAgICByZXF1aXJlKHBpbi5tYXRjaGVzKFJlZ2V4KCJcXGR7NCw2fSIpKSkgeyAiTyBQSU4gZGV2ZSB0ZXIgZGUgNCBhIDYgZMOtZ2l0b3MuIiB9CiAgICAgICAgICAgICAgICByZXF1aXJlKHBpbiA9PSBjb25maXJtYXRpb24pIHsgIkEgY29uZmlybWHDp8OjbyBkbyBQSU4gbsOjbyBjb25mZXJlLiIgfQogICAgICAgICAgICAgICAgLy8gUmUtY2hlY2sgYXQgc3VibWlzc2lvbiB0aW1lOiBuZXZlciBvdmVyd3JpdGUgYW4gYWNjb3VudCB0aGF0IGFwcGVhcmVkIG1lYW53aGlsZS4KICAgICAgICAgICAgICAgIHJlcXVpcmUoZGIudXNlckRhbygpLmxpc3RBY3RpdmUoKS5pc0VtcHR5KCkpIHsgIkrDoSBleGlzdGUgdW0gdXN1w6FyaW8gY2FkYXN0cmFkby4gRW50cmUgY29tIGVsZS4iIH0KCiAgICAgICAgICAgICAgICB2YWwgdXNlcklkID0gVXVpZC5uZXcoKQogICAgICAgICAgICAgICAgdmFsIHNhbHQgPSBQaW5IYXNoZXIubmV3U2FsdCgpCiAgICAgICAgICAgICAgICB2YWwgZXZlbnQgPSBldmVudHMuYXBwZW5kKAogICAgICAgICAgICAgICAgICAgIEV2ZW50VHlwZS5VU0VSX0NSRUFURUQsCiAgICAgICAgICAgICAgICAgICAganNvbi5lbmNvZGVUb1N0cmluZyhVc2VyQ3JlYXRlZFBheWxvYWQodXNlcklkLCBuYW1lLnRyaW0oKSwgIm1hbmFnZXIiLCBQaW5IYXNoZXIuaGFzaChwaW4sIHNhbHQpLCBzYWx0KSkKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIC8vIExvZ2luIGlzIGFsbG93ZWQgb25seSBhZnRlciB0aGUgdXNlciBwcm9qZWN0aW9uIGhhcyBjb21taXR0ZWQgZHVyYWJseS4KICAgICAgICAgICAgICAgIHByb2plY3Rpb24uYXBwbHkoZXZlbnQpCiAgICAgICAgICAgICAgICB2YWwgbWFuYWdlciA9IGRiLnVzZXJEYW8oKS5nZXRCeUlkKHVzZXJJZCkKICAgICAgICAgICAgICAgICAgICA/OiBlcnJvcigiTsOjbyBmb2kgcG9zc8OtdmVsIGNvbmNsdWlyIG8gY2FkYXN0cm8gZG8gZ2VyZW50ZS4iKQogICAgICAgICAgICAgICAgY2hlY2sobWFuYWdlci5hY3RpdmUgJiYgbWFuYWdlci5yb2xlLmVxdWFscygibWFuYWdlciIsIGlnbm9yZUNhc2UgPSB0cnVlKSkgewogICAgICAgICAgICAgICAgICAgICJOw6NvIGZvaSBwb3Nzw612ZWwgY29uY2x1aXIgbyBjYWRhc3RybyBkbyBnZXJlbnRlLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHNlc3Npb24ubG9naW4obWFuYWdlci51c2VySWQsIG1hbmFnZXIubmFtZSwgbWFuYWdlci5yb2xlKQogICAgICAgICAgICAgICAgX3Jlc3VsdC5lbWl0KExvZ2luUmVzdWx0LlN1Y2Nlc3MpCiAgICAgICAgICAgIH0gY2F0Y2ggKGVycm9yOiBFeGNlcHRpb24pIHsKICAgICAgICAgICAgICAgIF9yZXN1bHQuZW1pdChMb2dpblJlc3VsdC5FcnJvcihlcnJvci5tZXNzYWdlID86ICJOw6NvIGZvaSBwb3Nzw612ZWwgY3JpYXIgbyBnZXJlbnRlLiBUZW50ZSBub3ZhbWVudGUuIikpCiAgICAgICAgICAgIH0gZmluYWxseSB7CiAgICAgICAgICAgICAgICBfc3VibWl0dGluZy52YWx1ZSA9IGZhbHNlCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBjb21wYW5pb24gb2JqZWN0IHsKICAgICAgICBjb25zdCB2YWwgTUFYX1dST05HX0FUVEVNUFRTID0gNQogICAgICAgIGNvbnN0IHZhbCBMT0NLT1VUX01JTExJUyA9IDMwXzAwMEwKICAgIH0KfQoKQENvbXBvc2FibGUKZnVuIExvZ2luU2NyZWVuKG9uU3VjY2VzczogKCkgLT4gVW5pdCwgdm06IExvZ2luVmlld01vZGVsID0gaGlsdFZpZXdNb2RlbCgpKSB7CiAgICB2YWwgdXNlcnMgYnkgdm0udXNlcnMuY29sbGVjdEFzU3RhdGUoKQogICAgdmFsIHJlYWR5IGJ5IHZtLnJlYWR5LmNvbGxlY3RBc1N0YXRlKCkKICAgIHZhbCBuZWVkc0Vucm9sbG1lbnQgYnkgdm0ubmVlZHNFbnJvbGxtZW50LmNvbGxlY3RBc1N0YXRlKCkKICAgIHZhbCBzdWJtaXR0aW5nIGJ5IHZtLnN1Ym1pdHRpbmcuY29sbGVjdEFzU3RhdGUoKQogICAgdmFyIHNlbGVjdGVkIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2Y8VXNlcj8+KG51bGwpIH0KICAgIHZhciBwaW4gYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZigiIikgfQogICAgdmFyIG1hbmFnZXJOYW1lIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH0KICAgIHZhciBtYW5hZ2VyUGluIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH0KICAgIHZhciBtYW5hZ2VyUGluQ29uZmlybWF0aW9uIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH0KICAgIHZhciBlcnJvciBieSByZW1lbWJlciB7IG11dGFibGVTdGF0ZU9mPFN0cmluZz8+KG51bGwpIH0KCiAgICBMYXVuY2hlZEVmZmVjdChVbml0KSB7CiAgICAgICAgdm0ucmVzdWx0LmNvbGxlY3QgeyByZXN1bHQgLT4KICAgICAgICAgICAgd2hlbiAocmVzdWx0KSB7CiAgICAgICAgICAgICAgICBMb2dpblJlc3VsdC5TdWNjZXNzIC0+IG9uU3VjY2VzcygpCiAgICAgICAgICAgICAgICBpcyBMb2dpblJlc3VsdC5FcnJvciAtPiBlcnJvciA9IHJlc3VsdC5tZXNzYWdlCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgQ29sdW1uKAogICAgICAgIE1vZGlmaWVyLmZpbGxNYXhTaXplKCkucGFkZGluZygyNC5kcCksCiAgICAgICAgdmVydGljYWxBcnJhbmdlbWVudCA9IEFycmFuZ2VtZW50LkNlbnRlciwKICAgICAgICBob3Jpem9udGFsQWxpZ25tZW50ID0gQWxpZ25tZW50LkNlbnRlckhvcml6b250YWxseQogICAgKSB7CiAgICAgICAgVGV4dCgiQVNQQVMgQ29udGluZ8OqbmNpYSIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LmhlYWRsaW5lTWVkaXVtKQogICAgICAgIFNwYWNlcihNb2RpZmllci5oZWlnaHQoMjQuZHApKQogICAgICAgIHdoZW4gewogICAgICAgICAgICAhcmVhZHkgLT4gQ2lyY3VsYXJQcm9ncmVzc0luZGljYXRvcigpCiAgICAgICAgICAgIG5lZWRzRW5yb2xsbWVudCAtPiBGaXJzdE1hbmFnZXJGb3JtKAogICAgICAgICAgICAgICAgbmFtZSA9IG1hbmFnZXJOYW1lLAogICAgICAgICAgICAgICAgcGluID0gbWFuYWdlclBpbiwKICAgICAgICAgICAgICAgIGNvbmZpcm1hdGlvbiA9IG1hbmFnZXJQaW5Db25maXJtYXRpb24sCiAgICAgICAgICAgICAgICBlcnJvciA9IGVycm9yLAogICAgICAgICAgICAgICAgc3VibWl0dGluZyA9IHN1Ym1pdHRpbmcsCiAgICAgICAgICAgICAgICBvbk5hbWVDaGFuZ2UgPSB7IG1hbmFnZXJOYW1lID0gaXQ7IGVycm9yID0gbnVsbCB9LAogICAgICAgICAgICAgICAgb25QaW5DaGFuZ2UgPSB7IG1hbmFnZXJQaW4gPSBpdC5maWx0ZXIoQ2hhcjo6aXNEaWdpdCkudGFrZSg2KTsgZXJyb3IgPSBudWxsIH0sCiAgICAgICAgICAgICAgICBvbkNvbmZpcm1hdGlvbkNoYW5nZSA9IHsgbWFuYWdlclBpbkNvbmZpcm1hdGlvbiA9IGl0LmZpbHRlcihDaGFyOjppc0RpZ2l0KS50YWtlKDYpOyBlcnJvciA9IG51bGwgfSwKICAgICAgICAgICAgICAgIG9uU3VibWl0ID0geyB2bS5lbnJvbGxGaXJzdE1hbmFnZXIobWFuYWdlck5hbWUsIG1hbmFnZXJQaW4sIG1hbmFnZXJQaW5Db25maXJtYXRpb24pIH0KICAgICAgICAgICAgKQogICAgICAgICAgICBzZWxlY3RlZCA9PSBudWxsIC0+IHsKICAgICAgICAgICAgICAgIFRleHQoIlF1ZW0gZXN0w6Egb3BlcmFuZG8/Iiwgc3R5bGUgPSBNYXRlcmlhbFRoZW1lLnR5cG9ncmFwaHkudGl0bGVNZWRpdW0pCiAgICAgICAgICAgICAgICBTcGFjZXIoTW9kaWZpZXIuaGVpZ2h0KDEyLmRwKSkKICAgICAgICAgICAgICAgIExhenlDb2x1bW4oTW9kaWZpZXIud2VpZ2h0KDFmKSkgewogICAgICAgICAgICAgICAgICAgIGl0ZW1zKHVzZXJzLCBrZXkgPSB7IGl0LnVzZXJJZCB9KSB7IHVzZXIgLT4KICAgICAgICAgICAgICAgICAgICAgICAgQ2FyZCgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2sgPSB7IHNlbGVjdGVkID0gdXNlcjsgZXJyb3IgPSBudWxsIH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBtb2RpZmllciA9IE1vZGlmaWVyLmZpbGxNYXhXaWR0aCgpLnBhZGRpbmcodmVydGljYWwgPSA0LmRwKQogICAgICAgICAgICAgICAgICAgICAgICApIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIExpc3RJdGVtKGhlYWRsaW5lQ29udGVudCA9IHsgVGV4dCh1c2VyLm5hbWUpIH0sIHN1cHBvcnRpbmdDb250ZW50ID0geyBUZXh0KHVzZXIucm9sZSkgfSkKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIC0+IHsKICAgICAgICAgICAgICAgIFRleHQoIk9sw6EsICR7c2VsZWN0ZWQhIS5uYW1lfSIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlTGFyZ2UpCiAgICAgICAgICAgICAgICBTcGFjZXIoTW9kaWZpZXIuaGVpZ2h0KDEyLmRwKSkKICAgICAgICAgICAgICAgIE91dGxpbmVkVGV4dEZpZWxkKAogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gcGluLAogICAgICAgICAgICAgICAgICAgIG9uVmFsdWVDaGFuZ2UgPSB7IHBpbiA9IGl0LmZpbHRlcihDaGFyOjppc0RpZ2l0KS50YWtlKDYpOyBlcnJvciA9IG51bGwgfSwKICAgICAgICAgICAgICAgICAgICBsYWJlbCA9IHsgVGV4dCgiUElOIikgfSwKICAgICAgICAgICAgICAgICAgICB2aXN1YWxUcmFuc2Zvcm1hdGlvbiA9IFBhc3N3b3JkVmlzdWFsVHJhbnNmb3JtYXRpb24oKSwKICAgICAgICAgICAgICAgICAgICBzaW5nbGVMaW5lID0gdHJ1ZSwKICAgICAgICAgICAgICAgICAgICBlbmFibGVkID0gIXN1Ym1pdHRpbmcKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGVycm9yPy5sZXQgeyBUZXh0KGl0LCBjb2xvciA9IE1hdGVyaWFsVGhlbWUuY29sb3JTY2hlbWUuZXJyb3IpIH0KICAgICAgICAgICAgICAgIFNwYWNlcihNb2RpZmllci5oZWlnaHQoMTIuZHApKQogICAgICAgICAgICAgICAgUm93KGhvcml6b250YWxBcnJhbmdlbWVudCA9IEFycmFuZ2VtZW50LnNwYWNlZEJ5KDguZHApKSB7CiAgICAgICAgICAgICAgICAgICAgT3V0bGluZWRCdXR0b24ob25DbGljayA9IHsgc2VsZWN0ZWQgPSBudWxsOyBwaW4gPSAiIjsgZXJyb3IgPSBudWxsIH0sIGVuYWJsZWQgPSAhc3VibWl0dGluZykgeyBUZXh0KCJWb2x0YXIiKSB9CiAgICAgICAgICAgICAgICAgICAgQnV0dG9uKG9uQ2xpY2sgPSB7IHZtLmF0dGVtcHQoc2VsZWN0ZWQhIS51c2VySWQsIHBpbikgfSwgZW5hYmxlZCA9IHBpbi5sZW5ndGggPj0gNCAmJiAhc3VibWl0dGluZykgewogICAgICAgICAgICAgICAgICAgICAgICBpZiAoc3VibWl0dGluZykgQ2lyY3VsYXJQcm9ncmVzc0luZGljYXRvcihNb2RpZmllci5zaXplKDE4LmRwKSwgc3Ryb2tlV2lkdGggPSAyLmRwKSBlbHNlIFRleHQoIkVudHJhciIpCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQp9CgpAQ29tcG9zYWJsZQpwcml2YXRlIGZ1biBGaXJzdE1hbmFnZXJGb3JtKAogICAgbmFtZTogU3RyaW5nLAogICAgcGluOiBTdHJpbmcsCiAgICBjb25maXJtYXRpb246IFN0cmluZywKICAgIGVycm9yOiBTdHJpbmc/LAogICAgc3VibWl0dGluZzogQm9vbGVhbiwKICAgIG9uTmFtZUNoYW5nZTogKFN0cmluZykgLT4gVW5pdCwKICAgIG9uUGluQ2hhbmdlOiAoU3RyaW5nKSAtPiBVbml0LAogICAgb25Db25maXJtYXRpb25DaGFuZ2U6IChTdHJpbmcpIC0+IFVuaXQsCiAgICBvblN1Ym1pdDogKCkgLT4gVW5pdAopIHsKICAgIFRleHQoIkNyaWFyIGdlcmVudGUiLCBzdHlsZSA9IE1hdGVyaWFsVGhlbWUudHlwb2dyYXBoeS50aXRsZUxhcmdlKQogICAgU3BhY2VyKE1vZGlmaWVyLmhlaWdodCg4LmRwKSkKICAgIFRleHQoIkNhZGFzdHJlIG8gcHJpbWVpcm8gZ2VyZW50ZSBwYXJhIGNvbWXDp2FyLiIpCiAgICBTcGFjZXIoTW9kaWZpZXIuaGVpZ2h0KDEyLmRwKSkKICAgIE91dGxpbmVkVGV4dEZpZWxkKG5hbWUsIG9uTmFtZUNoYW5nZSwgbGFiZWwgPSB7IFRleHQoIk5vbWUgZG8gZ2VyZW50ZSIpIH0sIHNpbmdsZUxpbmUgPSB0cnVlLCBlbmFibGVkID0gIXN1Ym1pdHRpbmcpCiAgICBTcGFjZXIoTW9kaWZpZXIuaGVpZ2h0KDguZHApKQogICAgT3V0bGluZWRUZXh0RmllbGQocGluLCBvblBpbkNoYW5nZSwgbGFiZWwgPSB7IFRleHQoIlBJTiAoNCBhIDYgZMOtZ2l0b3MpIikgfSwgdmlzdWFsVHJhbnNmb3JtYXRpb24gPSBQYXNzd29yZFZpc3VhbFRyYW5zZm9ybWF0aW9uKCksIHNpbmdsZUxpbmUgPSB0cnVlLCBlbmFibGVkID0gIXN1Ym1pdHRpbmcpCiAgICBTcGFjZXIoTW9kaWZpZXIuaGVpZ2h0KDguZHApKQogICAgT3V0bGluZWRUZXh0RmllbGQoY29uZmlybWF0aW9uLCBvbkNvbmZpcm1hdGlvbkNoYW5nZSwgbGFiZWwgPSB7IFRleHQoIkNvbmZpcm1hciBQSU4iKSB9LCB2aXN1YWxUcmFuc2Zvcm1hdGlvbiA9IFBhc3N3b3JkVmlzdWFsVHJhbnNmb3JtYXRpb24oKSwgc2luZ2xlTGluZSA9IHRydWUsIGVuYWJsZWQgPSAhc3VibWl0dGluZykKICAgIGVycm9yPy5sZXQgeyBUZXh0KGl0LCBjb2xvciA9IE1hdGVyaWFsVGhlbWUuY29sb3JTY2hlbWUuZXJyb3IpIH0KICAgIFNwYWNlcihNb2RpZmllci5oZWlnaHQoMTYuZHApKQogICAgQnV0dG9uKG9uQ2xpY2sgPSBvblN1Ym1pdCwgZW5hYmxlZCA9IG5hbWUudHJpbSgpLmxlbmd0aCA+PSAyICYmIHBpbi5sZW5ndGggaW4gNC4uNiAmJiBjb25maXJtYXRpb24ubGVuZ3RoIGluIDQuLjYgJiYgIXN1Ym1pdHRpbmcpIHsKICAgICAgICBpZiAoc3VibWl0dGluZykgQ2lyY3VsYXJQcm9ncmVzc0luZGljYXRvcihNb2RpZmllci5zaXplKDE4LmRwKSwgc3Ryb2tlV2lkdGggPSAyLmRwKSBlbHNlIFRleHQoIkNyaWFyIGdlcmVudGUiKQogICAgfQp9Cg==
+package br.com.aspas.contingencia.feature.login
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import br.com.aspas.contingencia.common.PinHasher
+import br.com.aspas.contingencia.common.Uuid
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.projection.ProjectionEngine
+import br.com.aspas.contingencia.domain.event.EventType
+import br.com.aspas.contingencia.domain.event.payload.UserCreatedPayload
+import br.com.aspas.contingencia.domain.model.User
+import br.com.aspas.contingencia.domain.repository.EventRepository
+import br.com.aspas.contingencia.domain.repository.UserRepository
+import br.com.aspas.contingencia.session.SessionManager
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import javax.inject.Inject
+
+private sealed interface LoginResult {
+    data object Success : LoginResult
+    data class Error(val message: String) : LoginResult
+}
+
+@HiltViewModel
+class LoginViewModel @Inject constructor(
+    private val db: AspasDatabase,
+    private val userRepository: UserRepository,
+    private val events: EventRepository,
+    private val projection: ProjectionEngine,
+    private val session: SessionManager,
+    private val json: Json
+) : ViewModel() {
+    val users: StateFlow<List<User>> = userRepository.observeActive()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    private val _ready = MutableStateFlow(false)
+    val ready: StateFlow<Boolean> = _ready.asStateFlow()
+    // This is based on an explicit DAO read, rather than the initial empty Flow value.
+    // It prevents briefly showing enrollment while existing users are still loading.
+    private val _needsEnrollment = MutableStateFlow(false)
+    val needsEnrollment: StateFlow<Boolean> = _needsEnrollment.asStateFlow()
+    private val _submitting = MutableStateFlow(false)
+    val submitting: StateFlow<Boolean> = _submitting.asStateFlow()
+    // Replay the latest failure so an initialization error is not lost before Compose starts collecting.
+    private val _result = MutableSharedFlow<LoginResult>(replay = 1)
+    val result: SharedFlow<LoginResult> = _result.asSharedFlow()
+
+    private var wrongAttempts = 0
+    private var lockedUntil = 0L
+
+    init {
+        viewModelScope.launch {
+            // Do not provision or alter existing accounts (including usr-admin).
+            try {
+                _needsEnrollment.value = db.userDao().listActive().isEmpty()
+            } catch (_: Exception) {
+                _result.emit(LoginResult.Error("Não foi possível carregar os usuários. Tente novamente."))
+            } finally {
+                _ready.value = true
+            }
+        }
+    }
+
+    fun attempt(userId: String, pin: String) {
+        if (_submitting.value) return
+        viewModelScope.launch {
+            val now = System.currentTimeMillis()
+            if (now < lockedUntil) {
+                _result.emit(LoginResult.Error("Muitas tentativas. Aguarde ${(lockedUntil - now + 999) / 1_000} segundos."))
+                return@launch
+            }
+            if (lockedUntil != 0L) {
+                lockedUntil = 0L
+                wrongAttempts = 0
+            }
+            _submitting.value = true
+            try {
+                val user = db.userDao().getById(userId)
+                val ok = user != null && user.active && PinHasher.verify(pin, user.pinSalt, user.pinHash)
+                if (ok) {
+                    wrongAttempts = 0
+                    session.login(user.userId, user.name, user.role)
+                    _result.emit(LoginResult.Success)
+                } else {
+                    wrongAttempts++
+                    if (wrongAttempts >= MAX_WRONG_ATTEMPTS) {
+                        lockedUntil = System.currentTimeMillis() + LOCKOUT_MILLIS
+                        wrongAttempts = 0
+                        _result.emit(LoginResult.Error("Muitas tentativas. Aguarde 30 segundos."))
+                    } else {
+                        _result.emit(LoginResult.Error("PIN incorreto ou usuário inativo."))
+                    }
+                }
+            } catch (_: Exception) {
+                _result.emit(LoginResult.Error("Não foi possível entrar. Tente novamente."))
+            } finally {
+                _submitting.value = false
+            }
+        }
+    }
+
+    fun enrollFirstManager(name: String, pin: String, confirmation: String) {
+        if (_submitting.value) return
+        viewModelScope.launch {
+            _submitting.value = true
+            try {
+                require(name.trim().length >= 2) { "Informe o nome do gerente." }
+                require(pin.matches(Regex("\\d{4,6}"))) { "O PIN deve ter de 4 a 6 dígitos." }
+                require(pin == confirmation) { "A confirmação do PIN não confere." }
+                // Re-check at submission time: never overwrite an account that appeared meanwhile.
+                require(db.userDao().listActive().isEmpty()) { "Já existe um usuário cadastrado. Entre com ele." }
+
+                val userId = Uuid.new()
+                val salt = PinHasher.newSalt()
+                val event = events.append(
+                    EventType.USER_CREATED,
+                    json.encodeToString(UserCreatedPayload(userId, name.trim(), "manager", PinHasher.hash(pin, salt), salt))
+                )
+                // Login is allowed only after the user projection has committed durably.
+                projection.apply(event)
+                val manager = db.userDao().getById(userId)
+                    ?: error("Não foi possível concluir o cadastro do gerente.")
+                check(manager.active && manager.role.equals("manager", ignoreCase = true)) {
+                    "Não foi possível concluir o cadastro do gerente."
+                }
+                session.login(manager.userId, manager.name, manager.role)
+                _result.emit(LoginResult.Success)
+            } catch (error: Exception) {
+                _result.emit(LoginResult.Error(error.message ?: "Não foi possível criar o gerente. Tente novamente."))
+            } finally {
+                _submitting.value = false
+            }
+        }
+    }
+
+    private companion object {
+        const val MAX_WRONG_ATTEMPTS = 5
+        const val LOCKOUT_MILLIS = 30_000L
+    }
+}
+
+@Composable
+fun LoginScreen(onSuccess: () -> Unit, vm: LoginViewModel = hiltViewModel()) {
+    val users by vm.users.collectAsState()
+    val ready by vm.ready.collectAsState()
+    val needsEnrollment by vm.needsEnrollment.collectAsState()
+    val submitting by vm.submitting.collectAsState()
+    var selected by remember { mutableStateOf<User?>(null) }
+    var pin by remember { mutableStateOf("") }
+    var managerName by remember { mutableStateOf("") }
+    var managerPin by remember { mutableStateOf("") }
+    var managerPinConfirmation by remember { mutableStateOf("") }
+    var error by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(Unit) {
+        vm.result.collect { result ->
+            when (result) {
+                LoginResult.Success -> onSuccess()
+                is LoginResult.Error -> error = result.message
+            }
+        }
+    }
+
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("ASPAS Contingência", style = MaterialTheme.typography.headlineMedium)
+        Spacer(Modifier.height(24.dp))
+        when {
+            !ready -> CircularProgressIndicator()
+            needsEnrollment -> FirstManagerForm(
+                name = managerName,
+                pin = managerPin,
+                confirmation = managerPinConfirmation,
+                error = error,
+                submitting = submitting,
+                onNameChange = { managerName = it; error = null },
+                onPinChange = { managerPin = it.filter(Char::isDigit).take(6); error = null },
+                onConfirmationChange = { managerPinConfirmation = it.filter(Char::isDigit).take(6); error = null },
+                onSubmit = { vm.enrollFirstManager(managerName, managerPin, managerPinConfirmation) }
+            )
+            selected == null -> {
+                Text("Quem está operando?", style = MaterialTheme.typography.titleMedium)
+                Spacer(Modifier.height(12.dp))
+                LazyColumn(Modifier.weight(1f)) {
+                    items(users, key = { it.userId }) { user ->
+                        Card(
+                            onClick = { selected = user; error = null },
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                        ) {
+                            ListItem(headlineContent = { Text(user.name) }, supportingContent = { Text(user.role) })
+                        }
+                    }
+                }
+            }
+            else -> {
+                Text("Olá, ${selected!!.name}", style = MaterialTheme.typography.titleLarge)
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = pin,
+                    onValueChange = { pin = it.filter(Char::isDigit).take(6); error = null },
+                    label = { Text("PIN") },
+                    visualTransformation = PasswordVisualTransformation(),
+                    singleLine = true,
+                    enabled = !submitting
+                )
+                error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+                Spacer(Modifier.height(12.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedButton(onClick = { selected = null; pin = ""; error = null }, enabled = !submitting) { Text("Voltar") }
+                    Button(onClick = { vm.attempt(selected!!.userId, pin) }, enabled = pin.length >= 4 && !submitting) {
+                        if (submitting) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp) else Text("Entrar")
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun FirstManagerForm(
+    name: String,
+    pin: String,
+    confirmation: String,
+    error: String?,
+    submitting: Boolean,
+    onNameChange: (String) -> Unit,
+    onPinChange: (String) -> Unit,
+    onConfirmationChange: (String) -> Unit,
+    onSubmit: () -> Unit
+) {
+    Text("Criar gerente", style = MaterialTheme.typography.titleLarge)
+    Spacer(Modifier.height(8.dp))
+    Text("Cadastre o primeiro gerente para começar.")
+    Spacer(Modifier.height(12.dp))
+    OutlinedTextField(name, onNameChange, label = { Text("Nome do gerente") }, singleLine = true, enabled = !submitting)
+    Spacer(Modifier.height(8.dp))
+    OutlinedTextField(pin, onPinChange, label = { Text("PIN (4 a 6 dígitos)") }, visualTransformation = PasswordVisualTransformation(), singleLine = true, enabled = !submitting)
+    Spacer(Modifier.height(8.dp))
+    OutlinedTextField(confirmation, onConfirmationChange, label = { Text("Confirmar PIN") }, visualTransformation = PasswordVisualTransformation(), singleLine = true, enabled = !submitting)
+    error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+    Spacer(Modifier.height(16.dp))
+    Button(onClick = onSubmit, enabled = name.trim().length >= 2 && pin.length in 4..6 && confirmation.length in 4..6 && !submitting) {
+        if (submitting) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp) else Text("Criar gerente")
+    }
+}
