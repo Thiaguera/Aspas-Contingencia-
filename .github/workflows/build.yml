@@ -1,4 +1,4 @@
-name: Build Android APK
+lname: Build Android APK
 
 on:
   push:
@@ -106,6 +106,7 @@ jobs:
         run: |
           python3 << 'EOF'
           import os
+          import re
 
           if not os.path.exists("aspas.md"):
               exit(1)
@@ -180,6 +181,7 @@ jobs:
               ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
               ("app/build.gradle.kts", "app/build.gradle.kts"),
               ("gradle.properties", "gradle.properties"),
+              ("settings.gradle.kts", "settings.gradle.kts"),
               ("root build.gradle.kts", "build.gradle.kts")
           ]
 
@@ -212,13 +214,18 @@ jobs:
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
 
-          # Limpar de forma limpa a linha do compose-compiler do build.gradle.kts raiz sem deixar lixo
+          # Unificar blocos 'plugins' duplicados no build.gradle.kts raiz para evitar erros de sintaxe
           if os.path.exists("build.gradle.kts"):
               with open("build.gradle.kts", "r", encoding="utf-8") as bf:
-                  lines = bf.readlines()
-              clean_lines = [line for line in lines if "compose.compiler" not in line and "compose-compiler" not in line]
-              with open("build.gradle.kts", "w", encoding="utf-8") as bf:
-                  bf.writelines(clean_lines)
+                  bcontent = bf.read()
+              plugins_matches = re.findall(r'plugins\s*\{(.*?)\}', bcontent, re.DOTALL)
+              if len(plugins_matches) > 1:
+                  all_plugins_inner = "\n".join(plugins_matches)
+                  cleaned_content = re.sub(r'plugins\s*\{.*?\}', '', bcontent, flags=re.DOTALL)
+                  unified_block = f"plugins {{\n{all_plugins_inner}\n}}\n"
+                  bcontent = unified_block + cleaned_content
+                  with open("build.gradle.kts", "w", encoding="utf-8") as bf:
+                      bf.write(bcontent)
 
           print("Ficheiros processados com sucesso.")
           EOF
