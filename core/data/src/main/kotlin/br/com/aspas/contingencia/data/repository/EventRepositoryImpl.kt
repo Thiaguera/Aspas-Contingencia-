@@ -1,1 +1,114 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEucmVwb3NpdG9yeQoKaW1wb3J0IGFuZHJvaWR4LnJvb20ud2l0aFRyYW5zYWN0aW9uCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmNvbW1vbi5IbGMKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuY29tbW9uLkhsY0dlbmVyYXRvcgppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5jb21tb24uVXVpZAppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmRiLkFzcGFzRGF0YWJhc2UKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5kYi5kYW8uRXZlbnREYW8KaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5kYi5lbnRpdHkuRXZlbnRFbnRpdHkKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZG9tYWluLmV2ZW50LkV2ZW50RW52ZWxvcGUKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZG9tYWluLmV2ZW50LkV2ZW50VHlwZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4ucmVwb3NpdG9yeS5DbG9zZVRhYmxlQXBwZW5kUmVzdWx0CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRvbWFpbi5yZXBvc2l0b3J5LkV2ZW50QXBwZW5kUmVxdWVzdAppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4ucmVwb3NpdG9yeS5FdmVudFJlcG9zaXRvcnkKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5EaXNwYXRjaGVycwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuRmxvdwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuZmxvdwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cubWFwCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuc3luYy5NdXRleAppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLnN5bmMud2l0aExvY2sKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy53aXRoQ29udGV4dAppbXBvcnQgamF2YXguaW5qZWN0LkluamVjdAppbXBvcnQgamF2YXguaW5qZWN0Lk5hbWVkCmltcG9ydCBqYXZheC5pbmplY3QuU2luZ2xldG9uCgpAU2luZ2xldG9uCmNsYXNzIEV2ZW50UmVwb3NpdG9yeUltcGwgQEluamVjdCBjb25zdHJ1Y3RvcigKICAgIHByaXZhdGUgdmFsIGRiOiBBc3Bhc0RhdGFiYXNlLAogICAgcHJpdmF0ZSB2YWwgZGFvOiBFdmVudERhbywKICAgIHByaXZhdGUgdmFsIGhsY0dlbmVyYXRvcjogSGxjR2VuZXJhdG9yLAogICAgQE5hbWVkKCJkZXZpY2VJZCIpIHByaXZhdGUgdmFsIGRldmljZUlkOiBTdHJpbmcsCiAgICBwcml2YXRlIHZhbCBzZXNzaW9uUHJvdmlkZXI6IFNlc3Npb25Qcm92aWRlcgopIDogRXZlbnRSZXBvc2l0b3J5IHsKICAgIHByaXZhdGUgdmFsIGxvY2sgPSBNdXRleCgpCgogICAgb3ZlcnJpZGUgc3VzcGVuZCBmdW4gYXBwZW5kKHR5cGU6IFN0cmluZywgcGF5bG9hZEpzb246IFN0cmluZywgdXNlcklkOiBTdHJpbmc/KTogRXZlbnRFbnZlbG9wZSA9CiAgICAgICAgYXBwZW5kQmF0Y2gobGlzdE9mKEV2ZW50QXBwZW5kUmVxdWVzdCh0eXBlLCBwYXlsb2FkSnNvbiwgdXNlcklkKSkpLnNpbmdsZSgpCgogICAgb3ZlcnJpZGUgc3VzcGVuZCBmdW4gYXBwZW5kQmF0Y2gocmVxdWVzdHM6IExpc3Q8RXZlbnRBcHBlbmRSZXF1ZXN0Pik6IExpc3Q8RXZlbnRFbnZlbG9wZT4gPQogICAgICAgIHdpdGhDb250ZXh0KERpc3BhdGNoZXJzLklPKSB7CiAgICAgICAgICAgIHJlcXVpcmUocmVxdWVzdHMuYWxsIHsgaXQudHlwZSBpbiBFdmVudFR5cGUuQUxMIH0pIHsgInRpcG8gZGUgZXZlbnRvIGludsOhbGlkbyIgfQogICAgICAgICAgICBpZiAocmVxdWVzdHMuaXNFbXB0eSgpKSByZXR1cm5Ad2l0aENvbnRleHQgZW1wdHlMaXN0KCkKICAgICAgICAgICAgbG9jay53aXRoTG9jayB7CiAgICAgICAgICAgICAgICB2YWwgZXZlbnRzID0gcmVxdWVzdHMubWFwIHsgcmVxdWVzdCAtPiBuZXdFbnZlbG9wZShyZXF1ZXN0KSB9CiAgICAgICAgICAgICAgICBkYi53aXRoVHJhbnNhY3Rpb24geyBkYW8uaW5zZXJ0QWxsKGV2ZW50cy5tYXAgeyBpdC50b0VudGl0eShzeW5jZWQgPSBmYWxzZSkgfSkgfQogICAgICAgICAgICAgICAgZXZlbnRzCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgb3ZlcnJpZGUgc3VzcGVuZCBmdW4gYXBwZW5kQ2xvc2VCYXRjaCgKICAgICAgICB0YWJsZUlkOiBTdHJpbmcsCiAgICAgICAgb3JkZXJJZDogU3RyaW5nLAogICAgICAgIHJlcXVlc3RzOiBMaXN0PEV2ZW50QXBwZW5kUmVxdWVzdD4KICAgICk6IENsb3NlVGFibGVBcHBlbmRSZXN1bHQgPSB3aXRoQ29udGV4dChEaXNwYXRjaGVycy5JTykgewogICAgICAgIHJlcXVpcmUocmVxdWVzdHMuaXNOb3RFbXB0eSgpKSB7ICJsb3RlIGRlIGZlY2hhbWVudG8gdmF6aW8iIH0KICAgICAgICByZXF1aXJlKHJlcXVlc3RzLmxhc3QoKS50eXBlID09IEV2ZW50VHlwZS5UQUJMRV9DTE9TRUQpIHsgImZlY2hhbWVudG8gZGV2ZSB0ZXJtaW5hciBjb20gdGFibGVfY2xvc2VkIiB9CiAgICAgICAgcmVxdWlyZShyZXF1ZXN0cy5kcm9wTGFzdCgxKS5hbGwgeyBpdC50eXBlID09IEV2ZW50VHlwZS5QQVlNRU5UX1JFR0lTVEVSRUQgfSkgewogICAgICAgICAgICAibG90ZSBkZSBmZWNoYW1lbnRvIHPDsyBhY2VpdGEgcGFnYW1lbnRvcyBlIHRhYmxlX2Nsb3NlZCIKICAgICAgICB9CiAgICAgICAgcmVxdWlyZShyZXF1ZXN0cy5hbGwgeyBpdC50eXBlIGluIEV2ZW50VHlwZS5BTEwgfSkgeyAidGlwbyBkZSBldmVudG8gaW52w6FsaWRvIiB9CiAgICAgICAgbG9jay53aXRoTG9jayB7CiAgICAgICAgICAgIGRiLndpdGhUcmFuc2FjdGlvbiB7CiAgICAgICAgICAgICAgICAvLyBUaGlzIGd1YXJkIGludGVudGlvbmFsbHkgcmVhZHMgdGhlIGV2ZW50IGxvZywgbm90IHByb2plY3Rpb25zOiBwcm9qZWN0aW9ucyBtYXkgbGFnLgogICAgICAgICAgICAgICAgaWYgKGRhby5oYXNFdmVudEZvck9yZGVyKEV2ZW50VHlwZS5UQUJMRV9DTE9TRUQsIG9yZGVySWQpKSB7CiAgICAgICAgICAgICAgICAgICAgQ2xvc2VUYWJsZUFwcGVuZFJlc3VsdChhcHBlbmRlZCA9IGZhbHNlKQogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICB2YWwgZXZlbnRzID0gcmVxdWVzdHMubWFwIHsgbmV3RW52ZWxvcGUoaXQpIH0KICAgICAgICAgICAgICAgICAgICBkYW8uaW5zZXJ0QWxsKGV2ZW50cy5tYXAgeyBpdC50b0VudGl0eShzeW5jZWQgPSBmYWxzZSkgfSkKICAgICAgICAgICAgICAgICAgICBDbG9zZVRhYmxlQXBwZW5kUmVzdWx0KGFwcGVuZGVkID0gdHJ1ZSwgZXZlbnRzID0gZXZlbnRzKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgZnVuIG5ld0VudmVsb3BlKHJlcXVlc3Q6IEV2ZW50QXBwZW5kUmVxdWVzdCk6IEV2ZW50RW52ZWxvcGUgewogICAgICAgIHZhbCBobGMgPSBobGNHZW5lcmF0b3IubmV4dCgpCiAgICAgICAgcmV0dXJuIEV2ZW50RW52ZWxvcGUoCiAgICAgICAgICAgIFV1aWQubmV3KCksIGhsYy5lbmNvZGUoKSwgZGV2aWNlSWQsCiAgICAgICAgICAgIHJlcXVlc3QudXNlcklkID86IHNlc3Npb25Qcm92aWRlci5jdXJyZW50VXNlcklkKCksIHJlcXVlc3QudHlwZSwgcmVxdWVzdC5wYXlsb2FkSnNvbiwKICAgICAgICAgICAgU3lzdGVtLmN1cnJlbnRUaW1lTWlsbGlzKCkKICAgICAgICApCiAgICB9CgogICAgb3ZlcnJpZGUgc3VzcGVuZCBmdW4gYXBwZW5kUmVtb3RlKGVudmVsb3BlOiBFdmVudEVudmVsb3BlKSA9IHdpdGhDb250ZXh0KERpc3BhdGNoZXJzLklPKSB7CiAgICAgICAgaWYgKGRhby5leGlzdHMoZW52ZWxvcGUuZXZlbnRJZCkpIHJldHVybkB3aXRoQ29udGV4dAogICAgICAgIGlmIChlbnZlbG9wZS50eXBlICFpbiBFdmVudFR5cGUuQUxMKSByZXR1cm5Ad2l0aENvbnRleHQKICAgICAgICB2YWwgcmVtb3RlSGxjID0gcnVuQ2F0Y2hpbmcgeyBIbGMuZGVjb2RlKGVudmVsb3BlLmhsYykgfS5nZXRPck51bGwoKSA/OiByZXR1cm5Ad2l0aENvbnRleHQKICAgICAgICBobGNHZW5lcmF0b3Iub2JzZXJ2ZShyZW1vdGVIbGMpCiAgICAgICAgZGFvLmluc2VydChlbnZlbG9wZS50b0VudGl0eShzeW5jZWQgPSB0cnVlKSkKICAgIH0KCiAgICBvdmVycmlkZSBmdW4gcGVuZGluZ0ZvclN5bmMoKTogRmxvdzxMaXN0PEV2ZW50RW52ZWxvcGU+PiA9CiAgICAgICAgZGFvLm9ic2VydmVBbGwoKS5tYXAgeyBsaXN0IC0+IGxpc3QuZmlsdGVyIHsgIWl0LnN5bmNlZCB9Lm1hcCB7IGl0LnRvRW52ZWxvcGUoKSB9IH0KCiAgICBvdmVycmlkZSBzdXNwZW5kIGZ1biBldmVudHNTaW5jZShzaW5jZUhsYzogSGxjPywgbGltaXQ6IEludCk6IExpc3Q8RXZlbnRFbnZlbG9wZT4gPSB3aXRoQ29udGV4dChEaXNwYXRjaGVycy5JTykgewogICAgICAgIHZhbCBzaW5jZSA9IHNpbmNlSGxjPy5lbmNvZGUoKSA/OiAiMC0wLTAwMDAiCiAgICAgICAgZGFvLmV2ZW50c1NpbmNlKHNpbmNlLCBsaW1pdCkubWFwIHsgaXQudG9FbnZlbG9wZSgpIH0KICAgIH0KCiAgICBvdmVycmlkZSBzdXNwZW5kIGZ1biBtYXJrU3luY2VkKGV2ZW50SWRzOiBMaXN0PFN0cmluZz4pID0gd2l0aENvbnRleHQoRGlzcGF0Y2hlcnMuSU8pIHsKICAgICAgICBpZiAoZXZlbnRJZHMuaXNOb3RFbXB0eSgpKSBkYW8ubWFya1N5bmNlZChldmVudElkcykKICAgIH0KCiAgICBvdmVycmlkZSBzdXNwZW5kIGZ1biBleGlzdHMoZXZlbnRJZDogU3RyaW5nKTogQm9vbGVhbiA9IHdpdGhDb250ZXh0KERpc3BhdGNoZXJzLklPKSB7IGRhby5leGlzdHMoZXZlbnRJZCkgfQoKICAgIG92ZXJyaWRlIGZ1biBvYnNlcnZlQWxsKCk6IEZsb3c8RXZlbnRFbnZlbG9wZT4gPSBmbG93IHsKICAgICAgICBkYW8ub2JzZXJ2ZUFsbCgpLmNvbGxlY3QgeyBsaXN0IC0+IGxpc3QuZm9yRWFjaCB7IGVtaXQoaXQudG9FbnZlbG9wZSgpKSB9IH0KICAgIH0KfQoKcHJpdmF0ZSBmdW4gRXZlbnRFbnZlbG9wZS50b0VudGl0eShzeW5jZWQ6IEJvb2xlYW4pID0KICAgIEV2ZW50RW50aXR5KGV2ZW50SWQsIGhsYywgZGV2aWNlSWQsIHVzZXJJZCwgdHlwZSwgcGF5bG9hZCwgY3JlYXRlZEF0LCBzeW5jZWQpCnByaXZhdGUgZnVuIEV2ZW50RW50aXR5LnRvRW52ZWxvcGUoKSA9CiAgICBFdmVudEVudmVsb3BlKGV2ZW50SWQsIGhsYywgZGV2aWNlSWQsIHVzZXJJZCwgdHlwZSwgcGF5bG9hZCwgY3JlYXRlZEF0KQo=
+package br.com.aspas.contingencia.data.repository
+
+import androidx.room.withTransaction
+import br.com.aspas.contingencia.common.Hlc
+import br.com.aspas.contingencia.common.HlcGenerator
+import br.com.aspas.contingencia.common.Uuid
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.db.dao.EventDao
+import br.com.aspas.contingencia.data.db.entity.EventEntity
+import br.com.aspas.contingencia.domain.event.EventEnvelope
+import br.com.aspas.contingencia.domain.event.EventType
+import br.com.aspas.contingencia.domain.repository.CloseTableAppendResult
+import br.com.aspas.contingencia.domain.repository.EventAppendRequest
+import br.com.aspas.contingencia.domain.repository.EventRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Singleton
+
+@Singleton
+class EventRepositoryImpl @Inject constructor(
+    private val db: AspasDatabase,
+    private val dao: EventDao,
+    private val hlcGenerator: HlcGenerator,
+    @Named("deviceId") private val deviceId: String,
+    private val sessionProvider: SessionProvider
+) : EventRepository {
+    private val lock = Mutex()
+
+    override suspend fun append(type: String, payloadJson: String, userId: String?): EventEnvelope =
+        appendBatch(listOf(EventAppendRequest(type, payloadJson, userId))).single()
+
+    override suspend fun appendBatch(requests: List<EventAppendRequest>): List<EventEnvelope> =
+        withContext(Dispatchers.IO) {
+            require(requests.all { it.type in EventType.ALL }) { "tipo de evento inválido" }
+            if (requests.isEmpty()) return@withContext emptyList()
+            lock.withLock {
+                val events = requests.map { request -> newEnvelope(request) }
+                db.withTransaction { dao.insertAll(events.map { it.toEntity(synced = false) }) }
+                events
+            }
+        }
+
+    override suspend fun appendCloseBatch(
+        tableId: String,
+        orderId: String,
+        requests: List<EventAppendRequest>
+    ): CloseTableAppendResult = withContext(Dispatchers.IO) {
+        require(requests.isNotEmpty()) { "lote de fechamento vazio" }
+        require(requests.last().type == EventType.TABLE_CLOSED) { "fechamento deve terminar com table_closed" }
+        require(requests.dropLast(1).all { it.type == EventType.PAYMENT_REGISTERED }) {
+            "lote de fechamento só aceita pagamentos e table_closed"
+        }
+        require(requests.all { it.type in EventType.ALL }) { "tipo de evento inválido" }
+        lock.withLock {
+            db.withTransaction {
+                // This guard intentionally reads the event log, not projections: projections may lag.
+                if (dao.hasEventForOrder(EventType.TABLE_CLOSED, orderId)) {
+                    CloseTableAppendResult(appended = false)
+                } else {
+                    val events = requests.map { newEnvelope(it) }
+                    dao.insertAll(events.map { it.toEntity(synced = false) })
+                    CloseTableAppendResult(appended = true, events = events)
+                }
+            }
+        }
+    }
+
+    private fun newEnvelope(request: EventAppendRequest): EventEnvelope {
+        val hlc = hlcGenerator.next()
+        return EventEnvelope(
+            Uuid.new(), hlc.encode(), deviceId,
+            request.userId ?: sessionProvider.currentUserId(), request.type, request.payloadJson,
+            System.currentTimeMillis()
+        )
+    }
+
+    override suspend fun appendRemote(envelope: EventEnvelope) = withContext(Dispatchers.IO) {
+        if (dao.exists(envelope.eventId)) return@withContext
+        if (envelope.type !in EventType.ALL) return@withContext
+        val remoteHlc = runCatching { Hlc.decode(envelope.hlc) }.getOrNull() ?: return@withContext
+        hlcGenerator.observe(remoteHlc)
+        dao.insert(envelope.toEntity(synced = true))
+    }
+
+    override fun pendingForSync(): Flow<List<EventEnvelope>> =
+        dao.observeAll().map { list -> list.filter { !it.synced }.map { it.toEnvelope() } }
+
+    override suspend fun eventsSince(sinceHlc: Hlc?, limit: Int): List<EventEnvelope> = withContext(Dispatchers.IO) {
+        val since = sinceHlc?.encode() ?: "0-0-0000"
+        dao.eventsSince(since, limit).map { it.toEnvelope() }
+    }
+
+    override suspend fun markSynced(eventIds: List<String>) = withContext(Dispatchers.IO) {
+        if (eventIds.isNotEmpty()) dao.markSynced(eventIds)
+    }
+
+    override suspend fun exists(eventId: String): Boolean = withContext(Dispatchers.IO) { dao.exists(eventId) }
+
+    override fun observeAll(): Flow<EventEnvelope> = flow {
+        dao.observeAll().collect { list -> list.forEach { emit(it.toEnvelope()) } }
+    }
+}
+
+private fun EventEnvelope.toEntity(synced: Boolean) =
+    EventEntity(eventId, hlc, deviceId, userId, type, payload, createdAt, synced)
+private fun EventEntity.toEnvelope() =
+    EventEnvelope(eventId, hlc, deviceId, userId, type, payload, createdAt)
