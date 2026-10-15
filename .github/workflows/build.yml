@@ -41,7 +41,6 @@ jobs:
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
-          # Dicionário ou lista ordenada com marcadores únicos e caminhos reais
           files_map = [
               ("settings.gradle.kts", "settings.gradle.kts"),
               ("root build.gradle.kts", "build.gradle.kts"),
@@ -121,7 +120,6 @@ jobs:
               start_content = pos + len(target_path)
               end_content = len(full_text)
               
-              # Procurar o próximo marcador válido na sequência
               for next_label, next_target in files_map[idx+1:]:
                   next_pos = full_text.find(next_target, start_content)
                   if next_pos != -1 and next_pos < end_content:
@@ -131,6 +129,10 @@ jobs:
               file_data = full_text[start_content:end_content].strip()
               if file_data.startswith("---"):
                   file_data = file_data.split("---", 2)[-1].strip()
+
+              # Se for build.gradle.kts, cortar se encontrar o início de outro bloco ou cabeçalho excessivo
+              if target_path.endswith("build.gradle.kts") and "package " in file_data:
+                  file_data = file_data.split("package ")[0].strip()
 
               dir_name = os.path.dirname(target_path)
               if dir_name:
