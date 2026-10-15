@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Parse aspas.md and create libs.versions.toml
+      - name: Create libs.versions.toml and extract files
         run: |
           mkdir -p gradle
           cat << 'EOF' > gradle/libs.versions.toml
@@ -83,12 +83,9 @@ jobs:
           hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
           EOF
 
-      - name: Parse aspas.md to extract remaining project files
-        run: |
           python3 << 'EOF'
           import os
 
-          print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
               exit(1)
 
@@ -194,8 +191,20 @@ jobs:
                   os.makedirs(dir_name, exist_ok=True)
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
-          print("Ficheiros processados com sucesso.")
           EOF
+
+      - name: Ensure settings.gradle.kts includes version catalog mapping
+        run: |
+          if ! grep -q "versionCatalogs" settings.gradle.kts; then
+            echo "" >> settings.gradle.kts
+            echo "dependencyResolutionManagement {" >> settings.gradle.kts
+            echo "    versionCatalogs {" >> settings.gradle.kts
+            echo "        create(\"libs\") {" >> settings.gradle.kts
+            echo "            from(files(\"gradle/libs.versions.toml\"))" >> settings.gradle.kts
+            echo "        }" >> settings.gradle.kts
+            echo "    }" >> settings.gradle.kts
+            echo "}" >> settings.gradle.kts
+          fi
 
       - name: Setup Gradle Wrapper and Build APK
         run: |
