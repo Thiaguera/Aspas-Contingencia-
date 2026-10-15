@@ -212,18 +212,13 @@ jobs:
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
 
-          # Substituir o plugin compose-compiler problemático se ele constar no build.gradle.kts raiz
+          # Limpar de forma limpa a linha do compose-compiler do build.gradle.kts raiz sem deixar lixo
           if os.path.exists("build.gradle.kts"):
               with open("build.gradle.kts", "r", encoding="utf-8") as bf:
-                  bcontent = bf.read()
-              # Limpar duplicados de plugins se existirem
-              if bcontent.count("plugins {") > 1:
-                  parts = bcontent.split("plugins {")
-                  bcontent = parts[0] + "plugins {" + parts[1]
-              # Corrigir o ID do compose se necessário para evitar falhas de resolução
-              bcontent = bcontent.replace("alias(libs.plugins.compose.compiler)", "")
+                  lines = bf.readlines()
+              clean_lines = [line for line in lines if "compose.compiler" not in line and "compose-compiler" not in line]
               with open("build.gradle.kts", "w", encoding="utf-8") as bf:
-                  bf.write(bcontent)
+                  bf.writelines(clean_lines)
 
           print("Ficheiros processados com sucesso.")
           EOF
