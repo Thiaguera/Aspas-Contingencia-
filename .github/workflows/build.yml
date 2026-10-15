@@ -1,132 +1,36 @@
-name: Build Android APK
-
+name: Recovery Build APK
 on:
-  push:
-    branches: [ "main", "master" ]
   workflow_dispatch:
-
+  push:
+    branches: [recovery/native-stage12]
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: '17'
-          distribution: 'temurin'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v4
+      - uses: android-actions/setup-android@v3
+      - name: Build isolated recovery APK
+        run: |
+          chmod +x ./gradlew
+          ./gradlew :app:assembleDebug :core:data:testDebugUnitTest :core:data:compileDebugAndroidTestKotlin --stacktrace --no-daemon --max-workers 1
+      - uses: actions/upload-artifact@v4
+        if: success()
         with:
-          packages: 'platform-tools'
-
-      - name: Create libs.versions.toml and settings.gradle.kts explicitly
-        run: |
-          mkdir -p gradle
-          cat << 'EOF' > gradle/libs.versions.toml
-          [versions]
-          agp = "8.5.0"
-          kotlin = "1.9.23"
-          ksp = "1.9.23-1.0.19"
-          hilt = "2.51.1"
-          room = "2.6.1"
-          ktor = "2.3.11"
-          serialization = "1.6.3"
-          coroutines = "1.8.0"
-          compose-compiler = "1.5.11"
-          androidx-lifecycle = "2.7.0"
-          androidx-navigation = "2.7.7"
-          sqlcipher = "4.5.4"
-          sqlite = "2.4.0"
-          jmdns = "3.5.8"
-
-          [libraries]
-          androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.12.0" }
-          androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
-          androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
-          androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-          androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
-          
-          kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
-          kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-          kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
-
-          hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
-          hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
-          hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.2.0" }
-
-          room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
-          room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-          room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
-          sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "sqlcipher" }
-          sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
-
-          ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
-          ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
-          ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
-          ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
-
-          jmdns = { module = "javax.jmdns:jmdns", version.ref = "jmdns" }
-
-          [plugins]
-          android-application = { id = "com.android.application", version.ref = "agp" }
-          android-library = { id = "com.android.library", version.ref = "agp" }
-          kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-          kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-          kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-          compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-          ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-          hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-          EOF
-
-          cat << 'EOF' > settings.gradle.kts
-          pluginManagement {
-              repositories {
-                  google()
-                  mavenCentral()
-                  gradlePluginPortal()
-              }
-          }
-          dependencyResolutionManagement {
-              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-              repositories {
-                  google()
-                  mavenCentral()
-              }
-          }
-          rootProject.name = "Aspas-Contingencia"
-          include(":app", ":core:common", ":core:domain", ":core:data", ":core:print", ":core:sync")
-          EOF
-
-      - name: Parse aspas.md to extract project files
-        run: |
-          python3 << 'EOF'
-          import os
-          import re
-
-          if not os.path.exists("aspas.md"):
-              exit(1)
-
-          with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
-              full_text = f.read()
-
-          marker = "============ BUILD FILES ============"
-          if marker in full_text:
-              full_text = full_text[full_text.find(marker):]
-
-          files_map = [
-              ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt"),
-              ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt"),
-              ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt"),
-              ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt"),
-              ("core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt", "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.
+          name: aspas-recovery-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovery-test-reports
+          path: |
+            **/build/reports/tests/**
+            **/build/test-results/**
+          if-no-files-found: ignore
