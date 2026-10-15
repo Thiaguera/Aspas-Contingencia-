@@ -1,5 +1,6 @@
 package br.com.aspas.contingencia.di
 import android.content.Context
+import br.com.aspas.contingencia.data.db.dao.*
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import br.com.aspas.contingencia.data.db.AspasDatabase
@@ -37,4 +38,21 @@ bytes.joinToString("") { "%02x".format(it) }).apply()
 }
 return DatabaseFactory.create(ctx, pass)
 }
+@Provides fun provideEventDao(db: AspasDatabase): EventDao = db.eventDao()
+@Provides fun provideTableDao(db: AspasDatabase): TableDao = db.tableDao()
+@Provides fun provideOrderDao(db: AspasDatabase): OrderDao = db.orderDao()
+@Provides fun provideOrderItemDao(db: AspasDatabase): OrderItemDao = db.orderItemDao()
+@Provides fun providePaymentDao(db: AspasDatabase): PaymentDao = db.paymentDao()
+@Provides fun provideLeaseDao(db: AspasDatabase): LeaseDao = db.leaseDao()
+@Provides fun provideCatalogDao(db: AspasDatabase): CatalogDao = db.catalogDao()
+@Provides fun providePrinterDao(db: AspasDatabase): PrinterDao = db.printerDao()
+@Provides fun providePrintJobDao(db: AspasDatabase): PrintJobDao = db.printJobDao()
+@Provides fun provideUserDao(db: AspasDatabase): UserDao = db.userDao()
+@Provides fun provideAuditDao(db: AspasDatabase): AuditDao = db.auditDao()
+@Provides fun provideSnapshotDao(db: AspasDatabase): SnapshotDao = db.snapshotDao()
+@Provides fun provideCashSessionDao(db: AspasDatabase): CashSessionDao = db.cashSessionDao()
+@Provides fun provideCashMovementDao(db: AspasDatabase): CashMovementDao = db.cashMovementDao()
+@Provides fun provideSyncStateDao(db: AspasDatabase): SyncStateDao = db.syncStateDao()
+@Provides fun provideAppliedEventDao(db: AspasDatabase): AppliedEventDao = db.appliedEventDao()
+@Provides fun provideProjectionStateDao(db: AspasDatabase): ProjectionStateDao = db.projectionStateDao()
 }
