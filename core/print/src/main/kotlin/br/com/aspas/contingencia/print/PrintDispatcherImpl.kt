@@ -78,7 +78,7 @@ override suspend fun forwardToPeer(printId: String, peerDeviceId: String) {
 eventRepository.append(EventType.PRINT_JOB_FORWARDED,
 """{"printId":"$printId","toDevice":"$peerDeviceId"}""", null)
 }
-override suspend fun processQueue() = withContext(Dispatchers.IO) {
+override suspend fun processQueue(): Unit = withContext(Dispatchers.IO) {
     // Hold the shared gate until all sends finish; checking only a durable boolean
     // before fetching jobs leaves a rebuild/send race.
     maintenanceGate.withPhysicalProcessing {
@@ -87,6 +87,7 @@ override suspend fun processQueue() = withContext(Dispatchers.IO) {
             runCatching { processOne(job) }.onFailure { Timber.e(it, "processOne ${job.printId}") }
         }
     }
+    Unit
 }
 private suspend fun processOne(job: PrintJobEntity) {
 val printer = db.printerDao().getById(job.printerId) ?: return
