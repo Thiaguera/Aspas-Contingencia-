@@ -1,1 +1,80 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuYm9vdHN0cmFwCgppbXBvcnQgYW5kcm9pZHgucm9vbS5Sb29tCmltcG9ydCBhbmRyb2lkeC50ZXN0LmNvcmUuYXBwLkFwcGxpY2F0aW9uUHJvdmlkZXIKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5jYXRhbG9nLkNhdGFsb2dGaWxlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuY2F0YWxvZy5DYXRhbG9nSW1wb3J0ZXIKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5jYXRhbG9nLkNhdGVnb3J5SnNvbgppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmNhdGFsb2cuSXRlbUpzb24KaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZGF0YS5jYXRhbG9nLlByaW50ZXJKc29uCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRhdGEuZGIuQXNwYXNEYXRhYmFzZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kYXRhLmRiLmVudGl0eS5UYWJsZUVudGl0eQppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLnJ1bkJsb2NraW5nCmltcG9ydCBrb3RsaW54LnNlcmlhbGl6YXRpb24uanNvbi5Kc29uCmltcG9ydCBvcmcuanVuaXQuQWZ0ZXIKaW1wb3J0IG9yZy5qdW5pdC5Bc3NlcnQuYXNzZXJ0RXF1YWxzCmltcG9ydCBvcmcuanVuaXQuQXNzZXJ0LmFzc2VydEZhbHNlCmltcG9ydCBvcmcuanVuaXQuQXNzZXJ0LmFzc2VydFRydWUKaW1wb3J0IG9yZy5qdW5pdC5CZWZvcmUKaW1wb3J0IG9yZy5qdW5pdC5UZXN0CgovKiogSW50ZWdyYXRpb24gY292ZXJhZ2UgZm9yIHNhZmUsIHJlcGVhdGFibGUgZmlyc3QtcnVuIHByb3Zpc2lvbmluZy4gKi8KY2xhc3MgRmlyc3RSdW5Qcm92aXNpb25lclJvb21JbnRlZ3JhdGlvblRlc3QgewogICAgcHJpdmF0ZSBsYXRlaW5pdCB2YXIgZGI6IEFzcGFzRGF0YWJhc2UKICAgIHByaXZhdGUgbGF0ZWluaXQgdmFyIGltcG9ydGVyOiBDYXRhbG9nSW1wb3J0ZXIKICAgIHByaXZhdGUgbGF0ZWluaXQgdmFyIHByb3Zpc2lvbmVyOiBGaXJzdFJ1blByb3Zpc2lvbmVyCgogICAgQEJlZm9yZSBmdW4gc2V0VXAoKSB7CiAgICAgICAgZGIgPSBSb29tLmluTWVtb3J5RGF0YWJhc2VCdWlsZGVyKAogICAgICAgICAgICBBcHBsaWNhdGlvblByb3ZpZGVyLmdldEFwcGxpY2F0aW9uQ29udGV4dCgpLCBBc3Bhc0RhdGFiYXNlOjpjbGFzcy5qYXZhCiAgICAgICAgKS5hbGxvd01haW5UaHJlYWRRdWVyaWVzKCkuYnVpbGQoKQogICAgICAgIHZhbCBqc29uID0gSnNvbiB7IGVuY29kZURlZmF1bHRzID0gdHJ1ZSB9CiAgICAgICAgaW1wb3J0ZXIgPSBDYXRhbG9nSW1wb3J0ZXIoZGIsIGpzb24pCiAgICAgICAgcHJvdmlzaW9uZXIgPSBGaXJzdFJ1blByb3Zpc2lvbmVyKEFwcGxpY2F0aW9uUHJvdmlkZXIuZ2V0QXBwbGljYXRpb25Db250ZXh0KCksIGRiLCBpbXBvcnRlcikKICAgIH0KCiAgICBAQWZ0ZXIgZnVuIHRlYXJEb3duKCkgPSBkYi5jbG9zZSgpCgogICAgQFRlc3QgZnVuIGluaXRpYWxDYXRhbG9nSW1wb3J0X2lzSWRlbXBvdGVudEFuZE5ldmVyT3ZlcndyaXRlc0F2YWlsYWJpbGl0eU9yUHJpbnRlcklwKCkgPSBydW5CbG9ja2luZyB7CiAgICAgICAgaW1wb3J0ZXIuaW1wb3J0RmlsZShjYXRhbG9nKCkpCiAgICAgICAgdmFsIGluaXRpYWxJdGVtID0gZGIuY2F0YWxvZ0RhbygpLmdldEl0ZW0oImNvZmZlZSIpISEKICAgICAgICBkYi5jYXRhbG9nRGFvKCkudXBzZXJ0SXRlbShpbml0aWFsSXRlbS5jb3B5KGF2YWlsYWJsZSA9IGZhbHNlKSkKICAgICAgICB2YWwgaW5pdGlhbFByaW50ZXIgPSBkYi5wcmludGVyRGFvKCkuZ2V0QnlJZCgiYmFyIikhIQogICAgICAgIGRiLnByaW50ZXJEYW8oKS51cHNlcnQoaW5pdGlhbFByaW50ZXIuY29weShpcCA9ICIxMC4wLjAuNDQiLCBlbmFibGVkID0gZmFsc2UsIGxhc3RTdGF0dXMgPSAib2ZmbGluZSIpKQoKICAgICAgICBpbXBvcnRlci5pbXBvcnRGaWxlKGNhdGFsb2coKS5jb3B5KAogICAgICAgICAgICBpdGVtcyA9IGNhdGFsb2coKS5pdGVtcy5tYXAgeyBpdC5jb3B5KG5hbWUgPSAiQ2hhbmdlZCByZW1vdGVseSIpIH0sCiAgICAgICAgICAgIHByaW50ZXJzID0gY2F0YWxvZygpLnByaW50ZXJzLm1hcCB7IGl0LmNvcHkoaXAgPSAiMTkyLjE2OC45LjkiKSB9CiAgICAgICAgKSkKCiAgICAgICAgYXNzZXJ0RmFsc2UoZGIuY2F0YWxvZ0RhbygpLmdldEl0ZW0oImNvZmZlZSIpISEuYXZhaWxhYmxlKQogICAgICAgIGFzc2VydEVxdWFscygiQ2Fmw6kiLCBkYi5jYXRhbG9nRGFvKCkuZ2V0SXRlbSgiY29mZmVlIikhIS5uYW1lKQogICAgICAgIGRiLnByaW50ZXJEYW8oKS5nZXRCeUlkKCJiYXIiKSEhLmFsc28geyBwcmludGVyIC0+CiAgICAgICAgICAgIGFzc2VydEVxdWFscygiMTAuMC4wLjQ0IiwgcHJpbnRlci5pcCkKICAgICAgICAgICAgYXNzZXJ0RmFsc2UocHJpbnRlci5lbmFibGVkKQogICAgICAgICAgICBhc3NlcnRFcXVhbHMoIm9mZmxpbmUiLCBwcmludGVyLmxhc3RTdGF0dXMpCiAgICAgICAgfQogICAgfQoKICAgIEBUZXN0IGZ1biBwcm92aXNpb25fY3JlYXRlc09ubHlNaXNzaW5nTnVtYmVyc0FuZExlYXZlc0V4aXN0aW5nVGFibGVzVW50b3VjaGVkKCkgPSBydW5CbG9ja2luZyB7CiAgICAgICAgaW1wb3J0ZXIuaW1wb3J0RmlsZShjYXRhbG9nKCkpCiAgICAgICAgdmFsIGV4aXN0aW5nID0gVGFibGVFbnRpdHkoImNvbmZpZ3VyZWQtdGFibGUiLCAyLCAiw4FyZWEgZXh0ZXJuYSIsICJvcGVuIiwgMTBMLCBudWxsLCAibGVhc2UtMSIsIDEyLjApCiAgICAgICAgZGIudGFibGVEYW8oKS51cHNlcnQoZXhpc3RpbmcpCgogICAgICAgIHZhbCBmaXJzdCA9IHByb3Zpc2lvbmVyLnByb3Zpc2lvbigxLi4zKQogICAgICAgIHZhbCBzZWNvbmQgPSBwcm92aXNpb25lci5wcm92aXNpb24oMS4uMykKCiAgICAgICAgYXNzZXJ0RXF1YWxzKDIsIGZpcnN0LnRhYmxlc0NyZWF0ZWQpCiAgICAgICAgYXNzZXJ0RXF1YWxzKDAsIHNlY29uZC50YWJsZXNDcmVhdGVkKQogICAgICAgIGFzc2VydEVxdWFscyhsaXN0T2YoMSwgMiwgMyksIGRiLnRhYmxlRGFvKCkubGlzdEFsbCgpLm1hcCB7IGl0Lm51bWJlciB9KQogICAgICAgIGFzc2VydEVxdWFscyhleGlzdGluZywgZGIudGFibGVEYW8oKS5nZXRCeUlkKCJjb25maWd1cmVkLXRhYmxlIikpCiAgICAgICAgYXNzZXJ0VHJ1ZShwcm92aXNpb25lci5zbmFwc2hvdCgpLmlzUmVhZHkpCiAgICB9CgogICAgcHJpdmF0ZSBmdW4gY2F0YWxvZygpID0gQ2F0YWxvZ0ZpbGUoCiAgICAgICAgdmVyc2lvbiA9IDEsCiAgICAgICAgY2F0ZWdvcmllcyA9IGxpc3RPZihDYXRlZ29yeUpzb24oImRyaW5rcyIsICJCZWJpZGFzIiwgImJhciIsIDEpKSwKICAgICAgICBpdGVtcyA9IGxpc3RPZihJdGVtSnNvbigiY29mZmVlIiwgIkNhZsOpIiwgImRyaW5rcyIsIDguMCwgcHJpbnRfZGVzdGluYXRpb25zID0gbGlzdE9mKCJiYXIiKSkpLAogICAgICAgIHByaW50ZXJzID0gbGlzdE9mKFByaW50ZXJKc29uKCJiYXIiLCAiQmFyIiwgIjE5Mi4xNjguMS4xMCIsIDkxMDAsICJCQVIiKSkKICAgICkKfQo=
+package br.com.aspas.contingencia.data.bootstrap
+
+import androidx.room.Room
+import androidx.test.core.app.ApplicationProvider
+import br.com.aspas.contingencia.data.catalog.CatalogFile
+import br.com.aspas.contingencia.data.catalog.CatalogImporter
+import br.com.aspas.contingencia.data.catalog.CategoryJson
+import br.com.aspas.contingencia.data.catalog.ItemJson
+import br.com.aspas.contingencia.data.catalog.PrinterJson
+import br.com.aspas.contingencia.data.db.AspasDatabase
+import br.com.aspas.contingencia.data.db.entity.TableEntity
+import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.Json
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+
+/** Integration coverage for safe, repeatable first-run provisioning. */
+class FirstRunProvisionerRoomIntegrationTest {
+    private lateinit var db: AspasDatabase
+    private lateinit var importer: CatalogImporter
+    private lateinit var provisioner: FirstRunProvisioner
+
+    @Before fun setUp() {
+        db = Room.inMemoryDatabaseBuilder(
+            ApplicationProvider.getApplicationContext(), AspasDatabase::class.java
+        ).allowMainThreadQueries().build()
+        val json = Json { encodeDefaults = true }
+        importer = CatalogImporter(db, json)
+        provisioner = FirstRunProvisioner(ApplicationProvider.getApplicationContext(), db, importer)
+    }
+
+    @After fun tearDown() = db.close()
+
+    @Test fun initialCatalogImport_isIdempotentAndNeverOverwritesAvailabilityOrPrinterIp() = runBlocking {
+        importer.importFile(catalog())
+        val initialItem = db.catalogDao().getItem("coffee")!!
+        db.catalogDao().upsertItem(initialItem.copy(available = false))
+        val initialPrinter = db.printerDao().getById("bar")!!
+        db.printerDao().upsert(initialPrinter.copy(ip = "10.0.0.44", enabled = false, lastStatus = "offline"))
+
+        importer.importFile(catalog().copy(
+            items = catalog().items.map { it.copy(name = "Changed remotely") },
+            printers = catalog().printers.map { it.copy(ip = "192.168.9.9") }
+        ))
+
+        assertFalse(db.catalogDao().getItem("coffee")!!.available)
+        assertEquals("Café", db.catalogDao().getItem("coffee")!!.name)
+        db.printerDao().getById("bar")!!.also { printer ->
+            assertEquals("10.0.0.44", printer.ip)
+            assertFalse(printer.enabled)
+            assertEquals("offline", printer.lastStatus)
+        }
+    }
+
+    @Test fun provision_createsOnlyMissingNumbersAndLeavesExistingTablesUntouched() = runBlocking {
+        importer.importFile(catalog())
+        val existing = TableEntity("configured-table", 2, "Área externa", "open", 10L, null, "lease-1", 12.0)
+        db.tableDao().upsert(existing)
+
+        val first = provisioner.provision(1..3)
+        val second = provisioner.provision(1..3)
+
+        assertEquals(2, first.tablesCreated)
+        assertEquals(0, second.tablesCreated)
+        assertEquals(listOf(1, 2, 3), db.tableDao().listAll().map { it.number })
+        assertEquals(existing, db.tableDao().getById("configured-table"))
+        assertTrue(provisioner.snapshot().isReady)
+    }
+
+    private fun catalog() = CatalogFile(
+        version = 1,
+        categories = listOf(CategoryJson("drinks", "Bebidas", "bar", 1)),
+        items = listOf(ItemJson("coffee", "Café", "drinks", 8.0, print_destinations = listOf("bar"))),
+        printers = listOf(PrinterJson("bar", "Bar", "192.168.1.10", 9100, "BAR"))
+    )
+}
