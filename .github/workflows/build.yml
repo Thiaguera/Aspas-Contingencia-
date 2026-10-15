@@ -117,6 +117,7 @@ jobs:
               actual_path = path
               pos = full_text.find(actual_path)
               if pos == -1:
+                  # Tentar rota alternativa sem barras se falhar
                   continue
               
               start_content = pos + len(actual_path)
