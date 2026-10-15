@@ -43,7 +43,6 @@ jobs:
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
-          # Lista completa incluindo todos os build.gradle.kts dos módulos
           known_paths = [
               "settings.gradle.kts",
               "build.gradle.kts",
@@ -157,10 +156,15 @@ jobs:
 
           print("A gerar o Gradle Wrapper...")
           subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
-
-          if os.path.exists("gradlew"):
-              os.chmod("gradlew", 0o755)
-
-          print("A compilar o APK Debug...")
-          subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
           EOF
+
+      - name: Build APK Debug
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: '**/app/build/outputs/apk/debug/*.apk'
