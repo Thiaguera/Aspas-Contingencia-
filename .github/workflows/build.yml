@@ -24,55 +24,46 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Unpack, Locate Project, Setup Gradle and Build APK
+      - name: Unpack, Setup Gradle and Build APK
         run: |
           python3 -c '
           import os, urllib.request, zipfile, subprocess, base64
 
           print("--- Unpacking aspas.md ---")
-          if not os.path.exists("aspas.md"):
-              print("Error: aspas.md not found!")
-
           with open("aspas.md", "r", encoding="utf-8") as f:
-              lines = f.readlines()
+              content = f.read()
 
-          current_file = None
-          code_lines = []
-          collecting = False
+          # Extração robusta baseada em blocos de código markdown
+          import re
+          blocks = re.findall(r"([^\n]+\n)?```[^\n]*\n(.*?)```", content, re.DOTALL)
+          
+          for header, code in blocks:
+              filepath = ""
+              if header:
+                  filepath = header.strip().split()[0]
+              
+              if not filepath or "/" not in filepath:
+                  # Se não tiver caminho explícito, assume a estrutura do android-direct-print
+                  continue
+              
+              os.makedirs(os.path.dirname(filepath), exist_ok=True)
+              with open(filepath, "w", encoding="utf-8") as out:
+                  out.write(code)
+              print(f"Created: {filepath}")
 
-          for line in lines:
-              stripped = line.strip()
-              if stripped.startswith("```"):
-                  if collecting:
-                      if current_file:
-                          dir_name = os.path.dirname(current_file)
-                          if dir_name:
-                              os.makedirs(dir_name, exist_ok=True)
-                          with open(current_file, "w", encoding="utf-8") as out:
-                              out.writelines(code_lines)
-                          print(f"Created file: {current_file}")
-                      current_file = None
-                      code_lines = []
-                      collecting = False
-                  else:
-                      collecting = True
-              elif collecting:
-                  code_lines.append(line)
-              else:
-                  if stripped and not stripped.startswith("#") and ("/" in stripped or "." in stripped):
-                      current_file = stripped
+          # Forçar entrada na pasta do projeto Android
+          project_dir = "android-direct-print"
+          if not os.path.exists(project_dir):
+              # Se não encontrar com esse nome, procura por uma pasta que contenha build.gradle
+              for root, dirs, files in os.walk("."):
+                  if "build.gradle" in files and root != ".":
+                      project_dir = root
+                      break
 
-          print("\n--- Searching for Android Project Directory ---")
-          project_dir = "."
-          for root, dirs, files in os.walk("."):
-              if "settings.gradle" in files or "settings.gradle.kts" in files:
-                  project_dir = root
-                  break
-
-          print(f"Target project directory found at: {project_dir}")
+          print(f"Entering project directory: {project_dir}")
           os.chdir(project_dir)
 
-          print("\nDownloading Gradle 8.9...")
+          print("Downloading Gradle 8.9...")
           encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
           target_url = base64.b64decode(encoded_url).decode("utf-8")
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
