@@ -24,32 +24,80 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Locate Project, Setup Gradle and Build APK
+      - name: Unpack, Setup Gradle and Build APK
         run: |
           python3 -c '
-          import os, urllib.request, zipfile, subprocess, base64
+          import os, urllib.request, zipfile, subprocess, base64, re
 
-          print("--- Listing Workspace Contents ---")
+          print("--- Unpacking aspas.md ---")
+          if not os.path.exists("aspas.md"):
+              print("Erro: aspas.md nao encontrado!")
+
+          with open("aspas.md", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          # Extração de ficheiros baseada em blocos markdown com caminhos explícitos
+          # Procura linhas com caminhos antes de blocos de código
+          pattern = r"(?:^|\n)([^\n`#]+)\n```[^\n]*\n(.*?)```"
+          matches = re.findall(pattern, content, re.DOTALL)
+
+          if not matches:
+              # Fallback: procura por blocos marcados com comentários de caminho
+              print("A usar metodo alternativo de extracção...")
+              blocks = content.split("```")
+              for i in range(1, len(blocks), 2):
+                  code = blocks[i]
+                  if i > 1:
+                      header_lines = blocks[i-1].strip().split("\n")
+                      if header_lines:
+                          filepath = header_lines[-1].strip()
+                          if "/" in filepath or "." in filepath:
+                              dir_name = os.path.dirname(filepath)
+                              if dir_name:
+                                  os.makedirs(dir_name, exist_ok=True)
+                              with open(filepath, "w", encoding="utf-8") as out:
+                                  # Remove a primeira linha se for o nome do ficheiro
+                                  code_lines = code.split("\n")
+                                  if code_lines and ("/" in code_lines[0] or "\\" in code_lines[0]):
+                                      code_lines = code_lines[1:]
+                                  out.write("\n".join(code_lines))
+                              print(f"Extraído: {filepath}")
+
+          for filepath, code in matches:
+              filepath = filepath.strip()
+              if not filepath or ("/" not in filepath and "." not in filepath):
+                  continue
+              
+              dir_name = os.path.dirname(filepath)
+              if dir_name:
+                  os.makedirs(dir_name, exist_ok=True)
+              
+              with open(filepath, "w", encoding="utf-8") as out:
+                  out.write(code)
+              print(f"Criado: {filepath}")
+
+          print("\n--- Workspace atualizado ---")
           for root, dirs, files in os.walk("."):
               for file in files:
-                  print(os.path.join(root, file))
+                  if "gradle" not in root and ".git" not in root:
+                      print(os.path.join(root, file))
 
-          # Localizar diretamente onde está o settings.gradle no repositório
+          # Localizar o diretório do projeto Android
           project_dir = "."
           for root, dirs, files in os.walk("."):
               if "settings.gradle" in files or "settings.gradle.kts" in files:
                   project_dir = root
                   break
 
-          print(f"Project directory resolved at: {project_dir}")
+          print(f"Diretório do projeto: {project_dir}")
           os.chdir(project_dir)
 
-          print("Downloading Gradle 8.9...")
+          print("\nA descarregar o Gradle 8.9...")
           encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
           target_url = base64.b64decode(encoded_url).decode("utf-8")
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
-          print("Unzipping Gradle...")
+          print("A descompactar o Gradle...")
           with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
               zip_ref.extractall(".")
 
@@ -57,13 +105,13 @@ jobs:
           if os.path.exists(gradle_bin):
               os.chmod(gradle_bin, 0o755)
 
-          print("Generating Gradle Wrapper...")
+          print("A gerar o Gradle Wrapper...")
           subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
 
           if os.path.exists("gradlew"):
               os.chmod("gradlew", 0o755)
 
-          print("Building Debug APK...")
+          print("A compilar o APK Debug...")
           subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
           '
 
