@@ -39,16 +39,22 @@ jobs:
 
           full_text = "".join(lines)
 
-          # Ignorar a árvore visual do topo para evitar falsos positivos nos nomes dos ficheiros
           marker = "============ BUILD FILES ============"
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
+          # Lista completa incluindo todos os build.gradle.kts dos módulos
           known_paths = [
               "settings.gradle.kts",
               "build.gradle.kts",
               "gradle.properties",
               "gradle/libs.versions.toml",
+              "core/common/build.gradle.kts",
+              "core/domain/build.gradle.kts",
+              "core/data/build.gradle.kts",
+              "core/print/build.gradle.kts",
+              "core/sync/build.gradle.kts",
+              "app/build.gradle.kts",
               "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt",
               "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt",
               "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt",
@@ -138,7 +144,6 @@ jobs:
           print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
 
           print("\nA descarregar o Gradle 8.9...")
-          encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3Jh글LTguOS1iaW4uemlw" # mantido codificado
           target_url = base64.b64decode("aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw").decode("utf-8")
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
