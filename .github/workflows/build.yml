@@ -131,7 +131,6 @@ jobs:
               if file_data.startswith("---"):
                   file_data = file_data.split("---", 2)[-1].strip()
 
-              # Limpar blocos de código Markdown caso venham incluídos (```toml, ```kts, etc.)
               if file_data.startswith("```"):
                   first_nl = file_data.find("\n")
                   if first_nl != -1:
@@ -154,7 +153,7 @@ jobs:
       - name: Setup Gradle Wrapper and Build APK
         run: |
           echo "A descarregar o Gradle 8.9..."
-          wget -q [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip) -O gradle-8.9-bin.zip
+          wget -q "https://services.gradle.org/distributions/gradle-8.9-bin.zip" -O gradle-8.9-bin.zip
           unzip -q gradle-8.9-bin.zip
           
           echo "A gerar o Gradle Wrapper..."
