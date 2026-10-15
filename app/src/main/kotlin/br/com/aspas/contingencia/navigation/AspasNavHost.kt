@@ -1,1 +1,46 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLm5hdmlnYXRpb24KaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5Db21wb3NhYmxlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUuc2V0dXAuU2V0dXBTY3JlZW4KaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZmVhdHVyZS5tYW5hZ2VtZW50Lk1hbmFnZW1lbnRTY3JlZW4KaW1wb3J0IGFuZHJvaWR4Lm5hdmlnYXRpb24uTmF2SG9zdENvbnRyb2xsZXIKaW1wb3J0IGFuZHJvaWR4Lm5hdmlnYXRpb24uY29tcG9zZS5OYXZIb3N0CmltcG9ydCBhbmRyb2lkeC5uYXZpZ2F0aW9uLmNvbXBvc2UuY29tcG9zYWJsZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5mZWF0dXJlLmNoZWNrb3V0LkNoZWNrb3V0U2NyZWVuCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUua2l0Y2hlbi5LaXRjaGVuU2NyZWVuCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUubG9naW4uTG9naW5TY3JlZW4KaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZmVhdHVyZS5vcmRlci5PcmRlclNjcmVlbgppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5mZWF0dXJlLnByaW50ZXJzLlByaW50ZXJzU2NyZWVuCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUudGFibGVzLlRhYmxlc1NjcmVlbgpAQ29tcG9zYWJsZQpmdW4gQXNwYXNOYXZIb3N0KG5hdjogTmF2SG9zdENvbnRyb2xsZXIsIHN0YXJ0RGVzdGluYXRpb246IFN0cmluZyA9IFJvdXRlcy5MT0dJTikgewpOYXZIb3N0KG5hdiwgc3RhcnREZXN0aW5hdGlvbiA9IHN0YXJ0RGVzdGluYXRpb24pIHsKY29tcG9zYWJsZShSb3V0ZXMuTE9HSU4pIHsKTG9naW5TY3JlZW4ob25TdWNjZXNzID0gewpuYXYubmF2aWdhdGUoUm91dGVzLlNFVFVQKSB7IHBvcFVwVG8oUm91dGVzLkxPR0lOKSB7IGluY2x1c2l2ZSA9IHRydWUgfSB9IH0pCn0KY29tcG9zYWJsZShSb3V0ZXMuU0VUVVApIHsKU2V0dXBTY3JlZW4ob25SZWFkeSA9IHsgbmF2Lm5hdmlnYXRlKFJvdXRlcy5UQUJMRVMpIHsgcG9wVXBUbyhSb3V0ZXMuU0VUVVApIHsgaW5jbHVzaXZlID0gdHJ1ZSB9IH0gfSkKfQpjb21wb3NhYmxlKFJvdXRlcy5NQU5BR0VNRU5UKSB7IE1hbmFnZW1lbnRTY3JlZW4ob25CYWNrID0geyBuYXYucG9wQmFja1N0YWNrKCkgfSkgfQpjb21wb3NhYmxlKFJvdXRlcy5UQUJMRVMpIHsKVGFibGVzU2NyZWVuKApvbk9wZW4gPSB7IHRhYmxlSWQgLT4gbmF2Lm5hdmlnYXRlKFJvdXRlcy5vcmRlcih0YWJsZUlkKSkgfSwKb25NYW5hZ2VtZW50ID0geyBuYXYubmF2aWdhdGUoUm91dGVzLk1BTkFHRU1FTlQpIH0sCm9uTG9nb3V0ID0geyBuYXYubmF2aWdhdGUoUm91dGVzLkxPR0lOKSB7IHBvcFVwVG8oUm91dGVzLlRBQkxFUykgeyBpbmNsdXNpdmUgPSB0cnVlIH0gfSB9LApvblByaW50ZXJzID0geyBuYXYubmF2aWdhdGUoUm91dGVzLlBSSU5URVJTKSB9LApvbktpdGNoZW4gPSB7IG5hdi5uYXZpZ2F0ZShSb3V0ZXMuS0lUQ0hFTikgfSkKfQpjb21wb3NhYmxlKFJvdXRlcy5PUkRFUikgewpPcmRlclNjcmVlbigKb25CYWNrID0geyBuYXYucG9wQmFja1N0YWNrKCkgfSwKb25DaGVja291dCA9IHsgdGFibGVJZCwgb3JkZXJJZCAtPiBuYXYubmF2aWdhdGUoUm91dGVzLmNoZWNrb3V0KHRhYmxlSWQsIG9yZGVySWQpKSB9KQp9CmNvbXBvc2FibGUoUm91dGVzLkNIRUNLT1VUKSB7CkNoZWNrb3V0U2NyZWVuKApvbkJhY2sgPSB7IG5hdi5wb3BCYWNrU3RhY2soKSB9LApvbkNsb3NlZCA9IHsgbmF2LnBvcEJhY2tTdGFjayhSb3V0ZXMuVEFCTEVTLCBpbmNsdXNpdmUgPSBmYWxzZSkgfSkKfQpjb21wb3NhYmxlKFJvdXRlcy5QUklOVEVSUykgeyBQcmludGVyc1NjcmVlbihvbkJhY2sgPSB7IG5hdi5wb3BCYWNrU3RhY2soKSB9KSB9CmNvbXBvc2FibGUoUm91dGVzLktJVENIRU4pIHsgS2l0Y2hlblNjcmVlbihvbkJhY2sgPSB7IG5hdi5wb3BCYWNrU3RhY2soKSB9KSB9Cn0KfQo=
+package br.com.aspas.contingencia.navigation
+import androidx.compose.runtime.Composable
+import br.com.aspas.contingencia.feature.setup.SetupScreen
+import br.com.aspas.contingencia.feature.management.ManagementScreen
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import br.com.aspas.contingencia.feature.checkout.CheckoutScreen
+import br.com.aspas.contingencia.feature.kitchen.KitchenScreen
+import br.com.aspas.contingencia.feature.login.LoginScreen
+import br.com.aspas.contingencia.feature.order.OrderScreen
+import br.com.aspas.contingencia.feature.printers.PrintersScreen
+import br.com.aspas.contingencia.feature.tables.TablesScreen
+@Composable
+fun AspasNavHost(nav: NavHostController, startDestination: String = Routes.LOGIN) {
+NavHost(nav, startDestination = startDestination) {
+composable(Routes.LOGIN) {
+LoginScreen(onSuccess = {
+nav.navigate(Routes.SETUP) { popUpTo(Routes.LOGIN) { inclusive = true } } })
+}
+composable(Routes.SETUP) {
+SetupScreen(onReady = { nav.navigate(Routes.TABLES) { popUpTo(Routes.SETUP) { inclusive = true } } })
+}
+composable(Routes.MANAGEMENT) { ManagementScreen(onBack = { nav.popBackStack() }) }
+composable(Routes.TABLES) {
+TablesScreen(
+onOpen = { tableId -> nav.navigate(Routes.order(tableId)) },
+onManagement = { nav.navigate(Routes.MANAGEMENT) },
+onLogout = { nav.navigate(Routes.LOGIN) { popUpTo(Routes.TABLES) { inclusive = true } } },
+onPrinters = { nav.navigate(Routes.PRINTERS) },
+onKitchen = { nav.navigate(Routes.KITCHEN) })
+}
+composable(Routes.ORDER) {
+OrderScreen(
+onBack = { nav.popBackStack() },
+onCheckout = { tableId, orderId -> nav.navigate(Routes.checkout(tableId, orderId)) })
+}
+composable(Routes.CHECKOUT) {
+CheckoutScreen(
+onBack = { nav.popBackStack() },
+onClosed = { nav.popBackStack(Routes.TABLES, inclusive = false) })
+}
+composable(Routes.PRINTERS) { PrintersScreen(onBack = { nav.popBackStack() }) }
+composable(Routes.KITCHEN) { KitchenScreen(onBack = { nav.popBackStack() }) }
+}
+}
