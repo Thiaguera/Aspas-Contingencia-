@@ -162,7 +162,7 @@ jobs:
               ("app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt", "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt"),
-              ("app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt"),
+              ("app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kts"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt", "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt", "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt", "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt"),
@@ -211,6 +211,18 @@ jobs:
                   os.makedirs(dir_name, exist_ok=True)
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
+
+          # Garantir que o build.gradle.kts raiz não tem blocos plugins duplicados
+          if os.path.exists("build.gradle.kts"):
+              with open("build.gradle.kts", "r", encoding="utf-8") as bf:
+                  bcontent = bf.read()
+              # Se houver mais do que um bloco plugins, limpamos duplicados
+              if bcontent.count("plugins {") > 1:
+                  parts = bcontent.split("plugins {")
+                  bcontent = parts[0] + "plugins {" + parts[1]
+                  with open("build.gradle.kts", "w", encoding="utf-8") as bf:
+                      bf.write(bcontent)
+
           print("Ficheiros processados com sucesso.")
           EOF
 
