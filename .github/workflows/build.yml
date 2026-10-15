@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Create libs.versions.toml explicitly
+      - name: Parse aspas.md and create libs.versions.toml
         run: |
           mkdir -p gradle
           cat << 'EOF' > gradle/libs.versions.toml
@@ -83,11 +83,12 @@ jobs:
           hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
           EOF
 
-      - name: Parse aspas.md to extract project files
+      - name: Parse aspas.md to extract remaining project files
         run: |
           python3 << 'EOF'
           import os
 
+          print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
               exit(1)
 
@@ -193,6 +194,7 @@ jobs:
                   os.makedirs(dir_name, exist_ok=True)
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
+          print("Ficheiros processados com sucesso.")
           EOF
 
       - name: Setup Gradle Wrapper and Build APK
@@ -203,12 +205,20 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
 
-      - name: Upload APK to transfer.sh for direct download link
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: '**/app/build/outputs/apk/debug/*.apk'
+
+      - name: Upload APK to transfer.sh for direct link
         run: |
           APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -n 1)
-          echo "A enviar APK para link direto..."
+          echo "A gerar link direto..."
           DOWNLOAD_LINK=$(curl --upload-file "$APK_PATH" https://transfer.sh/app-debug.apk)
           echo "=================================================="
-          echo "LINK DIRETO PARA DESCARREGAR O APK NO TELEMÓVEL:"
+          echo "LINK DIRETO PARA DESCARREGAR NO TELEMÓVEL:"
           echo "$DOWNLOAD_LINK"
           echo "=================================================="
+
+          
