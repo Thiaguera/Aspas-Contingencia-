@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Unpack, Setup Gradle and Build APK
+      - name: Unpack, Locate Project, Setup Gradle and Build APK
         run: |
           python3 -c '
           import os, re, urllib.request, zipfile, subprocess, base64
@@ -41,10 +41,22 @@ jobs:
                 if code_lines and code_lines[-1].startswith("```"):
                     code_lines = code_lines[:-1]
                 
-                os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                dir_name = os.path.dirname(filepath)
+                if dir_name:
+                    os.makedirs(dir_name, exist_ok=True)
                 with open(filepath, "w", encoding="utf-8") as out:
                     out.write("\n".join(code_lines) + "\n")
                 print(f"Created: {filepath}")
+
+          # Localizar automaticamente a pasta onde está o projeto Gradle (settings.gradle)
+          project_dir = "."
+          for root, dirs, files in os.walk("."):
+              if "settings.gradle" in files or "settings.gradle.kts" in files:
+                  project_dir = root
+                  break
+
+          print(f"Project directory located at: {project_dir}")
+          os.chdir(project_dir)
 
           print("Downloading Gradle 8.9...")
           encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
@@ -56,12 +68,14 @@ jobs:
               zip_ref.extractall(".")
 
           gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
-          os.chmod(gradle_bin, 0o755)
+          if os.path.exists(gradle_bin):
+              os.chmod(gradle_bin, 0o755)
 
           print("Generating Gradle Wrapper...")
           subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
 
-          os.chmod("gradlew", 0o755)
+          if os.path.exists("gradlew"):
+              os.chmod("gradlew", 0o755)
 
           print("Building Debug APK...")
           subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
@@ -71,4 +85,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: '**/app/build/outputs/apk/debug/*.apk'
