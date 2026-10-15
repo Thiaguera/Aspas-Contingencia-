@@ -37,6 +37,13 @@ jobs:
           with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
               lines = f.readlines()
 
+          full_text = "".join(lines)
+
+          # Ignorar a árvore visual do topo para evitar falsos positivos nos nomes dos ficheiros
+          marker = "============ BUILD FILES ============"
+          if marker in full_text:
+              full_text = full_text[full_text.find(marker):]
+
           known_paths = [
               "settings.gradle.kts",
               "build.gradle.kts",
@@ -84,11 +91,11 @@ jobs:
               "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt",
               "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt",
               "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt",
-              "app/src/main/kotlin/br/com/aspas/contingencia.feature.order/OrderScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.navigation/Routes.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.navigation/AspasNavHost.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.login/LoginScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.tables/TablesScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.order/OrderScreen.kt".replace(".", "/"),
               "app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt".replace(".", "/"),
               "app/src/main/kotlin/br/com/aspas.contingencia.feature.printers/PrintersScreen.kt".replace(".", "/"),
               "app/src/main/kotlin/br/com/aspas.contingencia.feature.kitchen/KitchenScreen.kt".replace(".", "/"),
@@ -100,7 +107,6 @@ jobs:
               "app/src/main/res/xml/network_security_config.xml"
           ]
 
-          full_text = "".join(lines)
           extracted_count = 0
           for i, path in enumerate(known_paths):
               actual_path = path
@@ -132,8 +138,8 @@ jobs:
           print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
 
           print("\nA descarregar o Gradle 8.9...")
-          encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
-          target_url = base64.b64decode(encoded_url).decode("utf-8")
+          encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3Jh글LTguOS1iaW4uemlw" # mantido codificado
+          target_url = base64.b64decode("aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw").decode("utf-8")
           urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
 
           print("A descompactar o Gradle...")
