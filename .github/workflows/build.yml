@@ -46,6 +46,7 @@ jobs:
           p=Path('build.log')
           if p.exists():
             lines=p.read_text(errors='replace').splitlines()
-            selected=[x for x in lines if x.startswith(('e:','error:','> ', '* What went wrong:')) or 'error:' in x.lower()]
+            selected=[x for x in lines if x.startswith(('e:','error:', '* What went wrong:')) or 'error:' in x.lower()]
+            selected = selected or lines[-22:]
             for line in selected[-35:]: print('::error::'+line.replace('%','%25').replace('\r','%0D').replace('\n','%0A'))
           PY
