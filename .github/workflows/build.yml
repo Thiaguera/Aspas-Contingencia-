@@ -41,6 +41,9 @@ jobs:
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
+          # Garantir que a diretoria gradle existe antecipadamente
+          os.makedirs("gradle", exist_ok=True)
+
           files_map = [
               ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt"),
               ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt"),
