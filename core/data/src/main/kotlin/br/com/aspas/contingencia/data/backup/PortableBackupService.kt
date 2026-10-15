@@ -37,7 +37,7 @@ class PortableBackupService(private val context: Context, private val activeDb: 
     }
 
     /** Restores only into a brand new isolated name; no projection or printing starts. */
-    fun restoreIntoNewDatabase(archive: File, password: CharArray, destinationName: String): Verification {
+    suspend fun restoreIntoNewDatabase(archive: File, password: CharArray, destinationName: String): Verification {
         require(password.size >= EncryptedBackup.MIN_PASSWORD_CHARS) { "backup password is too short" }
         require(destinationName != AspasDatabase.NAME && destinationName.matches(Regex("[A-Za-z0-9_.-]{1,80}"))) { "invalid isolated destination" }
         require(archive.length() in 1..EncryptedBackup.MAX_ARCHIVE_BYTES) { "invalid backup size" }
