@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Parse aspas.md and create libs.versions.toml
+      - name: Create libs.versions.toml and settings.gradle.kts explicitly
         run: |
           mkdir -p gradle
           cat << 'EOF' > gradle/libs.versions.toml
@@ -83,12 +83,30 @@ jobs:
           hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
           EOF
 
-      - name: Parse aspas.md to extract remaining project files
+          cat << 'EOF' > settings.gradle.kts
+          pluginManagement {
+              repositories {
+                  google()
+                  mavenCentral()
+                  gradlePluginPortal()
+              }
+          }
+          dependencyResolutionManagement {
+              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+          }
+          rootProject.name = "Aspas-Contingencia"
+          include(":app", ":core:common", ":core:domain", ":core:data", ":core:print", ":core:sync")
+          EOF
+
+      - name: Parse aspas.md to extract project files
         run: |
           python3 << 'EOF'
           import os
 
-          print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
               exit(1)
 
@@ -162,7 +180,6 @@ jobs:
               ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
               ("app/build.gradle.kts", "app/build.gradle.kts"),
               ("gradle.properties", "gradle.properties"),
-              ("settings.gradle.kts", "settings.gradle.kts"),
               ("root build.gradle.kts", "build.gradle.kts")
           ]
 
