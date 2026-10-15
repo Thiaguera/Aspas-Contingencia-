@@ -29,7 +29,7 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
 
-private sealed interface LoginResult {
+sealed interface LoginResult {
     data object Success : LoginResult
     data class Error(val message: String) : LoginResult
 }

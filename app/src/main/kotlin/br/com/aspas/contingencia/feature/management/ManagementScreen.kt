@@ -44,7 +44,7 @@ import java.math.RoundingMode
 import java.text.NumberFormat
 import java.util.Locale
 import javax.inject.Inject
-private data class ManagementReport(
+data class ManagementReport(
 val sessionId: String? = null,
 val openedAt: Long? = null,
 val orderCount: Int = 0,
