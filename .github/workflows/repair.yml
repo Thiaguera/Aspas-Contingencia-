@@ -1,0 +1,35 @@
+name: Repair recovery compiler errors
+on:
+  push:
+    branches: [recovery/native-integration]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repair source compatibility
+        run: |
+          python3 - <<"PY"
+          from pathlib import Path
+          root=Path("app/src/main/kotlin/br/com/aspas/contingencia/feature")
+          changes={
+            "management/ManagementScreen.kt": [("private data class ManagementReport","data class ManagementReport")],
+            "login/LoginScreen.kt": [("private sealed interface LoginResult","sealed interface LoginResult")],
+            "order/OrderScreen.kt": [("FloatingActionButton(onClick = { showCatalog = true }, enabled = order != null)","FloatingActionButton(onClick = { if (order != null) showCatalog = true })")]
+          }
+          for rel,pairs in changes.items():
+            p=root/rel
+            t=p.read_text()
+            for a,b in pairs: t=t.replace(a,b)
+            p.write_text(t)
+          PY
+          if ! git diff --quiet; then
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add app/src/main/kotlin
+            git commit -m "Fix Kotlin visibility and Compose FAB compatibility"
+            git push origin HEAD:recovery/native-integration
+          fi
