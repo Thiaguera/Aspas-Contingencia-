@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Parse aspas.md and create libs.versions.toml
+      - name: Create libs.versions.toml explicitly
         run: |
           mkdir -p gradle
           cat << 'EOF' > gradle/libs.versions.toml
@@ -83,7 +83,7 @@ jobs:
           hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
           EOF
 
-      - name: Parse aspas.md to extract remaining project files
+      - name: Parse aspas.md to extract project files
         run: |
           python3 << 'EOF'
           import os
