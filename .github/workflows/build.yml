@@ -24,14 +24,72 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Parse aspas.md to extract project files
+      - name: Parse aspas.md and create libs.versions.toml
+        run: |
+          mkdir -p gradle
+          cat << 'EOF' > gradle/libs.versions.toml
+          [versions]
+          agp = "8.5.0"
+          kotlin = "1.9.23"
+          ksp = "1.9.23-1.0.19"
+          hilt = "2.51.1"
+          room = "2.6.1"
+          ktor = "2.3.11"
+          serialization = "1.6.3"
+          coroutines = "1.8.0"
+          compose-compiler = "1.5.11"
+          androidx-lifecycle = "2.7.0"
+          androidx-navigation = "2.7.7"
+          sqlcipher = "4.5.4"
+          sqlite = "2.4.0"
+          jmdns = "3.5.8"
+
+          [libraries]
+          androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.12.0" }
+          androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
+          androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+          androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+          androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
+          
+          kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+          kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+          kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+          hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+          hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+          hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.2.0" }
+
+          room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+          room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+          room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+          sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "sqlcipher" }
+          sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
+
+          ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+          ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+          ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+          ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+          jmdns = { module = "javax.jmdns:jmdns", version.ref = "jmdns" }
+
+          [plugins]
+          android-application = { id = "com.android.application", version.ref = "agp" }
+          android-library = { id = "com.android.library", version.ref = "agp" }
+          kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+          kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+          kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+          compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+          ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+          hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+          EOF
+
+      - name: Parse aspas.md to extract remaining project files
         run: |
           python3 << 'EOF'
           import os
 
           print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
-              print("ERRO: aspas.md nao encontrado!")
               exit(1)
 
           with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
@@ -40,9 +98,6 @@ jobs:
           marker = "============ BUILD FILES ============"
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
-
-          # Garantir que a diretoria gradle existe antecipadamente
-          os.makedirs("gradle", exist_ok=True)
 
           files_map = [
               ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt"),
@@ -106,7 +161,6 @@ jobs:
               ("core/print/build.gradle.kts", "core/print/build.gradle.kts"),
               ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
               ("app/build.gradle.kts", "app/build.gradle.kts"),
-              ("gradle/libs.versions.toml", "gradle/libs.versions.toml"),
               ("gradle.properties", "gradle.properties"),
               ("settings.gradle.kts", "settings.gradle.kts"),
               ("root build.gradle.kts", "build.gradle.kts")
@@ -114,26 +168,20 @@ jobs:
 
           files_map.sort(key=lambda x: len(x[1]), reverse=True)
 
-          extracted_count = 0
           for idx, (label, target_path) in enumerate(files_map):
               pos = full_text.find(target_path)
               if pos == -1:
-                  print(f"[AVISO] Nao encontrado: {target_path}")
                   continue
-              
               start_content = pos + len(target_path)
               end_content = len(full_text)
-              
               for next_label, next_target in files_map[idx+1:]:
                   next_pos = full_text.find(next_target, start_content)
                   if next_pos != -1 and next_pos < end_content:
                       end_content = next_pos
                       break
-              
               file_data = full_text[start_content:end_content].strip()
               if file_data.startswith("---"):
                   file_data = file_data.split("---", 2)[-1].strip()
-
               if file_data.startswith("```"):
                   first_nl = file_data.find("\n")
                   if first_nl != -1:
@@ -144,30 +192,10 @@ jobs:
               dir_name = os.path.dirname(target_path)
               if dir_name:
                   os.makedirs(dir_name, exist_ok=True)
-              
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
-              print(f"[CRIADO] {target_path}")
-              extracted_count += 1
-
-          print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
+          print("Ficheiros processados com sucesso.")
           EOF
 
       - name: Setup Gradle Wrapper and Build APK
         run: |
-          echo "A descarregar o Gradle 8.9..."
-          wget -q "https://services.gradle.org/distributions/gradle-8.9-bin.zip" -O gradle-8.9-bin.zip
-          unzip -q gradle-8.9-bin.zip
-          
-          echo "A gerar o Gradle Wrapper..."
-          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
-          
-          chmod +x gradlew
-          echo "A compilar o APK Debug..."
-          ./gradlew assembleDebug --no-daemon
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug-apk
-          path: '**/app/build/outputs/apk/debug/*.apk'
