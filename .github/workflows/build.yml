@@ -210,15 +210,3 @@ jobs:
         with:
           name: app-debug-apk
           path: '**/app/build/outputs/apk/debug/*.apk'
-
-      - name: Upload APK to transfer.sh for direct link
-        run: |
-          APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -n 1)
-          echo "A gerar link direto..."
-          DOWNLOAD_LINK=$(curl --upload-file "$APK_PATH" https://transfer.sh/app-debug.apk)
-          echo "=================================================="
-          echo "LINK DIRETO PARA DESCARREGAR NO TELEMÓVEL:"
-          echo "$DOWNLOAD_LINK"
-          echo "=================================================="
-
-          
