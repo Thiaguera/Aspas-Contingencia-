@@ -88,7 +88,6 @@ jobs:
           python3 << 'EOF'
           import os
 
-          print("--- A ler e processar o aspas.md ---")
           if not os.path.exists("aspas.md"):
               exit(1)
 
@@ -194,8 +193,22 @@ jobs:
                   os.makedirs(dir_name, exist_ok=True)
               with open(target_path, "w", encoding="utf-8") as out:
                   out.write(file_data)
-          print("Ficheiros processados com sucesso.")
           EOF
 
       - name: Setup Gradle Wrapper and Build APK
         run: |
+          wget -q "https://services.gradle.org/distributions/gradle-8.9-bin.zip" -O gradle-8.9-bin.zip
+          unzip -q gradle-8.9-bin.zip
+          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK to transfer.sh for direct download link
+        run: |
+          APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -n 1)
+          echo "A enviar APK para link direto..."
+          DOWNLOAD_LINK=$(curl --upload-file "$APK_PATH" https://transfer.sh/app-debug.apk)
+          echo "=================================================="
+          echo "LINK DIRETO PARA DESCARREGAR O APK NO TELEMÓVEL:"
+          echo "$DOWNLOAD_LINK"
+          echo "=================================================="
