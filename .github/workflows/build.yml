@@ -56,6 +56,8 @@ jobs:
               zip_ref.extractall(".")
 
           gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
+          os.chmod(gradle_bin, 0o755)
+
           print("Generating Gradle Wrapper...")
           subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
 
