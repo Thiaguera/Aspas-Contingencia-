@@ -1,1 +1,70 @@
-cGFja2FnZSBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmZlYXR1cmUuY2hlY2tvdXQKCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmZvdW5kYXRpb24ubGF5b3V0LioKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwuaWNvbnMuSWNvbnMKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwuaWNvbnMuZmlsbGVkLkFycm93QmFjawppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5tYXRlcmlhbDMuKgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5ydW50aW1lLioKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkuTW9kaWZpZXIKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UudWkudW5pdC5kcAppbXBvcnQgYW5kcm9pZHguaGlsdC5uYXZpZ2F0aW9uLmNvbXBvc2UuaGlsdFZpZXdNb2RlbAppbXBvcnQgYW5kcm9pZHgubGlmZWN5Y2xlLlNhdmVkU3RhdGVIYW5kbGUKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS5WaWV3TW9kZWwKaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS52aWV3TW9kZWxTY29wZQppbXBvcnQgYnIuY29tLmFzcGFzLmNvbnRpbmdlbmNpYS5kb21haW4ubW9kZWwuT3JkZXIKaW1wb3J0IGJyLmNvbS5hc3Bhcy5jb250aW5nZW5jaWEuZG9tYWluLnJlcG9zaXRvcnkuT3JkZXJSZXBvc2l0b3J5CmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLmRvbWFpbi51c2VjYXNlLkNsb3NlVGFibGVVc2VDYXNlCmltcG9ydCBici5jb20uYXNwYXMuY29udGluZ2VuY2lhLnNlc3Npb24uU2Vzc2lvbk1hbmFnZXIKaW1wb3J0IGRhZ2dlci5oaWx0LmFuZHJvaWQubGlmZWN5Y2xlLkhpbHRWaWV3TW9kZWwKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5mbG93LioKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5sYXVuY2gKaW1wb3J0IGphdmF4LmluamVjdC5JbmplY3QKCnNlYWxlZCBpbnRlcmZhY2UgQ2hlY2tvdXRVaUV2ZW50IHsgZGF0YSBvYmplY3QgQ2xvc2VkIDogQ2hlY2tvdXRVaUV2ZW50OyBkYXRhIGNsYXNzIEVycm9yKHZhbCBtZXNzYWdlOiBTdHJpbmcpIDogQ2hlY2tvdXRVaUV2ZW50IH0KCkBIaWx0Vmlld01vZGVsCmNsYXNzIENoZWNrb3V0Vmlld01vZGVsIEBJbmplY3QgY29uc3RydWN0b3IoCiAgICBwcml2YXRlIHZhbCBvcmRlclJlcG9zaXRvcnk6IE9yZGVyUmVwb3NpdG9yeSwgcHJpdmF0ZSB2YWwgY2xvc2VUYWJsZVVzZUNhc2U6IENsb3NlVGFibGVVc2VDYXNlLAogICAgcHJpdmF0ZSB2YWwgc2Vzc2lvbjogU2Vzc2lvbk1hbmFnZXIsIHNhdmVkU3RhdGVIYW5kbGU6IFNhdmVkU3RhdGVIYW5kbGUKKSA6IFZpZXdNb2RlbCgpIHsKICAgIHZhbCB0YWJsZUlkOiBTdHJpbmcgPSBzYXZlZFN0YXRlSGFuZGxlWyJ0YWJsZUlkIl0gPzogIiIKICAgIHByaXZhdGUgdmFsIG9yZGVySWQ6IFN0cmluZyA9IHNhdmVkU3RhdGVIYW5kbGVbIm9yZGVySWQiXSA/OiAiIgogICAgdmFsIG9yZGVyOiBTdGF0ZUZsb3c8T3JkZXI/PiA9IG9yZGVyUmVwb3NpdG9yeS5vYnNlcnZlQnlJZChvcmRlcklkKS5zdGF0ZUluKHZpZXdNb2RlbFNjb3BlLCBTaGFyaW5nU3RhcnRlZC5XaGlsZVN1YnNjcmliZWQoNV8wMDApLCBudWxsKQogICAgcHJpdmF0ZSB2YWwgX3BheW1lbnRzID0gTXV0YWJsZVN0YXRlRmxvdzxMaXN0PFRyaXBsZTxTdHJpbmcsIERvdWJsZSwgU3RyaW5nPz4+PihlbXB0eUxpc3QoKSkKICAgIHZhbCBwYXltZW50czogU3RhdGVGbG93PExpc3Q8VHJpcGxlPFN0cmluZywgRG91YmxlLCBTdHJpbmc/Pj4+ID0gX3BheW1lbnRzLmFzU3RhdGVGbG93KCkKICAgIHByaXZhdGUgdmFsIF9zdWJtaXR0aW5nID0gTXV0YWJsZVN0YXRlRmxvdyhmYWxzZSkKICAgIHZhbCBzdWJtaXR0aW5nOiBTdGF0ZUZsb3c8Qm9vbGVhbj4gPSBfc3VibWl0dGluZy5hc1N0YXRlRmxvdygpCiAgICBwcml2YXRlIHZhbCBfZXZlbnQgPSBNdXRhYmxlU2hhcmVkRmxvdzxDaGVja291dFVpRXZlbnQ+KGV4dHJhQnVmZmVyQ2FwYWNpdHkgPSAxKQogICAgdmFsIGV2ZW50OiBTaGFyZWRGbG93PENoZWNrb3V0VWlFdmVudD4gPSBfZXZlbnQuYXNTaGFyZWRGbG93KCkKICAgIGZ1biBhZGRQYXltZW50KG1ldGhvZDogU3RyaW5nLCBhbW91bnQ6IERvdWJsZSkgeyBpZiAoIV9zdWJtaXR0aW5nLnZhbHVlICYmIGFtb3VudCA+IDAuMCAmJiBhbW91bnQuaXNGaW5pdGUoKSkgX3BheW1lbnRzLnZhbHVlICs9IFRyaXBsZShtZXRob2QsIGFtb3VudCwgbnVsbCkgfQogICAgZnVuIHJlbW92ZVBheW1lbnQoaW5kZXg6IEludCkgeyBpZiAoIV9zdWJtaXR0aW5nLnZhbHVlKSBfcGF5bWVudHMudmFsdWUgPSBfcGF5bWVudHMudmFsdWUuZmlsdGVySW5kZXhlZCB7IGksIF8gLT4gaSAhPSBpbmRleCB9IH0KICAgIGZ1biBjb25maXJtKCkgewogICAgICAgIGlmIChfc3VibWl0dGluZy52YWx1ZSkgcmV0dXJuCiAgICAgICAgdmFsIHVpZCA9IHNlc3Npb24uY3VycmVudFVzZXJJZCgpID86IHJ1biB7IF9ldmVudC50cnlFbWl0KENoZWNrb3V0VWlFdmVudC5FcnJvcigiU2Vzc8OjbyBleHBpcmFkYSIpKTsgcmV0dXJuIH0KICAgICAgICB2YWwgY3VycmVudCA9IG9yZGVyLnZhbHVlID86IHJ1biB7IF9ldmVudC50cnlFbWl0KENoZWNrb3V0VWlFdmVudC5FcnJvcigiQ29tYW5kYSBpbmRpc3BvbsOtdmVsIikpOyByZXR1cm4gfQogICAgICAgIF9zdWJtaXR0aW5nLnZhbHVlID0gdHJ1ZQogICAgICAgIHZpZXdNb2RlbFNjb3BlLmxhdW5jaCB7CiAgICAgICAgICAgIGNsb3NlVGFibGVVc2VDYXNlKHRhYmxlSWQsIGN1cnJlbnQsIF9wYXltZW50cy52YWx1ZSwgdWlkKQogICAgICAgICAgICAgICAgLm9uU3VjY2VzcyB7IF9ldmVudC5lbWl0KENoZWNrb3V0VWlFdmVudC5DbG9zZWQpIH0KICAgICAgICAgICAgICAgIC5vbkZhaWx1cmUgeyBfZXZlbnQuZW1pdChDaGVja291dFVpRXZlbnQuRXJyb3IoaXQubWVzc2FnZSA/OiAiTsOjbyBmb2kgcG9zc8OtdmVsIGZlY2hhciBhIG1lc2EiKSkgfQogICAgICAgICAgICBfc3VibWl0dGluZy52YWx1ZSA9IGZhbHNlCiAgICAgICAgfQogICAgfQp9CgpAT3B0SW4oRXhwZXJpbWVudGFsTWF0ZXJpYWwzQXBpOjpjbGFzcykKQENvbXBvc2FibGUKZnVuIENoZWNrb3V0U2NyZWVuKG9uQmFjazogKCkgLT4gVW5pdCwgb25DbG9zZWQ6ICgpIC0+IFVuaXQsIHZtOiBDaGVja291dFZpZXdNb2RlbCA9IGhpbHRWaWV3TW9kZWwoKSkgewogICAgdmFsIG9yZGVyIGJ5IHZtLm9yZGVyLmNvbGxlY3RBc1N0YXRlKCk7IHZhbCBwYXltZW50cyBieSB2bS5wYXltZW50cy5jb2xsZWN0QXNTdGF0ZSgpOyB2YWwgc3VibWl0dGluZyBieSB2bS5zdWJtaXR0aW5nLmNvbGxlY3RBc1N0YXRlKCkKICAgIHZhbCBzbmFjayA9IHJlbWVtYmVyIHsgU25hY2tiYXJIb3N0U3RhdGUoKSB9OyB2YXIgc2hvd1BheW1lbnQgYnkgcmVtZW1iZXIgeyBtdXRhYmxlU3RhdGVPZihmYWxzZSkgfQogICAgTGF1bmNoZWRFZmZlY3QoVW5pdCkgeyB2bS5ldmVudC5jb2xsZWN0IHsgd2hlbiAoaXQpIHsgQ2hlY2tvdXRVaUV2ZW50LkNsb3NlZCAtPiBvbkNsb3NlZCgpOyBpcyBDaGVja291dFVpRXZlbnQuRXJyb3IgLT4gc25hY2suc2hvd1NuYWNrYmFyKGl0Lm1lc3NhZ2UpIH0gfSB9CiAgICBTY2FmZm9sZCh0b3BCYXIgPSB7IFRvcEFwcEJhcih0aXRsZSA9IHsgVGV4dCgiRmVjaGFyIG1lc2EiKSB9LCBuYXZpZ2F0aW9uSWNvbiA9IHsgSWNvbkJ1dHRvbihvbkNsaWNrID0gb25CYWNrLCBlbmFibGVkID0gIXN1Ym1pdHRpbmcpIHsgSWNvbihJY29ucy5EZWZhdWx0LkFycm93QmFjaywgbnVsbCkgfSB9KSB9LCBzbmFja2Jhckhvc3QgPSB7IFNuYWNrYmFySG9zdChzbmFjaykgfSkgeyBwYWRkaW5nIC0+CiAgICAgICAgQ29sdW1uKE1vZGlmaWVyLnBhZGRpbmcocGFkZGluZykuZmlsbE1heFNpemUoKS5wYWRkaW5nKDEyLmRwKSkgewogICAgICAgICAgICBvcmRlcj8ubGV0IHsgVGV4dCgiU3VidG90YWw6IFIkICUuMmYiLmZvcm1hdChpdC5zdWJ0b3RhbCkpOyBUZXh0KCJUYXhhIDEwJSU6IFIkICUuMmYiLmZvcm1hdChpdC5zZXJ2aWNlRmVlKSk7IFRleHQoIlRvdGFsOiBSJCAlLjJmIi5mb3JtYXQoaXQudG90YWwpLCBzdHlsZSA9IE1hdGVyaWFsVGhlbWUudHlwb2dyYXBoeS50aXRsZUxhcmdlKSB9CiAgICAgICAgICAgIFNwYWNlcihNb2RpZmllci5oZWlnaHQoMTIuZHApKTsgVGV4dCgiUGFnYW1lbnRvcyIsIHN0eWxlID0gTWF0ZXJpYWxUaGVtZS50eXBvZ3JhcGh5LnRpdGxlU21hbGwpCiAgICAgICAgICAgIHBheW1lbnRzLmZvckVhY2hJbmRleGVkIHsgaW5kZXgsIHBheW1lbnQgLT4gUm93KE1vZGlmaWVyLmZpbGxNYXhXaWR0aCgpLCBob3Jpem9udGFsQXJyYW5nZW1lbnQgPSBBcnJhbmdlbWVudC5TcGFjZUJldHdlZW4pIHsgVGV4dCgiJHtwYXltZW50LmZpcnN0fSDigJQgUiQgJS4yZiIuZm9ybWF0KHBheW1lbnQuc2Vjb25kKSk7IFRleHRCdXR0b24ob25DbGljayA9IHsgdm0ucmVtb3ZlUGF5bWVudChpbmRleCkgfSwgZW5hYmxlZCA9ICFzdWJtaXR0aW5nKSB7IFRleHQoIngiKSB9IH0gfQogICAgICAgICAgICBTcGFjZXIoTW9kaWZpZXIud2VpZ2h0KDFmKSk7IEJ1dHRvbihvbkNsaWNrID0geyBzaG93UGF5bWVudCA9IHRydWUgfSwgTW9kaWZpZXIuZmlsbE1heFdpZHRoKCksIGVuYWJsZWQgPSAhc3VibWl0dGluZykgeyBUZXh0KCIrIFBhZ2FtZW50byIpIH07IFNwYWNlcihNb2RpZmllci5oZWlnaHQoOC5kcCkpOyBCdXR0b24ob25DbGljayA9IHZtOjpjb25maXJtLCBNb2RpZmllci5maWxsTWF4V2lkdGgoKSwgZW5hYmxlZCA9IHBheW1lbnRzLmlzTm90RW1wdHkoKSAmJiAhc3VibWl0dGluZykgeyBpZiAoc3VibWl0dGluZykgQ2lyY3VsYXJQcm9ncmVzc0luZGljYXRvcihNb2RpZmllci5zaXplKDIwLmRwKSwgc3Ryb2tlV2lkdGggPSAyLmRwKSBlbHNlIFRleHQoIkNvbmZpcm1hciBmZWNoYW1lbnRvIikgfQogICAgICAgIH0KICAgIH0KICAgIGlmIChzaG93UGF5bWVudCkgeyB2YXIgbWV0aG9kIGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoImNhc2giKSB9OyB2YXIgYW1vdW50IGJ5IHJlbWVtYmVyIHsgbXV0YWJsZVN0YXRlT2YoIiIpIH07IEFsZXJ0RGlhbG9nKG9uRGlzbWlzc1JlcXVlc3QgPSB7IHNob3dQYXltZW50ID0gZmFsc2UgfSwgdGl0bGUgPSB7IFRleHQoIk5vdm8gcGFnYW1lbnRvIikgfSwgdGV4dCA9IHsgQ29sdW1uIHsgbGlzdE9mKCJjYXNoIiwgImNyZWRpdCIsICJkZWJpdCIsICJwaXgiLCAidm91Y2hlciIpLmZvckVhY2ggeyBvcHRpb24gLT4gUm93KHZlcnRpY2FsQWxpZ25tZW50ID0gYW5kcm9pZHguY29tcG9zZS51aS5BbGlnbm1lbnQuQ2VudGVyVmVydGljYWxseSkgeyBSYWRpb0J1dHRvbihtZXRob2QgPT0gb3B0aW9uLCB7IG1ldGhvZCA9IG9wdGlvbiB9KTsgVGV4dChvcHRpb24pIH0gfTsgT3V0bGluZWRUZXh0RmllbGQoYW1vdW50LCB7IGFtb3VudCA9IGl0IH0sIGxhYmVsID0geyBUZXh0KCJWYWxvciIpIH0pIH0gfSwgY29uZmlybUJ1dHRvbiA9IHsgVGV4dEJ1dHRvbihvbkNsaWNrID0geyBhbW91bnQucmVwbGFjZSgnLCcsICcuJykudG9Eb3VibGVPck51bGwoKT8udGFrZUlmIHsgaXQgPiAwLjAgJiYgaXQuaXNGaW5pdGUoKSB9Py5sZXQgeyB2bS5hZGRQYXltZW50KG1ldGhvZCwgaXQpOyBzaG93UGF5bWVudCA9IGZhbHNlIH0gfSkgeyBUZXh0KCJBZGljaW9uYXIiKSB9IH0sIGRpc21pc3NCdXR0b24gPSB7IFRleHRCdXR0b24ob25DbGljayA9IHsgc2hvd1BheW1lbnQgPSBmYWxzZSB9KSB7IFRleHQoIkNhbmNlbGFyIikgfSB9KSB9Cn0K
+package br.com.aspas.contingencia.feature.checkout
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import br.com.aspas.contingencia.domain.model.Order
+import br.com.aspas.contingencia.domain.repository.OrderRepository
+import br.com.aspas.contingencia.domain.usecase.CloseTableUseCase
+import br.com.aspas.contingencia.session.SessionManager
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+sealed interface CheckoutUiEvent { data object Closed : CheckoutUiEvent; data class Error(val message: String) : CheckoutUiEvent }
+
+@HiltViewModel
+class CheckoutViewModel @Inject constructor(
+    private val orderRepository: OrderRepository, private val closeTableUseCase: CloseTableUseCase,
+    private val session: SessionManager, savedStateHandle: SavedStateHandle
+) : ViewModel() {
+    val tableId: String = savedStateHandle["tableId"] ?: ""
+    private val orderId: String = savedStateHandle["orderId"] ?: ""
+    val order: StateFlow<Order?> = orderRepository.observeById(orderId).stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
+    private val _payments = MutableStateFlow<List<Triple<String, Double, String?>>>(emptyList())
+    val payments: StateFlow<List<Triple<String, Double, String?>>> = _payments.asStateFlow()
+    private val _submitting = MutableStateFlow(false)
+    val submitting: StateFlow<Boolean> = _submitting.asStateFlow()
+    private val _event = MutableSharedFlow<CheckoutUiEvent>(extraBufferCapacity = 1)
+    val event: SharedFlow<CheckoutUiEvent> = _event.asSharedFlow()
+    fun addPayment(method: String, amount: Double) { if (!_submitting.value && amount > 0.0 && amount.isFinite()) _payments.value += Triple(method, amount, null) }
+    fun removePayment(index: Int) { if (!_submitting.value) _payments.value = _payments.value.filterIndexed { i, _ -> i != index } }
+    fun confirm() {
+        if (_submitting.value) return
+        val uid = session.currentUserId() ?: run { _event.tryEmit(CheckoutUiEvent.Error("Sessão expirada")); return }
+        val current = order.value ?: run { _event.tryEmit(CheckoutUiEvent.Error("Comanda indisponível")); return }
+        _submitting.value = true
+        viewModelScope.launch {
+            closeTableUseCase(tableId, current, _payments.value, uid)
+                .onSuccess { _event.emit(CheckoutUiEvent.Closed) }
+                .onFailure { _event.emit(CheckoutUiEvent.Error(it.message ?: "Não foi possível fechar a mesa")) }
+            _submitting.value = false
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CheckoutScreen(onBack: () -> Unit, onClosed: () -> Unit, vm: CheckoutViewModel = hiltViewModel()) {
+    val order by vm.order.collectAsState(); val payments by vm.payments.collectAsState(); val submitting by vm.submitting.collectAsState()
+    val snack = remember { SnackbarHostState() }; var showPayment by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { vm.event.collect { when (it) { CheckoutUiEvent.Closed -> onClosed(); is CheckoutUiEvent.Error -> snack.showSnackbar(it.message) } } }
+    Scaffold(topBar = { TopAppBar(title = { Text("Fechar mesa") }, navigationIcon = { IconButton(onClick = onBack, enabled = !submitting) { Icon(Icons.Default.ArrowBack, null) } }) }, snackbarHost = { SnackbarHost(snack) }) { padding ->
+        Column(Modifier.padding(padding).fillMaxSize().padding(12.dp)) {
+            order?.let { Text("Subtotal: R$ %.2f".format(it.subtotal)); Text("Taxa 10%%: R$ %.2f".format(it.serviceFee)); Text("Total: R$ %.2f".format(it.total), style = MaterialTheme.typography.titleLarge) }
+            Spacer(Modifier.height(12.dp)); Text("Pagamentos", style = MaterialTheme.typography.titleSmall)
+            payments.forEachIndexed { index, payment -> Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("${payment.first} — R$ %.2f".format(payment.second)); TextButton(onClick = { vm.removePayment(index) }, enabled = !submitting) { Text("x") } } }
+            Spacer(Modifier.weight(1f)); Button(onClick = { showPayment = true }, Modifier.fillMaxWidth(), enabled = !submitting) { Text("+ Pagamento") }; Spacer(Modifier.height(8.dp)); Button(onClick = vm::confirm, Modifier.fillMaxWidth(), enabled = payments.isNotEmpty() && !submitting) { if (submitting) CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp) else Text("Confirmar fechamento") }
+        }
+    }
+    if (showPayment) { var method by remember { mutableStateOf("cash") }; var amount by remember { mutableStateOf("") }; AlertDialog(onDismissRequest = { showPayment = false }, title = { Text("Novo pagamento") }, text = { Column { listOf("cash", "credit", "debit", "pix", "voucher").forEach { option -> Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) { RadioButton(method == option, { method = option }); Text(option) } }; OutlinedTextField(amount, { amount = it }, label = { Text("Valor") }) } }, confirmButton = { TextButton(onClick = { amount.replace(',', '.').toDoubleOrNull()?.takeIf { it > 0.0 && it.isFinite() }?.let { vm.addPayment(method, it); showPayment = false } }) { Text("Adicionar") } }, dismissButton = { TextButton(onClick = { showPayment = false }) { Text("Cancelar") } }) }
+}
