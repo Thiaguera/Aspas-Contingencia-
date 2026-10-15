@@ -13,10 +13,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Unpack Project Structure from aspas.md
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+
+      - name: Unpack, Setup Gradle and Build APK
         run: |
           python3 -c '
-          import os, re
+          import os, re, urllib.request, zipfile, subprocess
 
           with open("aspas.md", "r", encoding="utf-8") as f:
               content = f.read()
@@ -34,27 +45,24 @@ jobs:
                 with open(filepath, "w", encoding="utf-8") as out:
                     out.write("\n".join(code_lines) + "\n")
                 print(f"Created: {filepath}")
+
+          print("Downloading Gradle 8.9...")
+          url = "[https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)"
+          urllib.request.urlretrieve(url, "gradle-8.9-bin.zip")
+
+          print("Unzipping Gradle...")
+          with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
+              zip_ref.extractall(".")
+
+          gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
+          print("Generating Gradle Wrapper...")
+          subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
+
+          os.chmod("gradlew", 0o755)
+
+          print("Building Debug APK...")
+          subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
           '
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v4
-        with:
-          packages: 'platform-tools'
-
-      - name: Generate Gradle Wrapper and Build APK
-        run: |
-          curl -L -O [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip)
-          unzip -q gradle-8.9-bin.zip
-          export PATH=$PWD/gradle-8.9/bin:$PATH
-          gradle wrapper --gradle-version 8.9
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
