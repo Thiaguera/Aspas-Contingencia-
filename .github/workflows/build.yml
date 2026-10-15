@@ -16,10 +16,15 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: android-actions/setup-android@v3
+      - name: Verify official Gradle wrapper
+        run: |
+          curl --fail --location https://raw.githubusercontent.com/gradle/gradle/v8.9.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
+          echo '498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17  gradle/wrapper/gradle-wrapper.jar' | sha256sum -c -
       - name: Build isolated recovery APK
         run: |
           chmod +x ./gradlew
-          ./gradlew :app:assembleDebug :core:data:testDebugUnitTest :core:data:compileDebugAndroidTestKotlin --stacktrace --no-daemon --max-workers 1
+          set -o pipefail
+          ./gradlew :app:assembleDebug :core:data:testDebugUnitTest :core:data:compileDebugAndroidTestKotlin --stacktrace --no-daemon --max-workers 1 2>&1 | tee build.log
       - uses: actions/upload-artifact@v4
         if: success()
         with:
@@ -34,3 +39,14 @@ jobs:
             **/build/reports/tests/**
             **/build/test-results/**
           if-no-files-found: ignore
+      - name: Surface compiler errors
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('build.log')
+          if p.exists():
+            lines=p.read_text(errors='replace').splitlines()
+            selected=[x for x in lines if x.startswith(('e:','error:','> ', '* What went wrong:')) or 'error:' in x.lower()]
+            for line in selected[-35:]: print('::error::'+line.replace('%','%25').replace('\r','%0D').replace('\n','%0A'))
+          PY
