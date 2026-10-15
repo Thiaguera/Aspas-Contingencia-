@@ -1,3 +1,5 @@
+yaml
+
 name: Build Android APK
 
 on:
@@ -12,16 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: gradle
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
 
       - name: Unpack Project Structure from aspas.md
         run: |
@@ -45,6 +37,15 @@ jobs:
                       out.write("\n".join(code_lines) + "\n")
                   print(f"Created: {filepath}")
           '
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Make gradlew executable
         run: |
