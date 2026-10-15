@@ -41,7 +41,6 @@ jobs:
           if marker in full_text:
               full_text = full_text[full_text.find(marker):]
 
-          # Lista ordenada do caminho mais longo para o mais curto para evitar colisões de substrings
           files_map = [
               ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt"),
               ("core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt", "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt"),
@@ -78,8 +77,6 @@ jobs:
               ("app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt", "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/feature/kitchen/KitchenScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/kitchen/KitchenScreen.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/printers/PrintersScreen.kt"),
-              ("app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt", "app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt".replace(".", "/")),
-              ("app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/checkout/CheckoutScreen.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt"),
               ("app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt", "app/src/main/kotlin/br/com/aspas/contingencia/feature/order/OrderScreen.kt"),
@@ -112,7 +109,6 @@ jobs:
               ("root build.gradle.kts", "build.gradle.kts")
           ]
 
-          # Ordenar estritamente por tamanho decrescente do caminho para evitar que 'build.gradle.kts' colida com os dos módulos
           files_map.sort(key=lambda x: len(x[1]), reverse=True)
 
           extracted_count = 0
@@ -135,6 +131,14 @@ jobs:
               if file_data.startswith("---"):
                   file_data = file_data.split("---", 2)[-1].strip()
 
+              # Limpar blocos de código Markdown caso venham incluídos (```toml, ```kts, etc.)
+              if file_data.startswith("```"):
+                  first_nl = file_data.find("\n")
+                  if first_nl != -1:
+                      file_data = file_data[first_nl+1:]
+              if file_data.endswith("```"):
+                  file_data = file_data[:-3].strip()
+
               dir_name = os.path.dirname(target_path)
               if dir_name:
                   os.makedirs(dir_name, exist_ok=True)
@@ -150,7 +154,7 @@ jobs:
       - name: Setup Gradle Wrapper and Build APK
         run: |
           echo "A descarregar o Gradle 8.9..."
-          wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip -O gradle-8.9-bin.zip
+          wget -q [https://services.gradle.org/distributions/gradle-8.9-bin.zip](https://services.gradle.org/distributions/gradle-8.9-bin.zip) -O gradle-8.9-bin.zip
           unzip -q gradle-8.9-bin.zip
           
           echo "A gerar o Gradle Wrapper..."
