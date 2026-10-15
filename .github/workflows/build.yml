@@ -24,7 +24,7 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Unpack, Locate Project, Setup Gradle and Build APK
+      - name: Locate Project, Setup Gradle and Build APK
         run: |
           python3 -c '
           import os, urllib.request, zipfile, subprocess, base64
@@ -34,30 +34,7 @@ jobs:
               for file in files:
                   print(os.path.join(root, file))
 
-          print("--- Unpacking aspas.md ---")
-          with open("aspas.md", "r", encoding="utf-8") as f:
-              content = f.read()
-
-          # Extração robusta para blocos de código com caminhos
-          import re
-          # Procura linhas anteriores a blocos de código markdown
-          pattern = r"(?:^|\n)([^\n`]+)\n```[^\n]*\n(.*?)```"
-          matches = re.findall(pattern, content, re.DOTALL)
-
-          for filepath, code in matches:
-              filepath = filepath.strip()
-              if not filepath or "/" not in filepath:
-                  continue
-              
-              dir_name = os.path.dirname(filepath)
-              if dir_name:
-                  os.makedirs(dir_name, exist_ok=True)
-              
-              with open(filepath, "w", encoding="utf-8") as out:
-                  out.write(code)
-              print(f"Created: {filepath}")
-
-          # Localizar a pasta do projeto Android (settings.gradle)
+          # Localizar diretamente onde está o settings.gradle no repositório
           project_dir = "."
           for root, dirs, files in os.walk("."):
               if "settings.gradle" in files or "settings.gradle.kts" in files:
