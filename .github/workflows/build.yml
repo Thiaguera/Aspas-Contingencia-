@@ -1,1 +1,52 @@
-bmFtZTogUmVjb3ZlcnkgQnVpbGQgQVBLCm9uOgogIHdvcmtmbG93X2Rpc3BhdGNoOgogIHB1c2g6CiAgICBicmFuY2hlczogW3JlY292ZXJ5L25hdGl2ZS1pbnRlZ3JhdGlvbl0KcGVybWlzc2lvbnM6CiAgY29udGVudHM6IHJlYWQKam9iczoKICBidWlsZDoKICAgIHJ1bnMtb246IHVidW50dS1sYXRlc3QKICAgIHRpbWVvdXQtbWludXRlczogMzAKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAdjQKICAgICAgLSB1c2VzOiBhY3Rpb25zL3NldHVwLWphdmFAdjUKICAgICAgICB3aXRoOgogICAgICAgICAgZGlzdHJpYnV0aW9uOiB0ZW11cmluCiAgICAgICAgICBqYXZhLXZlcnNpb246ICcxNycKICAgICAgLSBuYW1lOiBWZXJpZnkgb2ZmaWNpYWwgR3JhZGxlIHdyYXBwZXIKICAgICAgICBydW46IHwKICAgICAgICAgIGN1cmwgLS1mYWlsIC0tbG9jYXRpb24gaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2dyYWRsZS9ncmFkbGUvdjguOS4wL2dyYWRsZS93cmFwcGVyL2dyYWRsZS13cmFwcGVyLmphciAtbyBncmFkbGUvd3JhcHBlci9ncmFkbGUtd3JhcHBlci5qYXIKICAgICAgICAgIGVjaG8gJzQ5ODQ5NTEyMGEwM2I5YTZhYjVkMTU1ZjVkZTNjOGYwZDk4NmE0NDkxNTM3MDJmYjgwZmM4MGUxMzQ0ODRmMTcgIGdyYWRsZS93cmFwcGVyL2dyYWRsZS13cmFwcGVyLmphcicgfCBzaGEyNTZzdW0gLWMgLQogICAgICAtIG5hbWU6IEJ1aWxkIGlzb2xhdGVkIHJlY292ZXJ5IEFQSwogICAgICAgIHJ1bjogfAogICAgICAgICAgY2htb2QgK3ggLi9ncmFkbGV3CiAgICAgICAgICBzZXQgLW8gcGlwZWZhaWwKICAgICAgICAgIC4vZ3JhZGxldyA6YXBwOmFzc2VtYmxlRGVidWcgOmNvcmU6ZGF0YTp0ZXN0RGVidWdVbml0VGVzdCA6Y29yZTpkYXRhOmNvbXBpbGVEZWJ1Z0FuZHJvaWRUZXN0S290bGluIC0tc3RhY2t0cmFjZSAtLW5vLWRhZW1vbiAtLW1heC13b3JrZXJzIDEgMj4mMSB8IHRlZSBidWlsZC5sb2cKICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEB2NAogICAgICAgIGlmOiBzdWNjZXNzKCkKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZTogYXNwYXMtcmVjb3ZlcnktZGVidWcKICAgICAgICAgIHBhdGg6IGFwcC9idWlsZC9vdXRwdXRzL2Fway9kZWJ1Zy8qLmFwawogICAgICAgICAgaWYtbm8tZmlsZXMtZm91bmQ6IGVycm9yCiAgICAgIC0gdXNlczogYWN0aW9ucy91cGxvYWQtYXJ0aWZhY3RAdjQKICAgICAgICBpZjogYWx3YXlzKCkKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZTogcmVjb3ZlcnktdGVzdC1yZXBvcnRzCiAgICAgICAgICBwYXRoOiB8CiAgICAgICAgICAgICoqL2J1aWxkL3JlcG9ydHMvdGVzdHMvKioKICAgICAgICAgICAgKiovYnVpbGQvdGVzdC1yZXN1bHRzLyoqCiAgICAgICAgICBpZi1uby1maWxlcy1mb3VuZDogaWdub3JlCiAgICAgIC0gbmFtZTogU3VyZmFjZSBjb21waWxlciBlcnJvcnMKICAgICAgICBpZjogZmFpbHVyZSgpCiAgICAgICAgcnVuOiB8CiAgICAgICAgICBweXRob24zIC0gPDwnUFknCiAgICAgICAgICBmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKICAgICAgICAgIHA9UGF0aCgnYnVpbGQubG9nJykKICAgICAgICAgIGlmIHAuZXhpc3RzKCk6CiAgICAgICAgICAgIGxpbmVzPXAucmVhZF90ZXh0KGVycm9ycz0ncmVwbGFjZScpLnNwbGl0bGluZXMoKQogICAgICAgICAgICBzZWxlY3RlZD1beCBmb3IgeCBpbiBsaW5lcyBpZiB4LnN0YXJ0c3dpdGgoKCdlOicsJ2Vycm9yOicsICcqIFdoYXQgd2VudCB3cm9uZzonKSkgb3IgJ2Vycm9yOicgaW4geC5sb3dlcigpXQogICAgICAgICAgICBzZWxlY3RlZCA9IHNlbGVjdGVkIG9yIGxpbmVzWy0yMjpdCiAgICAgICAgICAgIGZvciBsaW5lIGluIHNlbGVjdGVkWy0zNTpdOiBwcmludCgnOjplcnJvcjo6JytsaW5lLnJlcGxhY2UoJyUnLCclMjUnKS5yZXBsYWNlKCdccicsJyUwRCcpLnJlcGxhY2UoJ1xuJywnJTBBJykpCiAgICAgICAgICBQWQo=
+name: Recovery Build APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [recovery/native-integration]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Verify official Gradle wrapper
+        run: |
+          curl --fail --location https://raw.githubusercontent.com/gradle/gradle/v8.9.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
+          echo '498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17  gradle/wrapper/gradle-wrapper.jar' | sha256sum -c -
+      - name: Build isolated recovery APK
+        run: |
+          chmod +x ./gradlew
+          set -o pipefail
+          ./gradlew :app:assembleDebug :core:data:testDebugUnitTest :core:data:compileDebugAndroidTestKotlin --stacktrace --no-daemon --max-workers 1 2>&1 | tee build.log
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: aspas-recovery-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovery-test-reports
+          path: |
+            **/build/reports/tests/**
+            **/build/test-results/**
+          if-no-files-found: ignore
+      - name: Surface compiler errors
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('build.log')
+          if p.exists():
+            lines=p.read_text(errors='replace').splitlines()
+            selected=[x for x in lines if x.startswith(('e:','error:', '* What went wrong:')) or 'error:' in x.lower()]
+            selected = selected or lines[-22:]
+            for line in selected[-35:]: print('::error::'+line.replace('%','%25').replace('\r','%0D').replace('\n','%0A'))
+          PY
