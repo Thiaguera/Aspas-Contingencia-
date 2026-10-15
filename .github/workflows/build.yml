@@ -26,7 +26,7 @@ jobs:
 
       - name: Parse aspas.md, Setup Gradle and Build APK
         run: |
-          python3 -c '
+          python3 << 'EOF'
           import os, urllib.request, zipfile, subprocess, base64
 
           print("--- A ler e processar o aspas.md ---")
@@ -36,3 +36,120 @@ jobs:
 
           with open("aspas.md", "r", encoding="utf-8", errors="ignore") as f:
               lines = f.readlines()
+
+          known_paths = [
+              "settings.gradle.kts",
+              "build.gradle.kts",
+              "gradle.properties",
+              "gradle/libs.versions.toml",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Hlc.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/HlcGenerator.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/Uuid.kt",
+              "core/common/src/main/kotlin/br/com/aspas/contingencia/common/PinHasher.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/model/Models.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventEnvelope.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/EventType.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/event/payload/Payloads.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/repository/Repositories.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/service/Services.kt",
+              "core/domain/src/main/kotlin/br/com/aspas/contingencia/domain/usecase/UseCases.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/entity/Entities.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/dao/Daos.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/AspasDatabase.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/db/DatabaseFactory.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/SessionProvider.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/EventRepositoryImpl.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/repository/RepositoriesImpl.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/projection/ProjectionEngine.kt",
+              "core/data/src/main/kotlin/br/com/aspas/contingencia/data/catalog/CatalogImporter.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/EscPosCommands.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/driver/ElginI9Driver.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketLayout.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/ItemTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/CancellationTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/render/TestTicketRenderer.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/RetryPolicy.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintDispatcherImpl.kt",
+              "core/print/src/main/kotlin/br/com/aspas/contingencia/print/PrintScheduler.kt",
+              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncPreference.kt",
+              "core/sync/src/main/kotlin/br/com/aspas/contingencia/sync/SyncEngineImpl.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/AspasApp.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/MainActivity.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionHolder.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/session/SessionManager.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/AppModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/DatabaseModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/RepositoryModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/di/ServiceModule.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/core/lease/LeaseManagerImpl.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/ui/theme/Theme.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/Routes.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/navigation/AspasNavHost.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/login/LoginScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia/feature/tables/TablesScreen.kt",
+              "app/src/main/kotlin/br/com/aspas/contingencia.feature.order/OrderScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.checkout/CheckoutScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.printers/PrintersScreen.kt".replace(".", "/"),
+              "app/src/main/kotlin/br/com/aspas.contingencia.feature.kitchen/KitchenScreen.kt".replace(".", "/"),
+              "app/src/main/assets/catalog.json",
+              "app/proguard-rules.pro",
+              "app/src/main/AndroidManifest.xml",
+              "app/src/main/res/values/strings.xml",
+              "app/src/main/res/values/themes.xml",
+              "app/src/main/res/xml/network_security_config.xml"
+          ]
+
+          full_text = "".join(lines)
+          extracted_count = 0
+          for i, path in enumerate(known_paths):
+              actual_path = path
+              pos = full_text.find(actual_path)
+              if pos == -1:
+                  continue
+              
+              start_content = pos + len(actual_path)
+              end_content = len(full_text)
+              for next_path in known_paths[i+1:]:
+                  next_pos = full_text.find(next_path, start_content)
+                  if next_pos != -1 and next_pos < end_content:
+                      end_content = next_pos
+                      break
+              
+              file_data = full_text[start_content:end_content].strip()
+              if file_data.startswith("---"):
+                  file_data = file_data.split("---", 2)[-1].strip()
+
+              dir_name = os.path.dirname(actual_path)
+              if dir_name:
+                  os.makedirs(dir_name, exist_ok=True)
+              
+              with open(actual_path, "w", encoding="utf-8") as out:
+                  out.write(file_data)
+              print(f"[CRIADO] {actual_path}")
+              extracted_count += 1
+
+          print(f"Total de ficheiros extraídos com sucesso: {extracted_count}")
+
+          print("\nA descarregar o Gradle 8.9...")
+          encoded_url = "aHR0cHM6Ly9zZXJ2aWNlcy5ncmFkbGUub3JnL2Rpc3RyaWJ1dGlvbnMvZ3JhZGxlLTguOS1iaW4uemlw"
+          target_url = base64.b64decode(encoded_url).decode("utf-8")
+          urllib.request.urlretrieve(target_url, "gradle-8.9-bin.zip")
+
+          print("A descompactar o Gradle...")
+          with zipfile.ZipFile("gradle-8.9-bin.zip", "r") as zip_ref:
+              zip_ref.extractall(".")
+
+          gradle_bin = os.path.abspath("gradle-8.9/bin/gradle")
+          if os.path.exists(gradle_bin):
+              os.chmod(gradle_bin, 0o755)
+
+          print("A gerar o Gradle Wrapper...")
+          subprocess.run([gradle_bin, "wrapper", "--gradle-version", "8.9"], check=True)
+
+          if os.path.exists("gradlew"):
+              os.chmod("gradlew", 0o755)
+
+          print("A compilar o APK Debug...")
+          subprocess.run(["./gradlew", "assembleDebug", "--no-daemon"], check=True)
+          EOF
