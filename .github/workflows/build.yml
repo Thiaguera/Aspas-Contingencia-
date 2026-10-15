@@ -24,9 +24,11 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Create libs.versions.toml explicitly
+      - name: Create robust libs.versions.toml and settings.gradle.kts
         run: |
           mkdir -p gradle
+          
+          # Criar o catálogo de versões
           cat << 'EOF' > gradle/libs.versions.toml
           [versions]
           agp = "8.5.0"
@@ -81,6 +83,33 @@ jobs:
           compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
           ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
           hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+          EOF
+
+          # Garantir um settings.gradle.kts compatível com o catálogo de versões
+          cat << 'EOF' > settings.gradle.kts
+          pluginManagement {
+              repositories {
+                  google()
+                  mavenCentral()
+                  gradlePluginPortal()
+              }
+          }
+
+          dependencyResolutionManagement {
+              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+              versionCatalogs {
+                  create("libs") {
+                      from(files("gradle/libs.versions.toml"))
+                  }
+              }
+          }
+
+          rootProject.name = "Aspas-Contingencia"
+          include(":app", ":core:common", ":core:domain", ":core:data", ":core:print", ":core:sync")
           EOF
 
       - name: Parse aspas.md to extract project files
@@ -161,7 +190,6 @@ jobs:
               ("core/sync/build.gradle.kts", "core/sync/build.gradle.kts"),
               ("app/build.gradle.kts", "app/build.gradle.kts"),
               ("gradle.properties", "gradle.properties"),
-              ("settings.gradle.kts", "settings.gradle.kts"),
               ("root build.gradle.kts", "build.gradle.kts")
           ]
 
