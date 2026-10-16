@@ -101,7 +101,15 @@ fun OrderScreen(onBack: () -> Unit, onCheckout: (String, String) -> Unit, vm: Or
         Column(Modifier.padding(padding).fillMaxSize()) {
             Surface(color = MaterialTheme.colorScheme.secondaryContainer) { Row(Modifier.fillMaxWidth().padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) { Text(order?.notes?.takeIf { it.isNotBlank() } ?: "Sem observação da mesa"); TextButton(onClick = { if (editingNote) { vm.setNote(noteText); editingNote = false } else editingNote = true }) { Text(if (editingNote) "Salvar" else "Editar") } } }
             if (editingNote) OutlinedTextField(noteText, { noteText = it.take(280) }, Modifier.fillMaxWidth().padding(12.dp), placeholder = { Text("Ex.: aniversário, alergia…") }, minLines = 2)
-            LazyColumn(Modifier.weight(1f).fillMaxWidth()) { items(items, key = { it.itemId }) { item -> ListItem(headlineContent = { Text("${item.quantity}x ${item.nameSnapshot}${item.weightG?.let { weight -> " (${weight}g)" }.orEmpty()}") }, supportingContent = { Text("R$ %.2f".format(item.priceSnapshot * item.quantity)) }, trailingContent = { Row { IconButton(onClick = { vm.send(item) }, enabled = !vm.isBusy(item.itemId)) { Icon(Icons.Default.Send, "Enviar") }; TextButton(onClick = { vm.cancel(item) }, enabled = !vm.isBusy(item.itemId)) { Text("X") } } }) } }
+            LazyColumn(Modifier.weight(1f).fillMaxWidth()) { items(items, key = { it.itemId }) { item -> ListItem(headlineContent = { Text("${item.quantity}x ${item.nameSnapshot}${item.weightG?.let { weight -> " (${weight}g)" }.orEmpty()}") }, supportingContent = {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    item.modifiers["observacao"]?.takeIf { it.isNotBlank() }?.let { observation ->
+                        Text(text = observation, style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurface)
+                    }
+                    Text("R$ %.2f".format(item.priceSnapshot * item.quantity))
+                }
+            }, trailingContent = { Row { IconButton(onClick = { vm.send(item) }, enabled = !vm.isBusy(item.itemId)) { Icon(Icons.Default.Send, "Enviar") }; TextButton(onClick = { vm.cancel(item) }, enabled = !vm.isBusy(item.itemId)) { Text("X") } } }) } }
             order?.let { current -> Card(Modifier.fillMaxWidth().padding(12.dp)) { Column(Modifier.padding(12.dp)) { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Subtotal"); Text("R$ %.2f".format(current.subtotal)) }; Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Taxa 10%"); Text("R$ %.2f".format(current.serviceFee)) }; HorizontalDivider(); Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) { Text("Total", style = MaterialTheme.typography.titleLarge); Text("R$ %.2f".format(current.total), style = MaterialTheme.typography.titleLarge) }; Button(onClick = { onCheckout(vm.tableId, current.orderId) }, Modifier.fillMaxWidth()) { Text("Fechar") } } } }
         }
     }
