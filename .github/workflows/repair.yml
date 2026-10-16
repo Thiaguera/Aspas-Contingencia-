@@ -1,40 +1,10 @@
-name: Repair recovery compiler errors
+name: Archived recovery repair
 on:
-  push:
-    branches: [recovery/native-integration]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  repair:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Repair source compatibility
-        run: |
-          python3 - <<"PY"
-          from pathlib import Path
-          root=Path("app/src/main/kotlin/br/com/aspas/contingencia/feature")
-          changes={
-            "management/ManagementScreen.kt": [("private data class ManagementReport","data class ManagementReport")],
-            "management/ManagementUi.kt": [("private fun ManagementScreen(","fun ManagementScreen(")],
-            "login/LoginScreen.kt": [("private sealed interface LoginResult","sealed interface LoginResult")],
-            "setup/SetupScreen.kt": [("import androidx.compose.foundation.layout.weight\n","")],
-            "order/OrderScreen.kt": [("FloatingActionButton(onClick = { showCatalog = true }, enabled = order != null)","FloatingActionButton(onClick = { if (order != null) showCatalog = true })"),("selected.weightMaxG","selected.weightMaxG")]
-          }
-          import re
-          for rel,pairs in changes.items():
-            p=root/rel
-            t=p.read_text()
-            for a,b in pairs: t=t.replace(a,b)
-            if rel=="order/OrderScreen.kt":
-              t=re.sub(r"([a-zA-Z_][a-zA-Z_0-9]*)\.weightMaxG(?![a-zA-Z_0-9])",r"(\1.weightMaxG ?: Int.MAX_VALUE)",t)
-            p.write_text(t)
-          PY
-          if ! git diff --quiet; then
-            git config user.name github-actions[bot]
-            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-            git add app/src/main/kotlin
-            git commit -m "Fix remaining Compose visibility and nullable module properties"
-            git push origin HEAD:recovery/native-integration
-          fi
+      - run: echo "Repairs are committed as source. Automatic source rewriting is disabled."
