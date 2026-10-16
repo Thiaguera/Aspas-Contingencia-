@@ -46,7 +46,7 @@ import java.text.NumberFormat
 import java.util.Locale
 import javax.inject.Inject
 
-private @OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ManagementScreen(onBack: () -> Unit, vm: ManagementViewModel = hiltViewModel()) {
     val users by vm.users.collectAsState()
