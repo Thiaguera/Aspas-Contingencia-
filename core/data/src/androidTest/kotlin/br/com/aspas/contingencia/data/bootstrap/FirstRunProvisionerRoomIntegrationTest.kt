@@ -35,7 +35,7 @@ class FirstRunProvisionerRoomIntegrationTest {
 
     @After fun tearDown() = db.close()
 
-    @Test fun initialCatalogImport_isIdempotentAndNeverOverwritesAvailabilityOrPrinterIp() = runBlocking {
+    @Test fun initialCatalogImport_isIdempotentAndNeverOverwritesAvailabilityOrPrinterIp(): Unit = runBlocking {
         importer.importFile(catalog())
         val initialItem = db.catalogDao().getItem("coffee")!!
         db.catalogDao().upsertItem(initialItem.copy(available = false))
@@ -56,7 +56,7 @@ class FirstRunProvisionerRoomIntegrationTest {
         }
     }
 
-    @Test fun provision_createsOnlyMissingNumbersAndLeavesExistingTablesUntouched() = runBlocking {
+    @Test fun provision_createsOnlyMissingNumbersAndLeavesExistingTablesUntouched(): Unit = runBlocking {
         importer.importFile(catalog())
         val existing = TableEntity("configured-table", 2, "Área externa", "open", 10L, null, "lease-1", 12.0)
         db.tableDao().upsert(existing)

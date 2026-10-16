@@ -7,8 +7,11 @@ interface EventDao {
 @Insert(onConflict = OnConflictStrategy.IGNORE) suspend fun insert(e: EventEntity): Long
 @Insert(onConflict = OnConflictStrategy.IGNORE) suspend fun insertAll(events: List<EventEntity>): List<Long>
 @Query("SELECT EXISTS(SELECT 1 FROM events WHERE eventId = :id)") suspend fun exists(id: String): Boolean
-@Query("SELECT EXISTS(SELECT 1 FROM events WHERE type = :type AND json_extract(payload, '$.orderId') = :orderId)") suspend fun hasEventForOrder(type: String, orderId: String): Boolean
-@Query("SELECT EXISTS(SELECT 1 FROM events WHERE type = :type AND json_extract(payload, '$.userId') = :userId)") suspend fun hasEventForUser(type: String, userId: String): Boolean
+@Query("SELECT payload FROM events WHERE type = :type") suspend fun payloadsForType(type: String): List<String>
+suspend fun hasEventForOrder(type: String, orderId: String): Boolean =
+    payloadsForType(type).any { org.json.JSONObject(it).optString("orderId") == orderId }
+suspend fun hasEventForUser(type: String, userId: String): Boolean =
+    payloadsForType(type).any { org.json.JSONObject(it).optString("userId") == userId }
 @Query("SELECT * FROM events WHERE synced = 0 ORDER BY hlc ASC LIMIT :limit") suspend fun pending(limit: Int = 500): List<EventEntity>
 @Query("SELECT * FROM events WHERE hlc > :since ORDER BY hlc ASC LIMIT :limit") suspend fun eventsSince(since: String, limit: Int): List<EventEntity>
 @Query("SELECT * FROM events ORDER BY hlc ASC") fun observeAll(): Flow<List<EventEntity>>
